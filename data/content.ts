@@ -583,7 +583,40 @@ export const content: Content = {
     },
     news_and_insights: {
         section_title: "News & Insights",
-        articles: []
+        articles: [
+            {
+                title: "Pudu Robotics Launches PUDU MT1 Vac: AI-powered Robotic Sweeper & Vacuum Sets New Standard for Commercial Dry Cleaning",
+                description: "Pudu Robotics Launches PUDU MT1 Vac: AI-powered Robotic Sweeper & Vacuum Sets New Standard for Commercial Dry Cleaning",
+                date: "2025-07-15",
+                category: "News",
+                image: "https://cdn.pudutech.com/MT_1_Vac_news_banner_c8948e4c02.png",
+                link: "#"
+            },
+            {
+                title: "Pudu Robotics Marks Major Milestone with Completion of 100,000th Robot",
+                description: "Pudu Robotics Marks Major Milestone with Completion of 100,000th Robot",
+                date: "2025-06-10",
+                category: "News",
+                image: "https://cdn.pudutech.com/E5_AE_98_E7_BD_91_2025_06_10_19_3_A34_3_A48_0e33295865.png",
+                link: "#"
+            },
+            {
+                title: "Pudu Robotics Launches its Latest AI-Powered Autonomous Cleaning Robot – PUDU CC1 Pro",
+                description: "Pudu Robotics Launches its Latest AI-Powered Autonomous Cleaning Robot – PUDU CC1 Pro",
+                date: "2025-05-27",
+                category: "News",
+                image: "https://cdn.pudutech.com/1184_752_1_2025_05_27_11_3_A16_3_A33_ea68addc21.png",
+                link: "#"
+            },
+            {
+                title: "Pudu Robotics and Deloitte Release White Paper on \"Open Full-Stack Intelligent Service Robot Ecosystem\"",
+                description: "Pudu Robotics and Deloitte Release White Paper on \"Open Full-Stack Intelligent Service Robot Ecosystem\"",
+                date: "2025-04-24",
+                category: "News",
+                image: "https://cdn.pudutech.com/E5_AE_98_E7_BD_91_E8_8_B_B1_E6_96_87_2025_04_24_13_3_A46_3_A31_97961f6bca.png",
+                link: "#"
+            }
+        ]
     },
     cta_section: {
         headline: "Ready to Transform Your Business?",
