@@ -53,12 +53,14 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
             <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
                 <div className="min-h-screen grid lg:grid-cols-2 items-center gap-12 relative z-10 pt-24 pb-12 lg:pt-0 lg:pb-0">
                     <div className="text-center lg:text-left">
-                        <h1 
-                            className="text-4xl md:text-6xl font-bold font-display text-gray-100 leading-tight md:leading-tight pop-in"
+                        <div 
+                            className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 pop-in"
                             style={{ '--delay': '200ms' } as React.CSSProperties}
                         >
-                            {content.hero.headline}
-                        </h1>
+                            <img src="https://iili.io/FQiLFzQ.png" alt="Xinyi Trading Group Logo" className="h-16 md:h-20 object-contain" />
+                            <span className="text-4xl md:text-5xl font-light text-gray-400 mx-2">+</span>
+                            <img src="https://images2.imgbox.com/62/7d/pvVxSmYd_o.png" alt="Kawan Lama Group Logo" className="h-12 md:h-16 object-contain filter-to-white" />
+                        </div>
                         <p 
                             className="mt-6 text-lg text-medium-gray max-w-2xl mx-auto lg:mx-0 pop-in"
                             style={{ '--delay': '350ms' } as React.CSSProperties}

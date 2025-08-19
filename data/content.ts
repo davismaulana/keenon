@@ -137,8 +137,8 @@ export const content: Content = {
         text: "Get Quote",
     },
     hero: {
-        headline: "Intelligent Robotics for Smarter Businesses",
-        subheadline: "At PUDU, we design robots that do more than work — they deliver unforgettable experiences. Whether it's hospitality, retail, logistics, or cleaning, our robots blend cutting-edge AI, intuitive design, and 24/7 reliability to boost productivity, wow customers, and redefine service.",
+        headline: "Powering Indonesia's Future, Together.",
+        subheadline: "At Xinyi, we're dedicated to reshaping how Indonesia cleans, serves, and operates — through intelligent automation. Xinyi Trading Group collaborates with Kawan Lama Group to distribute Pudu Robotics' innovative service robots in Indonesia. This partnership stems from Kawan Lama's legacy as Indonesia's premier industrial equipment importer since 1955. Following extensive research in China, we identified Pudu Robotics as the market leader in service automation. Combining Kawan Lama's local expertise with Xinyi's nationwide distribution ensures seamless access and reliable support. Together, we empower businesses to boost efficiency, enhance service quality, and achieve measurable operational improvements.",
         primary_cta: "Explore Products",
         secondary_cta: "Watch Demo",
     },
