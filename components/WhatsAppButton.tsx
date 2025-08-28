@@ -1,24 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const WhatsAppButton: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const toggleVisibility = () => {
-            // Show button after scrolling down 80% of the viewport height
-            if (window.scrollY > window.innerHeight * 0.8) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
-
-        window.addEventListener('scroll', toggleVisibility);
-
-        // Cleanup function to remove the event listener
-        return () => window.removeEventListener('scroll', toggleVisibility);
-    }, []);
-
+const WhatsAppCTA: React.FC = () => {
     const whatsappNumber = "6282315156088";
     const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
@@ -28,18 +10,15 @@ const WhatsAppButton: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contact Us on WhatsApp"
-            className={`fixed bottom-8 right-8 z-40 flex flex-col items-center transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/50 focus:rounded-lg ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 pointer-events-none'
-            }`}
+            className="fixed bottom-8 right-8 z-40 flex flex-col items-center transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/50 focus:rounded-lg opacity-0 animate-fade-in-up"
         >
             {/* Image container with blue outline */}
-            <div className="w-24 h-24 rounded-full bg-white flex items-center justify-center p-1 shadow-lg border-2 border-blue-600">
+            <div className="w-24 h-24 rounded-full bg-white flex items-center justify-center p-1 shadow-lg border-2 border-blue-600 animate-gentle-bounce">
                 <div className="w-full h-full rounded-full overflow-hidden">
                     <img 
                         src="https://cdn.pudutech.com/nav_product_bella_pro_816bfa936e.png" 
                         alt="BellaBot Pro" 
-                        className="w-full h-full object-cover scale-150"
-                        style={{ objectPosition: 'center 20%' }} // Focus on the head
+                        className="w-full h-full object-contain"
                     />
                 </div>
             </div>
@@ -52,4 +31,4 @@ const WhatsAppButton: React.FC = () => {
     );
 };
 
-export default WhatsAppButton;
+export default WhatsAppCTA;

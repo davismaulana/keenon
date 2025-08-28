@@ -24,11 +24,10 @@ const Contact: React.FC = () => {
         setSubmissionError(null);
 
         try {
-            const response = await fetch('https://formspree.io/f/mvgqnwaa', {
+            const response = await fetch('https://n8n.sixzenith.space/webhook/3a2d51b1-956b-4b08-9aa5-b39361fce3a6', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'application/json',
                 },
                 body: JSON.stringify(formState),
             });
@@ -37,12 +36,8 @@ const Contact: React.FC = () => {
                 setSubmissionStatus('success');
                 setFormState({ name: '', email: '', subject: '', message: '' });
             } else {
-                const data = await response.json();
-                if (data.errors && data.errors.length > 0) {
-                    setSubmissionError(data.errors.map((err: { message: string }) => err.message).join(', '));
-                } else {
-                    setSubmissionError('An unexpected error occurred while sending the message.');
-                }
+                const errorText = await response.text();
+                setSubmissionError(errorText || 'An unexpected error occurred while sending the message.');
                 setSubmissionStatus('error');
             }
         } catch (error) {

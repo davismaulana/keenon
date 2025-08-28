@@ -9,15 +9,16 @@ const Testimonials: React.FC = () => {
     const { section_title, reviews } = content.testimonials;
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
 
     const scrollToCard = useCallback((index: number) => {
         if (scrollContainerRef.current) {
-            const card = scrollContainerRef.current.children[index] as HTMLElement;
+            const container = scrollContainerRef.current;
+            const card = container.children[index] as HTMLElement;
             if (card) {
-                card.scrollIntoView({
+                container.scrollTo({
+                    left: card.offsetLeft,
                     behavior: 'smooth',
-                    block: 'nearest',
-                    inline: 'start',
                 });
             }
         }
@@ -32,6 +33,16 @@ const Testimonials: React.FC = () => {
         });
     }, [reviews.length]);
 
+    useEffect(() => {
+        if (isHovered) return;
+
+        const timer = setInterval(() => {
+            advanceSlide(1);
+        }, 5000); // Auto-scroll every 5 seconds
+
+        return () => clearInterval(timer);
+    }, [currentIndex, isHovered, advanceSlide]);
+
     const handleNext = () => {
         advanceSlide(1);
     };
@@ -41,6 +52,7 @@ const Testimonials: React.FC = () => {
     };
 
     useEffect(() => {
+        // This will now only scroll the horizontal container, not the whole page.
         scrollToCard(currentIndex);
     }, [currentIndex, scrollToCard]);
 
@@ -76,6 +88,8 @@ const Testimonials: React.FC = () => {
 
             <div
                 className="relative -mx-6 lg:-mx-8"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
             >
                 <div 
                     ref={scrollContainerRef}

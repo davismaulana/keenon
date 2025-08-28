@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
                         </a>
                     ) : (
                         <>
-                            <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="flex items-center gap-3">
+                            <a href="https://www.xinyitradinggroup.com/" className="flex items-center gap-3">
                                 <img src="https://iili.io/FQiLFzQ.png" alt="Xinyi Trading Group Logo" className="h-12 w-auto" />
                                 <span className="text-xl font-bold font-display text-gray-100 hidden sm:inline">Xinyi Trading</span>
                             </a>
