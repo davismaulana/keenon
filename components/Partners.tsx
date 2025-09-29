@@ -25,16 +25,16 @@ const Partners: React.FC = () => {
     return (
         <div className="bg-white py-8 sm:py-12">
             <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
-                <ul className="flex items-center justify-center animate-infinite-scroll space-x-16 md:space-x-24">
+                <ul className="flex items-center justify-center animate-infinite-scroll">
                     {partnerLogos.map((logo, index) => (
-                        <li key={`logo-a-${index}`} className="flex-shrink-0">
+                        <li key={`logo-a-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
                             <img className="h-16 md:h-20 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
-                <ul className="flex items-center justify-center animate-infinite-scroll space-x-16 md:space-x-24" aria-hidden="true">
+                <ul className="flex items-center justify-center animate-infinite-scroll" aria-hidden="true">
                     {partnerLogos.map((logo, index) => (
-                        <li key={`logo-b-${index}`} className="flex-shrink-0">
+                        <li key={`logo-b-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
                             <img className="h-16 md:h-20 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
