@@ -28,14 +28,14 @@ const Partners: React.FC = () => {
                 <ul className="flex items-center justify-center animate-infinite-scroll">
                     {partnerLogos.map((logo, index) => (
                         <li key={`logo-a-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
-                            <img className="h-16 md:h-20 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
+                            <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
                 <ul className="flex items-center justify-center animate-infinite-scroll" aria-hidden="true">
                     {partnerLogos.map((logo, index) => (
                         <li key={`logo-b-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
-                            <img className="h-16 md:h-20 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
+                            <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
