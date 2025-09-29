@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { useContent } from '../context/LanguageContext';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
@@ -8,10 +9,10 @@ interface HeroProps {
 }
 
 const images = [
-  'https://thumbs2.imgbox.com/fd/cc/DIxH0Rdf_t.jpg',
-  'https://thumbs2.imgbox.com/7b/6b/UPF1nJAt_t.jpg',
-  'https://thumbs2.imgbox.com/1c/b8/G0o4QIQw_t.jpg',
-  'https://thumbs2.imgbox.com/d8/24/u1JEjZqZ_t.jpg'
+  'https://images2.imgbox.com/25/cd/mNbEYBqX_o.jpg',
+  'https://images2.imgbox.com/7d/46/W3pyPlax_o.jpeg',
+  'https://images2.imgbox.com/47/56/DoqkPWPF_o.jpeg',
+  'https://images2.imgbox.com/e3/9c/4ImIyinL_o.jpeg',
 ];
 
 const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
@@ -59,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
                         >
                             <img src="https://iili.io/FQiLFzQ.png" alt="Xinyi Trading Group Logo" className="h-16 md:h-20 object-contain" />
                             <span className="text-4xl md:text-5xl font-light text-gray-400 mx-2">+</span>
-                            <img src="https://images2.imgbox.com/7e/c6/Yn7j7DzB_o.png" alt="Kawan Lama Group Logo" className="h-12 md:h-16 object-contain" />
+                            <img src="https://images2.imgbox.com/1a/70/Hoh91byU_o.png" alt="KEENON Robotics Logo" className="h-12 md:h-16 object-contain" />
                         </div>
                         <p 
                             className="mt-6 text-lg text-medium-gray max-w-2xl mx-auto lg:mx-0 pop-in"

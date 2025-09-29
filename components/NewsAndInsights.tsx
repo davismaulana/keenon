@@ -32,19 +32,25 @@ const NewsAndInsights: React.FC = () => {
                     throw new Error('Failed to fetch RSS feed.');
                 }
                 
+                const tempDiv = document.createElement('div');
+                
                 const parsedArticles: NewsArticle[] = data.items.map((item: any) => {
-                    // Create a temporary element to parse HTML content and extract text
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = item.content; // 'content' usually has the full article HTML
-
+                    // Using a temporary DOM element to decode HTML entities from RSS feed content.
+                    tempDiv.innerHTML = item.content || '';
                     const description = (tempDiv.textContent || tempDiv.innerText || '').substring(0, 150) + '...';
 
+                    tempDiv.innerHTML = item.title || '';
+                    const title = tempDiv.textContent || tempDiv.innerText || 'No Title';
+
+                    tempDiv.innerHTML = item.categories?.[0] || '';
+                    const category = tempDiv.textContent || tempDiv.innerText || 'News';
+
                     return {
-                        title: item.title || 'No Title',
+                        title: title,
                         link: item.link || '#',
                         description: description,
                         date: new Date(item.pubDate).toISOString().split('T')[0],
-                        category: item.categories?.[0] || 'News',
+                        category: category,
                     };
                 });
                 
