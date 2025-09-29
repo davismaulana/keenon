@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from './Section';
 
 const partnerLogos = [
     'https://static.keenon.com/uploads/2024/12/30/936e00de2b5a44708fd0af378e8fdcb2.jpg?x-oss-process=image/format,webp',
@@ -23,8 +24,16 @@ const partnerLogos = [
 
 const Partners: React.FC = () => {
     return (
-        <div className="bg-white py-8 sm:py-12">
-            <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
+        <>
+            <Section className="bg-white !pb-8 md:!pb-12">
+                <div className="text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-800">Our Partners & Clients</h2>
+                    <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                        We are proud to collaborate with leading companies and institutions worldwide.
+                    </p>
+                </div>
+            </Section>
+            <div className="bg-white w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)] pb-16 md:pb-24">
                 <ul className="flex items-center justify-center animate-infinite-scroll">
                     {partnerLogos.map((logo, index) => (
                         <li key={`logo-a-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
@@ -40,7 +49,7 @@ const Partners: React.FC = () => {
                     ))}
                 </ul>
             </div>
-        </div>
+        </>
     );
 };
 
