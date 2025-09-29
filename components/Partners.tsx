@@ -24,32 +24,30 @@ const partnerLogos = [
 
 const Partners: React.FC = () => {
     return (
-        <>
-            <Section className="bg-white !pb-8 md:!pb-12">
-                <div className="text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-800">Our Partners & Clients</h2>
-                    <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-                        We are proud to collaborate with leading companies and institutions worldwide.
-                    </p>
-                </div>
-            </Section>
-            <div className="bg-white w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)] pb-16 md:pb-24">
+        <Section className="bg-white">
+            <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-800">Our Partners & Clients</h2>
+                <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                    We are proud to collaborate with leading companies and institutions worldwide.
+                </p>
+            </div>
+            <div className="mt-16 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
                 <ul className="flex items-center justify-center animate-infinite-scroll">
                     {partnerLogos.map((logo, index) => (
-                        <li key={`logo-a-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
+                        <li key={`logo-a-${index}`} className="flex-shrink-0 mx-10 md:mx-16">
                             <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
                 <ul className="flex items-center justify-center animate-infinite-scroll" aria-hidden="true">
                     {partnerLogos.map((logo, index) => (
-                        <li key={`logo-b-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
+                        <li key={`logo-b-${index}`} className="flex-shrink-0 mx-10 md:mx-16">
                             <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
             </div>
-        </>
+        </Section>
     );
 };
 
