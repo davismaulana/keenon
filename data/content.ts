@@ -16,11 +16,8 @@ export interface Product {
     keySpecs?: { label: string; value: string; }[];
     featureSections?: { title: string; description: string; image: string; }[];
     techSpecs?: { category: string; specs: { name: string; value: string; }[] }[];
-    videoFeatures?: {
-        title: string;
-        subtitle: string;
-        videoUrl: string;
-    }[];
+    videoUrl?: string;
+    videoDescription?: string;
     brochureUrl?: string;
 }
 
@@ -150,11 +147,11 @@ export const content: Content = {
         section_subtitle: "Discover the perfect robot for your business needs",
         products: [
             {
-                id: "c30",
-                name: "C30",
+                id: "c39",
+                name: "C39",
                 category: "Cleaning Robot",
                 headline: "Smaller and Smarter, Your Cleaning Expert",
-                description: "The compact size of the C30 allows it to easily navigate narrow spaces, while its powerful 4-in-1 cleaning functions and intelligent perception capabilities ensure efficient and thorough cleaning results in various commercial settings.",
+                description: "The compact size of the C39 allows it to easily navigate narrow spaces, while its powerful 4-in-1 cleaning functions and intelligent perception capabilities ensure efficient and thorough cleaning results in various commercial settings.",
                 key_features: [
                     "4-in-1 cleaning: sweeping, scrubbing, vacuuming, and mopping",
                     "Compact 50cm body for navigating narrow spaces",
@@ -175,12 +172,12 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "Nimble and Compact, Access to Narrow Spaces",
-                        description: "With a body width of only 50cm, C30 effortlessly navigates through narrow aisles and spaces under tables and chairs. It moves freely in complex environments, ensuring comprehensive cleaning without dead corners.",
+                        description: "With a body width of only 50cm, C39 effortlessly navigates through narrow aisles and spaces under tables and chairs. It moves freely in complex environments, ensuring comprehensive cleaning without dead corners.",
                         image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png"
                     },
                     {
                         title: "4-in-1 Versatility for Comprehensive Cleaning",
-                        description: "C30 integrates sweeping, scrubbing, vacuuming, and mopping. Its dual-roller brush design effectively handles various types of debris, from fine dust to larger particles, ensuring a thorough clean in a single pass.",
+                        description: "C39 integrates sweeping, scrubbing, vacuuming, and mopping. Its dual-roller brush design effectively handles various types of debris, from fine dust to larger particles, ensuring a thorough clean in a single pass.",
                         image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png"
                     }
                 ],
@@ -190,28 +187,8 @@ export const content: Content = {
                     { category: "Tanks", specs: [{ name: "Clean Water", value: "7L" }, { name: "Dirty Water", value: "6L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "4-6h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoFeatures: [
-                    {
-                        title: "3-in-1 Dry Cleaning",
-                        subtitle: "Sweeping, vacuuming, and dust mopping covers 610mm wide.",
-                        videoUrl: "https://static.keenon.com/uploads/videos/f9851260060249c8be808db5efaa90a3/pc.mp4"
-                    },
-                    {
-                        title: "100% Charged, 2500㎡ cleaned",
-                        subtitle: "With one complete automatic charging, the C30 can clean up to 2500㎡, ideal for extended cleaning sessions.",
-                        videoUrl: "https://static.keenon.com/uploads/2025/01/07/6d54b2ce32ae4e4b9c56b2fbbe4ef1ac/pc.mp4"
-                    },
-                    {
-                        title: "Dual Operation Modes",
-                        subtitle: "Switch between manual map building and automated cleaning with the innovative extendable handle.",
-                        videoUrl: "https://static.keenon.com/uploads/2025/01/07/c8377b46d69e479e96da57dc8a738d89/pc.mp4"
-                    },
-                    {
-                        title: "Remote Assign and Track",
-                        subtitle: "Effortlessly assign and track cleaning tasks, and gain insights into your C30 with the KEENON App.",
-                        videoUrl: "https://static.keenon.com/uploads/2025/01/07/b5daa7adfeeb48d799d74d7b090ad446/pc.mp4"
-                    }
-                ],
+                videoUrl: "https://www.youtube.com/watch?v=S2gO4f-9XhA",
+                videoDescription: "Watch the C39, a compact and intelligent cleaning robot, effortlessly navigate and clean various commercial spaces with its 4-in-1 functionality.",
                 brochureUrl: "https://www.keenon.com/en/product/C30/index.html"
             }
         ]
