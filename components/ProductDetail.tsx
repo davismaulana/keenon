@@ -34,7 +34,6 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
 
         return () => {
             if (currentRef) {
-                // eslint-disable-next-line react-hooks/exhaustive-deps
                 observer.unobserve(currentRef);
             }
         };
@@ -116,17 +115,42 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                         {product.videoDescription && <p className="text-lg text-medium-gray mb-8 reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>{product.videoDescription}</p>}
                         <div className="reveal" style={{ '--delay': '400ms' } as React.CSSProperties}>
                             {(() => {
-                                try {
-                                    const url = new URL(product.videoUrl);
-                                    // Extract file ID from Google Drive URL
-                                    const fileIdMatch = url.pathname.match(/\/file\/d\/([^/]+)/);
-                                    if (!url.hostname.includes('drive.google.com') || !fileIdMatch || !fileIdMatch[1]) {
+                                const getEmbedUrl = (urlStr: string): string | null => {
+                                    try {
+                                        const url = new URL(urlStr);
+            
+                                        if (url.hostname.includes('youtube.com') || url.hostname.includes('youtu.be')) {
+                                            let videoId;
+                                            if (url.hostname.includes('youtu.be')) {
+                                                videoId = url.pathname.split('/').pop();
+                                            } else {
+                                                videoId = url.searchParams.get('v');
+                                            }
+            
+                                            if (videoId) {
+                                                // Autoplay requires mute=1. Loop and playlist are for continuous play. Controls=0 for a cleaner look.
+                                                return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&rel=0&showinfo=0`;
+                                            }
+                                        }
+            
+                                        // Fallback for old Google Drive links if any are left
+                                        if (url.hostname.includes('drive.google.com')) {
+                                            const fileIdMatch = url.pathname.match(/\/file\/d\/([^/]+)/);
+                                            if (fileIdMatch && fileIdMatch[1]) {
+                                                const driveVideoId = fileIdMatch[1];
+                                                return `https://drive.google.com/file/d/${driveVideoId}/preview`;
+                                            }
+                                        }
+                                    } catch (e) {
+                                        console.error("Invalid video URL", e);
                                         return null;
                                     }
-                                    
-                                    const videoId = fileIdMatch[1];
-                                    const embedUrl = `https://drive.google.com/file/d/${videoId}/preview`;
-
+                                    return null;
+                                };
+                                
+                                const embedUrl = getEmbedUrl(product.videoUrl);
+            
+                                if (embedUrl) {
                                     return (
                                         <div className="aspect-video overflow-hidden rounded-xl shadow-lg">
                                             <iframe
@@ -134,15 +158,15 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                                                 src={embedUrl}
                                                 title="Product video"
                                                 frameBorder="0"
-                                                allow="autoplay"
-                                                allowFullScreen>
-                                            </iframe>
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowFullScreen
+                                            ></iframe>
                                         </div>
                                     );
-                                } catch (e) {
-                                    console.error("Invalid video URL", e);
-                                    return null;
                                 }
+                                
+                                console.warn(`Could not generate embed URL for: ${product.videoUrl}`);
+                                return null;
                             })()}
                         </div>
                     </div>

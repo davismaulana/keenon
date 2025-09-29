@@ -12,6 +12,7 @@ const Section: React.FC<SectionProps> = ({ children, className = '', id, noXPadd
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const currentRef = ref.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -26,14 +27,13 @@ const Section: React.FC<SectionProps> = ({ children, className = '', id, noXPadd
             }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                // eslint-disable-next-line react-hooks/exhaustive-deps
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);

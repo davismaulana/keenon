@@ -186,7 +186,7 @@ export const content: Content = {
                     { category: "Tanks", specs: [{ name: "Clean Water", value: "7L" }, { name: "Dirty Water", value: "6L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "4-6h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoUrl: "https://drive.google.com/file/d/1ElJirEGag5p4p2mziHVGOrww3_1W6DCa/view?usp=sharing",
+                videoUrl: "https://youtu.be/nHcg64XRxks",
                 videoDescription: "Watch the C30, a compact and intelligent cleaning robot, effortlessly navigate and clean various commercial spaces with its 4-in-1 functionality.",
                 brochureUrl: "https://www.keenon.com/en/product/C30/index.html"
             },
@@ -231,7 +231,7 @@ export const content: Content = {
                     { category: "Tanks", specs: [{ name: "Clean Water", value: "10L" }, { name: "Dirty Water", value: "8L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "3-5h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoUrl: "https://drive.google.com/file/d/1kJBNuaqB2B6ikkJshkIEVcHzbL05rP5I/view?usp=sharing",
+                videoUrl: "https://youtu.be/Gd4mC4TcF6s",
                 videoDescription: "Discover the C40, the agile and efficient cleaning expert for small to medium commercial scenarios.",
                 brochureUrl: "https://www.keenon.com/en/product/C40/index.html"
             },
@@ -275,7 +275,7 @@ export const content: Content = {
                     { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "8-12h" }, { name: "Charging Time", value: "5h" }] },
                 ],
-                videoUrl: "https://drive.google.com/file/d/1Wwrj35QhjAVMG84SpeSBU3j2j6Y9DJlY/view?usp=sharing",
+                videoUrl: "https://youtu.be/KGtbV6l5aJQ",
                 videoDescription: "See the S100 in action, delivering items securely and efficiently across different floors.",
                 brochureUrl: "https://www.keenon.com/en/product/S100/index.html"
             },
@@ -319,7 +319,7 @@ export const content: Content = {
                     { category: "Performance", specs: [{ name: "Max Load", value: "40kg" }, { name: "Tray Size", value: "420 x 500 mm" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
                 ],
-                videoUrl: "https://drive.google.com/file/d/1mwkoX0r_IyeOZQ7RFly9VVQYtGebbHNz/view?usp=sharing",
+                videoUrl: "https://youtu.be/5TP6MokvFnQ",
                 videoDescription: "Watch the T9 deliver dishes with unparalleled stability and efficiency in a busy restaurant.",
                 brochureUrl: "https://www.keenon.com/en/product/T9/index.html"
             },
@@ -363,7 +363,7 @@ export const content: Content = {
                     { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Screen", value: "23.8\" HD" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
                 ],
-                videoUrl: "https://drive.google.com/file/d/1ODMV29XN8GICWceAA8dgOsb45Ak3SjMR/view?usp=sharing",
+                videoUrl: "https://youtu.be/khnZ4v-5Lqg",
                 videoDescription: "Experience the T10's futuristic dining service, featuring its hygienic cover and large ad screen.",
                 brochureUrl: "https://www.keenon.com/en/product/T10/index.html"
             },
@@ -407,7 +407,7 @@ export const content: Content = {
                     { category: "Performance", specs: [{ name: "Max Load", value: "60kg" }, { name: "Volume", value: "120L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
                 ],
-                videoUrl: "https://drive.google.com/file/d/1TytzypO-6iuT9228S7nfDxb-LmOC8YSM/view?usp=sharing",
+                videoUrl: "https://youtu.be/hDVr_RCuxMs",
                 videoDescription: "Watch the W3 effortlessly collect dishes, boosting efficiency in a busy restaurant environment.",
                 brochureUrl: "https://www.keenon.com/en/product/W3/index.html"
             }

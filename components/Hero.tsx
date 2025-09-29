@@ -38,7 +38,6 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
 
         return () => {
             if (currentRef) {
-                // eslint-disable-next-line react-hooks/exhaustive-deps
                 observer.unobserve(currentRef);
             }
         };
