@@ -1,9 +1,4 @@
-
-
 import React from 'react';
-import Section from './Section';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
 
 const partnerLogos = [
     'https://static.keenon.com/uploads/2024/12/30/936e00de2b5a44708fd0af378e8fdcb2.jpg?x-oss-process=image/format,webp',
@@ -28,41 +23,24 @@ const partnerLogos = [
 
 const Partners: React.FC = () => {
     return (
-        <Section className="bg-white" noXPadding>
-            <div className="w-full">
-                <Swiper
-                    modules={[Autoplay]}
-                    loop={true}
-                    autoplay={{
-                        delay: 1,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    }}
-                    speed={5000}
-                    allowTouchMove={false}
-                    breakpoints={{
-                        320: { slidesPerView: 3, spaceBetween: 30 },
-                        768: { slidesPerView: 4, spaceBetween: 40 },
-                        1024: { slidesPerView: 5, spaceBetween: 50 },
-                        1280: { slidesPerView: 6, spaceBetween: 60 },
-                    }}
-                    className="w-full h-32 sm:h-36 md:h-36 lg:h-44 xl:h-56"
-                >
-                    {[...partnerLogos, ...partnerLogos].map((logoUrl, index) => (
-                        <SwiperSlide key={index} className="flex items-center justify-center">
-                            <div className="flex items-center justify-center h-full px-2 md:px-4 lg:px-6 xl:px-8">
-                                <img
-                                    src={logoUrl}
-                                    alt={`Logo of partner ${index + 1}`}
-                                    className="max-h-full max-w-full object-contain"
-                                    loading="lazy"
-                                />
-                            </div>
-                        </SwiperSlide>
+        <div className="bg-white py-8 sm:py-12">
+            <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
+                <ul className="flex items-center justify-center animate-infinite-scroll space-x-16 md:space-x-24">
+                    {partnerLogos.map((logo, index) => (
+                        <li key={`logo-a-${index}`} className="flex-shrink-0">
+                            <img className="h-16 md:h-20 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
+                        </li>
                     ))}
-                </Swiper>
+                </ul>
+                <ul className="flex items-center justify-center animate-infinite-scroll space-x-16 md:space-x-24" aria-hidden="true">
+                    {partnerLogos.map((logo, index) => (
+                        <li key={`logo-b-${index}`} className="flex-shrink-0">
+                            <img className="h-16 md:h-20 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
+                        </li>
+                    ))}
+                </ul>
             </div>
-        </Section>
+        </div>
     );
 };
 
