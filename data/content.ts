@@ -187,7 +187,7 @@ export const content: Content = {
                     { category: "Tanks", specs: [{ name: "Clean Water", value: "7L" }, { name: "Dirty Water", value: "6L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "4-6h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoUrl: "https://www.youtube.com/watch?v=S2gO4f-9XhA",
+                videoUrl: "https://drive.google.com/file/d/1ElJirEGag5p4p2mziHVGOrww3_1W6DCa/view?usp=sharing",
                 videoDescription: "Watch the C39, a compact and intelligent cleaning robot, effortlessly navigate and clean various commercial spaces with its 4-in-1 functionality.",
                 brochureUrl: "https://www.keenon.com/en/product/C30/index.html"
             }

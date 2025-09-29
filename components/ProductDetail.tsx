@@ -118,16 +118,23 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                             {(() => {
                                 try {
                                     const url = new URL(product.videoUrl);
-                                    const videoId = url.searchParams.get('v');
-                                    if (!videoId) return null;
+                                    // Extract file ID from Google Drive URL
+                                    const fileIdMatch = url.pathname.match(/\/file\/d\/([^/]+)/);
+                                    if (!url.hostname.includes('drive.google.com') || !fileIdMatch || !fileIdMatch[1]) {
+                                        return null;
+                                    }
+                                    
+                                    const videoId = fileIdMatch[1];
+                                    const embedUrl = `https://drive.google.com/file/d/${videoId}/preview`;
+
                                     return (
                                         <div className="aspect-video overflow-hidden rounded-xl shadow-lg">
                                             <iframe
                                                 className="w-full h-full"
-                                                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${videoId}&controls=0`}
-                                                title="YouTube video player"
+                                                src={embedUrl}
+                                                title="Product video"
                                                 frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allow="autoplay"
                                                 allowFullScreen>
                                             </iframe>
                                         </div>
