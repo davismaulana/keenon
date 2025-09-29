@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Product } from '../data/content';
 import Section from './Section';
@@ -124,7 +125,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                                     }
                                     
                                     const videoId = fileIdMatch[1];
-                                    const embedUrl = `https://drive.google.com/file/d/${videoId}/preview?autoplay=1`;
+                                    const embedUrl = `https://drive.google.com/file/d/${videoId}/preview`;
 
                                     return (
                                         <div className="aspect-video overflow-hidden rounded-xl shadow-lg">
