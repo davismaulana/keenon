@@ -1,50 +1,70 @@
+
 import React from 'react';
 import Section from './Section';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 
-// A curated list of partner logos to display in a grid format.
 const partnerLogos = [
-  'https://cdn.pudutech.com/logo_en_28_fe7c4dd48e.png', // Pizza Hut
-  'https://cdn.pudutech.com/logo_en_30_63a6f69894.png', // Marriott
-  'https://cdn.pudutech.com/logo_en_27_1a5ada4238.png', // Haidilao
-  'https://cdn.pudutech.com/logo_en_26_faf1e83c0c.png', // Walmart
-  'https://cdn.pudutech.com/logo_en_29_0147e74bef.png', // MediaMarkt
-  'https://cdn.pudutech.com/logo_en_24_fedfa36423.png', // Carrefour
-  'https://cdn.pudutech.com/logo_en_22_c98a188e87.png', // Coca-Cola
-  'https://cdn.pudutech.com/logo_en_20_13c1d3053b.png', // Shell
-  'https://cdn.pudutech.com/logo_en_16_c4ce5213aa.png', // McDonald's
-  'https://cdn.pudutech.com/logo_en_21_4c6cb3b9d3.png', // Metro
-  'https://cdn.pudutech.com/logo_en_1_4e2e3599ba.png',  // SF Express
-  'https://cdn.pudutech.com/logo_en_25_09b053cb21.png', // JD.com
-  'https://cdn.pudutech.com/logo_en_19_b4a546c986.png', // ACCOR
-  'https://cdn.pudutech.com/logo_en_17_bb7cc6808c.png', // InterContinental
-  'https://cdn.pudutech.com/logo_en_14_6516450a79.png', // Sheraton
-  'https://cdn.pudutech.com/logo_en_13_4dd3d62e53.png', // Westin
-  'https://cdn.pudutech.com/logo_en_7_6fcc7446fa.png',  // Hilton
-  'https://cdn.pudutech.com/logo_en_10_09b9ec58e7.png'  // Hyatt
+    'https://static.keenon.com/uploads/2024/12/30/936e00de2b5a44708fd0af378e8fdcb2.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/a182882c18c74868ba8b8fd332a20557.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/245f31b7a97d4cd68ef6f4b97e81bdcc.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/2bcf616b698b4fdfb9581bc118658ca1.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/73109ca376f44d7fbedda46e761c3ed8.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/87d15881e2914a96b451dc6eca029d3f.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/10b9cf3900074417b250e492459c8006.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/0230030f9106439a95102363d5c2bdb8.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/54618ae886cd40cf81223f28d0eac947.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/e86ce8aedfd84db1a689f013d21796f9.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/412f910b367f47dfbee2131547124bf5.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/6f8da5275ec8461cb8ab47251657407b.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/e8bf122bfdd449279ee1ea8772850cd7.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/71d3dbd7c42d40799ed5efebcc25ad9c.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/4f72ec37a7f049998b5d80a2061a544c.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/a7bc720d5fc34187842dea1acf256cf1.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/9bd1083972644d52a7554218e05fb3fd.jpg?x-oss-process=image/format,webp',
+    'https://static.keenon.com/uploads/2024/12/30/e9a6af202c7247e4bed7b925d4b1d95c.jpg?x-oss-process=image/format,webp'
 ];
 
 const Partners: React.FC = () => {
     return (
-        <Section className="bg-trust-navy">
+        <Section className="bg-trust-navy" noXPadding>
             <div className="flex flex-col items-center">
-                <h2 className="w-full text-3xl lg:text-4xl text-center pb-12 lg:pb-16 font-bold font-display text-gray-100 reveal">
+                <h2 className="w-full text-3xl lg:text-4xl text-center pb-12 lg:pb-16 font-bold font-display text-gray-100 reveal px-6 lg:px-8">
                     Businesses Grow with Xinyi Trading Group
                 </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                    {partnerLogos.map((logoUrl, index) => (
-                        <div 
-                            key={index} 
-                            className="bg-white p-6 rounded-xl shadow-sm flex justify-center items-center h-28 hover:shadow-lg hover:shadow-corporate-gold/20 transition-all duration-300 transform hover:-translate-y-1 reveal"
-                            style={{ '--delay': `${200 + index * 40}ms` } as React.CSSProperties}
-                        >
-                            <img
-                                src={logoUrl}
-                                alt={`Logo of PUDU Robotics partner ${index + 1}`}
-                                className="max-h-12 w-auto object-contain"
-                                loading="lazy"
-                            />
-                        </div>
-                    ))}
+                <div className="w-full">
+                    <Swiper
+                        modules={[Autoplay]}
+                        loop={true}
+                        autoplay={{
+                            delay: 1,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        speed={5000}
+                        allowTouchMove={false}
+                        breakpoints={{
+                            320: { slidesPerView: 3, spaceBetween: 30 },
+                            640: { slidesPerView: 4, spaceBetween: 40 },
+                            1024: { slidesPerView: 6, spaceBetween: 50 },
+                            1280: { slidesPerView: 8, spaceBetween: 60 },
+                        }}
+                        className="w-full"
+                    >
+                        {/* Doubling the logos array helps create a more seamless loop in the marquee effect */}
+                        {[...partnerLogos, ...partnerLogos].map((logoUrl, index) => (
+                            <SwiperSlide key={index} className="flex items-center justify-center">
+                                <div className="h-24 flex items-center justify-center">
+                                    <img
+                                        src={logoUrl}
+                                        alt={`Logo of partner ${index + 1}`}
+                                        className="max-h-10 w-auto object-contain filter-to-white"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
         </Section>
