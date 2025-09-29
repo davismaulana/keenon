@@ -7,7 +7,7 @@ import Section from './Section';
 const storiesData = [
     {
         link: "https://www.keenon.com/en/stories/catering/index.html",
-        image: "https://static.keenon.com/uploads/2025/04/27/1da15f088d1d40239cf2c2a058d846a1.jpg?x-oss-process=image/format,webp",
+        image: "https://images2.imgbox.com/70/de/pfaTT16n_o.jpg",
         category: "Catering",
         title: "Redefining the Dining Experience",
         description: "KEENON Robotics enhances restaurant efficiency and customer engagement with intelligent, autonomous solutions for food delivery and service.",
@@ -15,23 +15,23 @@ const storiesData = [
     },
     {
         link: "https://www.keenon.com/en/stories/hotel/index.html",
-        image: "https://static.keenon.com/uploads/2025/04/27/d3f75298516d41a79b29e0610113840e.jpg?x-oss-process=image/format,webp",
+        image: "https://images2.imgbox.com/db/cd/3JIWtIyz_o.jpg",
         category: "Hotel",
         title: "Elevating Guest Service with Smart Automation",
         description: "From room service to luggage delivery, KEENON robots provide secure, contactless, and efficient service, allowing hotel staff to focus on personalized guest care.",
         alt: "A KEENON robot delivering items in a luxury hotel corridor."
     },
     {
-        link: "https://www.keenon.com/en/stories/medical/index.html",
-        image: "https://static.keenon.com/uploads/2025/04/27/55b46e37e90e447990176d65c363f847.jpg?x-oss-process=image/format,webp",
-        category: "Healthcare",
-        title: "Revolutionizing Healthcare Logistics",
-        description: "Our robots ensure the safe and timely delivery of medical supplies, lab samples, and patient meals, reducing cross-contamination risks and freeing up medical staff.",
-        alt: "A medical delivery robot navigating a clean, bright hospital hallway."
+        link: "https://www.keenon.com/en/stories/retail/index.html",
+        image: "https://images2.imgbox.com/c2/b6/C6yfUDtJ_o.jpg",
+        category: "Supermarket",
+        title: "Enhancing the Shopping Experience",
+        description: "KEENON's smart robots assist shoppers, guide customers, and manage inventory, creating a more efficient and enjoyable retail environment.",
+        alt: "A KEENON robot guiding a customer in a bright, modern supermarket aisle."
     },
     {
         link: "https://www.keenon.com/en/stories/cleaning/index.html",
-        image: "https://static.keenon.com/uploads/2025/04/27/a225e0e010834e0281b67fde54efb56.jpg?x-oss-process=image/format,webp",
+        image: "https://images2.imgbox.com/1e/cc/iHtTQ1tn_o.png",
         category: "Cleaning",
         title: "A New Standard for Commercial Cleaning",
         description: "KEENON's cleaning robots provide intelligent, systematic, and efficient floor maintenance for large commercial spaces, ensuring a consistently clean and safe environment.",
