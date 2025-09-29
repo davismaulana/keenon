@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import Section from './Section';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -27,45 +28,39 @@ const partnerLogos = [
 
 const Partners: React.FC = () => {
     return (
-        <Section className="bg-trust-navy" noXPadding>
-            <div className="flex flex-col items-center">
-                <h2 className="w-full text-3xl lg:text-4xl text-center pb-12 lg:pb-16 font-bold font-display text-gray-100 reveal px-6 lg:px-8">
-                    Businesses Grow with Xinyi Trading Group
-                </h2>
-                <div className="w-full">
-                    <Swiper
-                        modules={[Autoplay]}
-                        loop={true}
-                        autoplay={{
-                            delay: 1,
-                            disableOnInteraction: false,
-                            pauseOnMouseEnter: true,
-                        }}
-                        speed={5000}
-                        allowTouchMove={false}
-                        breakpoints={{
-                            320: { slidesPerView: 3, spaceBetween: 30 },
-                            640: { slidesPerView: 4, spaceBetween: 40 },
-                            1024: { slidesPerView: 6, spaceBetween: 50 },
-                            1280: { slidesPerView: 8, spaceBetween: 60 },
-                        }}
-                        className="w-full"
-                    >
-                        {/* Doubling the logos array helps create a more seamless loop in the marquee effect */}
-                        {[...partnerLogos, ...partnerLogos].map((logoUrl, index) => (
-                            <SwiperSlide key={index} className="flex items-center justify-center">
-                                <div className="h-24 flex items-center justify-center">
-                                    <img
-                                        src={logoUrl}
-                                        alt={`Logo of partner ${index + 1}`}
-                                        className="max-h-10 w-auto object-contain filter-to-white"
-                                        loading="lazy"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
+        <Section className="bg-white" noXPadding>
+            <div className="w-full">
+                <Swiper
+                    modules={[Autoplay]}
+                    loop={true}
+                    autoplay={{
+                        delay: 1,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    }}
+                    speed={5000}
+                    allowTouchMove={false}
+                    breakpoints={{
+                        320: { slidesPerView: 3, spaceBetween: 30 },
+                        768: { slidesPerView: 4, spaceBetween: 40 },
+                        1024: { slidesPerView: 5, spaceBetween: 50 },
+                        1280: { slidesPerView: 6, spaceBetween: 60 },
+                    }}
+                    className="w-full h-32 sm:h-36 md:h-36 lg:h-44 xl:h-56"
+                >
+                    {[...partnerLogos, ...partnerLogos].map((logoUrl, index) => (
+                        <SwiperSlide key={index} className="flex items-center justify-center">
+                            <div className="flex items-center justify-center h-full px-2 md:px-4 lg:px-6 xl:px-8">
+                                <img
+                                    src={logoUrl}
+                                    alt={`Logo of partner ${index + 1}`}
+                                    className="max-h-full max-w-full object-contain"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </Section>
     );
