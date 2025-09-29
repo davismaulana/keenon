@@ -39,7 +39,7 @@ const Partners: React.FC = () => {
                 <ul className="flex items-center justify-center animate-infinite-scroll">
                     {extendedLogos.map((logo, index) => (
                         <li key={`logo-${index}`} className="flex-shrink-0 mx-12 md:mx-16">
-                            <img className="h-16 md:h-20 object-contain w-auto" src={logo} alt={`Partner logo ${index + 1}`} />
+                            <img className="h-24 md:h-28 object-contain w-auto" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
