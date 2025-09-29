@@ -16,8 +16,8 @@ const WhatsAppCTA: React.FC = () => {
             <div className="w-24 h-24 rounded-full bg-white flex items-center justify-center p-1 shadow-lg border-2 border-blue-600 animate-gentle-bounce">
                 <div className="w-full h-full rounded-full overflow-hidden">
                     <img 
-                        src="https://cdn.pudutech.com/nav_product_bella_pro_816bfa936e.png" 
-                        alt="BellaBot Pro" 
+                        src="https://images2.imgbox.com/a3/12/AnPR5cbG_o.png" 
+                        alt="C40 Cleaning Robot" 
                         className="w-full h-full object-contain"
                     />
                 </div>
