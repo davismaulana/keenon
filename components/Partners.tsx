@@ -1,5 +1,4 @@
 import React from 'react';
-import Section from './Section';
 
 const partnerLogos = [
     'https://static.keenon.com/uploads/2024/12/30/936e00de2b5a44708fd0af378e8fdcb2.jpg?x-oss-process=image/format,webp',
@@ -23,31 +22,36 @@ const partnerLogos = [
 ];
 
 const Partners: React.FC = () => {
+    // Duplicate logos for a seamless animation loop
+    const extendedLogos = [...partnerLogos, ...partnerLogos];
+
     return (
-        <Section className="bg-white">
-            <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-800">Our Partners & Clients</h2>
-                <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-                    We are proud to collaborate with leading companies and institutions worldwide.
-                </p>
+        <section className="bg-white py-16 md:py-24 overflow-hidden">
+            <div className="container mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-800">Our Partners & Clients</h2>
+                    <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+                        We are proud to collaborate with leading companies and institutions worldwide.
+                    </p>
+                </div>
             </div>
-            <div className="mt-16 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
+            <div className="mt-16 w-full inline-flex flex-nowrap [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
                 <ul className="flex items-center justify-center animate-infinite-scroll">
-                    {partnerLogos.map((logo, index) => (
-                        <li key={`logo-a-${index}`} className="flex-shrink-0 mx-16 md:mx-24">
-                            <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
+                    {extendedLogos.map((logo, index) => (
+                        <li key={`logo-${index}`} className="flex-shrink-0 mx-12 md:mx-16">
+                            <img className="h-16 md:h-20 object-contain w-auto" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
-                <ul className="flex items-center justify-center animate-infinite-scroll" aria-hidden="true">
-                    {partnerLogos.map((logo, index) => (
-                        <li key={`logo-b-${index}`} className="flex-shrink-0 mx-16 md:mx-24">
-                            <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
+                 <ul className="flex items-center justify-center animate-infinite-scroll" aria-hidden="true">
+                    {extendedLogos.map((logo, index) => (
+                        <li key={`logo-duplicate-${index}`} className="flex-shrink-0 mx-12 md:mx-16">
+                            <img className="h-16 md:h-20 object-contain w-auto" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
             </div>
-        </Section>
+        </section>
     );
 };
 
