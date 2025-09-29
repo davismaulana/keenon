@@ -1,43 +1,100 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import Section from './Section';
+import { ArrowRightIcon } from './icons/ArrowRightIcon';
+
+
+const storiesData = [
+    {
+        link: "https://www.keenon.com/en/stories/catering/index.html",
+        image: "https://static.keenon.com/uploads/2025/04/27/1da15f088d1d40239cf2c2a058d846a1.jpg?x-oss-process=image/format,webp",
+        category: "Catering",
+        title: "Redefining the Dining Experience",
+        description: "KEENON Robotics enhances restaurant efficiency and customer engagement with intelligent, autonomous solutions for food delivery and service.",
+        alt: "KEENON delivery robot serving food in a bustling, modern restaurant."
+    },
+    {
+        link: "https://www.keenon.com/en/stories/hotel/index.html",
+        image: "https://static.keenon.com/uploads/2025/04/27/d3f75298516d41a79b29e0610113840e.jpg?x-oss-process=image/format,webp",
+        category: "Hotel",
+        title: "Elevating Guest Service with Smart Automation",
+        description: "From room service to luggage delivery, KEENON robots provide secure, contactless, and efficient service, allowing hotel staff to focus on personalized guest care.",
+        alt: "A KEENON robot delivering items in a luxury hotel corridor."
+    },
+    {
+        link: "https://www.keenon.com/en/stories/medical/index.html",
+        image: "https://static.keenon.com/uploads/2025/04/27/55b46e37e90e447990176d65c363f847.jpg?x-oss-process=image/format,webp",
+        category: "Healthcare",
+        title: "Revolutionizing Healthcare Logistics",
+        description: "Our robots ensure the safe and timely delivery of medical supplies, lab samples, and patient meals, reducing cross-contamination risks and freeing up medical staff.",
+        alt: "A medical delivery robot navigating a clean, bright hospital hallway."
+    },
+    {
+        link: "https://www.keenon.com/en/stories/cleaning/index.html",
+        image: "https://static.keenon.com/uploads/2025/04/27/a225e0e010834e0281b67fde54efb56.jpg?x-oss-process=image/format,webp",
+        category: "Cleaning",
+        title: "A New Standard for Commercial Cleaning",
+        description: "KEENON's cleaning robots provide intelligent, systematic, and efficient floor maintenance for large commercial spaces, ensuring a consistently clean and safe environment.",
+        alt: "A KEENON cleaning robot autonomously scrubbing the floor of a large exhibition hall."
+    }
+];
 
 const CustomerStories: React.FC = () => {
-    const videoSrc = "https://static.keenon.com/uploads/2025/09/22/eeca4ab16b104cfb811a40c52b89f3ab.mp4";
-    const learnMoreLink = "https://www.keenon.com/en/stories/index.html";
-
     return (
-        <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden bg-trust-navy">
-            {/* Video Background */}
-            <video
-                key={videoSrc}
-                className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
-                autoPlay
-                loop
-                muted
-                playsInline
-            >
-                <source src={videoSrc} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-
-            {/* Overlay Content */}
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <div className="text-center text-white p-4 reveal">
-                    <h2 className="text-4xl md:text-6xl font-bold font-display tracking-tight text-gray-100">
-                        Customer Stories
-                    </h2>
-                    <div className="mt-8">
-                        <a
-                            href={learnMoreLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block px-8 py-3 border-2 border-white rounded-lg text-base font-bold transition-all duration-300 hover:bg-white hover:text-trust-navy transform hover:scale-105"
-                        >
-                            Learn More
-                        </a>
-                    </div>
-                </div>
+        <Section className="bg-trust-navy">
+             <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-5xl font-bold font-display text-gray-100 reveal">Customer Stories</h2>
+                <p className="mt-4 text-lg text-medium-gray max-w-3xl mx-auto reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>See how businesses across industries are thriving with our robotic solutions.</p>
             </div>
-        </section>
+            <div className="reveal">
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay, EffectFade]}
+                    effect="fade"
+                    fadeEffect={{ crossFade: true }}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    className="w-full h-[60vh] md:h-[70vh] rounded-2xl overflow-hidden shadow-lg"
+                    a11y={{
+                        prevSlideMessage: 'Previous story',
+                        nextSlideMessage: 'Next story',
+                    }}
+                >
+                    {storiesData.map((story, index) => (
+                        <SwiperSlide key={index} className="relative bg-light-gray">
+                            <div className="absolute inset-0">
+                                <img className="w-full h-full object-cover" src={story.image} alt={story.alt} />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                            </div>
+                            <div className="relative h-full flex flex-col justify-end text-white p-6 md:p-12">
+                               <div className="max-w-3xl">
+                                    <span className="text-sm font-bold text-corporate-gold uppercase tracking-wider">{story.category}</span>
+                                    <h3 className="mt-2 text-3xl md:text-4xl font-bold font-display leading-tight">{story.title}</h3>
+                                    <p className="mt-4 text-base text-gray-200 max-w-2xl hidden md:block">{story.description}</p>
+                                    <a
+                                        href={story.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group mt-6 inline-flex items-center px-6 py-3 border-2 border-white/80 rounded-lg text-sm font-bold transition-all duration-300 hover:bg-white hover:text-trust-navy transform hover:scale-105"
+                                    >
+                                        Read Story
+                                        <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                                    </a>
+                               </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+        </Section>
     );
 };
 
