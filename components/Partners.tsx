@@ -23,7 +23,7 @@ const partnerLogos = [
 
 const Partners: React.FC = () => {
     // Duplicate logos for a seamless animation loop
-    const extendedLogos = [...partnerLogos, ...partnerLogos];
+    const extendedLogos = [...partnerLogos];
 
     return (
         <section className="bg-white py-16 md:py-24 overflow-hidden">
@@ -39,13 +39,6 @@ const Partners: React.FC = () => {
                 <ul className="flex items-center justify-center animate-infinite-scroll">
                     {extendedLogos.map((logo, index) => (
                         <li key={`logo-${index}`} className="flex-shrink-0 mx-12 md:mx-16">
-                            <img className="h-16 md:h-20 object-contain w-auto" src={logo} alt={`Partner logo ${index + 1}`} />
-                        </li>
-                    ))}
-                </ul>
-                 <ul className="flex items-center justify-center animate-infinite-scroll" aria-hidden="true">
-                    {extendedLogos.map((logo, index) => (
-                        <li key={`logo-duplicate-${index}`} className="flex-shrink-0 mx-12 md:mx-16">
                             <img className="h-16 md:h-20 object-contain w-auto" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
