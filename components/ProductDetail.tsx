@@ -107,44 +107,40 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                     </div>
                 </div>
             </header>
-
-            {/* Video Section */}
-            {product.videoUrl && (
-                <Section className="bg-trust-navy">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold font-display text-gray-100 mb-4 reveal">Watch in Action</h2>
-                        {product.videoDescription && <p className="text-lg text-medium-gray mb-8 reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>{product.videoDescription}</p>}
-                        <div className="reveal" style={{ '--delay': '400ms' } as React.CSSProperties}>
-                            {(() => {
-                                try {
-                                    const url = new URL(product.videoUrl);
-                                    const videoId = url.searchParams.get('v');
-                                    if (!videoId) return null;
-                                    return (
-                                        <div className="aspect-video overflow-hidden rounded-xl shadow-lg">
-                                            <iframe
-                                                className="w-full h-full"
-                                                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${videoId}&controls=0`}
-                                                title="YouTube video player"
-                                                frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowFullScreen>
-                                            </iframe>
-                                        </div>
-                                    );
-                                } catch (e) {
-                                    console.error("Invalid video URL", e);
-                                    return null;
-                                }
-                            })()}
-                        </div>
+            
+            {/* Video Features Section */}
+            {product.videoFeatures && product.videoFeatures.length > 0 && (
+                <Section className="bg-light-gray">
+                    <div className="space-y-16 md:space-y-24">
+                        {product.videoFeatures.map((feature, index) => (
+                            <div key={index} className="max-w-5xl mx-auto text-center">
+                                <h3 className="text-3xl md:text-4xl font-bold font-display text-corporate-gold reveal tracking-wide">
+                                    {feature.title}
+                                </h3>
+                                <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto reveal" style={{ '--delay': '150ms' } as React.CSSProperties}>
+                                    {feature.subtitle}
+                                </p>
+                                <div className="mt-8 md:mt-12 mx-auto rounded-xl lg:rounded-2xl overflow-hidden shadow-2xl shadow-black/30 reveal" style={{ '--delay': '300ms' } as React.CSSProperties}>
+                                    <video
+                                        className="w-full h-full object-cover"
+                                        src={feature.videoUrl}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                    >
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </Section>
             )}
 
             {/* Key Specs Section */}
             {product.keySpecs && product.keySpecs.length > 0 && (
-                <Section className="bg-light-gray">
+                <Section className="bg-light-gray border-t border-gray-800">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         {product.keySpecs.map((spec, index) => (
                             <div key={index} className="pop-in" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
