@@ -34,14 +34,14 @@ const Partners: React.FC = () => {
             <div className="mt-16 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]">
                 <ul className="flex items-center justify-center animate-infinite-scroll">
                     {partnerLogos.map((logo, index) => (
-                        <li key={`logo-a-${index}`} className="flex-shrink-0 mx-10 md:mx-16">
+                        <li key={`logo-a-${index}`} className="flex-shrink-0 mx-16 md:mx-24">
                             <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
                 </ul>
                 <ul className="flex items-center justify-center animate-infinite-scroll" aria-hidden="true">
                     {partnerLogos.map((logo, index) => (
-                        <li key={`logo-b-${index}`} className="flex-shrink-0 mx-10 md:mx-16">
+                        <li key={`logo-b-${index}`} className="flex-shrink-0 mx-16 md:mx-24">
                             <img className="h-20 md:h-24 object-contain" src={logo} alt={`Partner logo ${index + 1}`} />
                         </li>
                     ))}
