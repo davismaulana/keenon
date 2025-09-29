@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -5,14 +6,14 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 const slidesData = [
     {
         link: "https://www.keenon.com/en/solution/catering/index.html",
-        desktopImg: "https://static.keenon.com/uploads/2025/04/27/399b2df9da8e4ff1931ea03d7aa05212.jpg?x-oss-process=image/format,webp",
-        mobileImg: "https://static.keenon.com/uploads/2025/04/27/7fcbda8219c548febe42b9ceea81881b.jpg?x-oss-process=image/format,webp",
+        desktopImg: "https://images2.imgbox.com/70/de/pfaTT16n_o.jpg",
+        mobileImg: "https://images2.imgbox.com/70/de/pfaTT16n_o.jpg",
         alt: "Robots serving in a restaurant, showcasing the catering solution."
     },
     {
         link: "https://www.keenon.com/en/solution/hotel/index.html",
-        desktopImg: "https://static.keenon.com/uploads/2025/04/27/4e5c2059175b4da19d19dbdf8549b41b.jpg?x-oss-process=image/format,webp",
-        mobileImg: "https://static.keenon.com/uploads/2025/04/27/b9f84a3d886a429f8a6e707a287b8670.jpg?x-oss-process=image/format,webp",
+        desktopImg: "https://images2.imgbox.com/db/cd/3JIWtIyz_o.jpg",
+        mobileImg: "https://images2.imgbox.com/db/cd/3JIWtIyz_o.jpg",
         alt: "A delivery robot in a hotel hallway, showcasing the hotel solution."
     }
 ];

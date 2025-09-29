@@ -2,7 +2,6 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import Section from './Section';
-import { ArrowRightIcon } from './icons/ArrowRightIcon';
 
 
 const storiesData = [
@@ -79,15 +78,6 @@ const CustomerStories: React.FC = () => {
                                     <span className="text-sm font-bold text-corporate-gold uppercase tracking-wider">{story.category}</span>
                                     <h3 className="mt-2 text-3xl md:text-4xl font-bold font-display leading-tight">{story.title}</h3>
                                     <p className="mt-4 text-base text-gray-200 max-w-2xl hidden md:block">{story.description}</p>
-                                    <a
-                                        href={story.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group mt-6 inline-flex items-center px-6 py-3 border-2 border-white/80 rounded-lg text-sm font-bold transition-all duration-300 hover:bg-white hover:text-trust-navy transform hover:scale-105"
-                                    >
-                                        Read Story
-                                        <ArrowRightIcon className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                                    </a>
                                </div>
                             </div>
                         </SwiperSlide>
