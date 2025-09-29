@@ -1,12 +1,9 @@
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Product } from '../data/content';
 import Section from './Section';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
 import { CheckCircleIcon } from './icons/CheckCircleIcon';
 import { DownloadIcon } from './icons/DownloadIcon';
-import CTA from './Advantages';
 
 interface ProductDetailProps {
     product: Product;
@@ -258,11 +255,6 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                     </div>
                 </div>
             </Section>
-            
-            <CTA 
-                scrollToContact={scrollToContact}
-                productBrochureUrl={product.brochureUrl}
-            />
         </div>
     );
 };

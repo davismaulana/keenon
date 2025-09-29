@@ -1,52 +1,56 @@
-
-
 import React from 'react';
-import Section from './Section';
-import { useContent } from '../context/LanguageContext';
-import { HotelIcon, RetailIcon, HealthcareIcon, LogisticsIcon, OfficeIcon, EllipsisIcon } from './icons/ServiceIcons';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-const iconMap: { [key: string]: React.FC<{className: string}> } = {
-    HotelIcon,
-    RetailIcon,
-    HealthcareIcon,
-    LogisticsIcon,
-    OfficeIcon,
-};
+const slidesData = [
+    {
+        link: "https://www.keenon.com/en/solution/catering/index.html",
+        desktopImg: "https://static.keenon.com/uploads/2025/04/27/399b2df9da8e4ff1931ea03d7aa05212.jpg?x-oss-process=image/format,webp",
+        mobileImg: "https://static.keenon.com/uploads/2025/04/27/7fcbda8219c548febe42b9ceea81881b.jpg?x-oss-process=image/format,webp",
+        alt: "Robots serving in a restaurant, showcasing the catering solution."
+    },
+    {
+        link: "https://www.keenon.com/en/solution/hotel/index.html",
+        desktopImg: "https://static.keenon.com/uploads/2025/04/27/4e5c2059175b4da19d19dbdf8549b41b.jpg?x-oss-process=image/format,webp",
+        mobileImg: "https://static.keenon.com/uploads/2025/04/27/b9f84a3d886a429f8a6e707a287b8670.jpg?x-oss-process=image/format,webp",
+        alt: "A delivery robot in a hotel hallway, showcasing the hotel solution."
+    }
+];
 
 const Solutions: React.FC = () => {
-    const { content } = useContent();
-
     return (
-        <Section className="bg-trust-navy" id="solutions">
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold font-display text-gray-100 reveal">{content.solutions_by_industry.section_title}</h2>
-                <p className="mt-4 text-lg text-medium-gray max-w-3xl mx-auto reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>{content.solutions_by_industry.section_subtitle}</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {content.solutions_by_industry.industries.slice(0, 5).map((industry, index) => {
-                    const Icon = iconMap[industry.icon];
-                    return (
-                        <div 
-                            key={index} 
-                            className="bg-light-gray p-6 rounded-lg border border-transparent hover:border-corporate-gold/50 hover:bg-gray-700 transition-all duration-300 reveal flex flex-col text-center items-center transform hover:-translate-y-1"
-                            style={{ '--delay': `${200 + index * 100}ms` } as React.CSSProperties}
-                        >
-                            {Icon && <Icon className="h-10 w-10 text-corporate-gold mb-4 flex-shrink-0"/>}
-                            <h3 className="font-bold font-display text-gray-200 text-xl">{industry.name}</h3>
-                            <p className="text-medium-gray mt-2 flex-grow">{industry.description}</p>
-                        </div>
-                    );
-                })}
-                 <div 
-                    className="bg-corporate-gold p-6 rounded-lg transition-all duration-300 reveal flex flex-col text-center items-center transform hover:-translate-y-1 hover:opacity-90"
-                    style={{ '--delay': `${200 + 5 * 100}ms` } as React.CSSProperties}
-                >
-                     <EllipsisIcon className="h-10 w-10 text-white mb-4 flex-shrink-0"/>
-                     <h3 className="font-bold font-display text-white text-xl">And Many More...</h3>
-                     <p className="text-gray-100 mt-2 flex-grow">Our versatile robots are adaptable to countless industries. Contact us to find your custom solution.</p>
-                </div>
-            </div>
-        </Section>
+        <section id="solutions" className="bg-trust-navy">
+            <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                className="w-full"
+                a11y={{
+                    prevSlideMessage: 'Previous slide',
+                    nextSlideMessage: 'Next slide',
+                }}
+            >
+                {slidesData.map((slide, index) => (
+                    <SwiperSlide key={index}>
+                        <a className="block w-full h-full cursor-pointer" href={slide.link} target="_blank" rel="noopener noreferrer" aria-label={`Learn more about our ${slide.alt}`}>
+                            <picture>
+                                <source srcSet={slide.desktopImg} media="(min-width: 768px)" />
+                                <source srcSet={slide.mobileImg} media="(max-width: 767px)" />
+                                <img className="w-full object-cover" src={slide.mobileImg} alt={slide.alt} />
+                            </picture>
+                        </a>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </section>
     );
 };
 
