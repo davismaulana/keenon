@@ -8,7 +8,7 @@ import Products from './components/Products';
 import ProductDetail from './components/ProductDetail';
 import Solutions from './components/Services'; // Repurposed Services.tsx as Solutions
 import Partners from './components/Partners';
-import Testimonials from './components/News'; // Repurposed News.tsx as Testimonials
+import CustomerStories from './components/News'; // Repurposed News.tsx as CustomerStories
 import NewsAndInsights from './components/NewsAndInsights';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -57,7 +57,7 @@ const AppCore: React.FC = () => {
             <div id="products"><Products /></div>
             <div id="solutions"><Solutions /></div>
             <Partners />
-            <Testimonials />
+            <CustomerStories />
             <NewsAndInsights />
         </>
     );
