@@ -8,7 +8,6 @@ import Products from './components/Products';
 import ProductDetail from './components/ProductDetail';
 import Solutions from './components/Services'; // Repurposed Services.tsx as Solutions
 import Partners from './components/Partners';
-import ValueProps from './components/About'; // Repurposed About.tsx as ValueProps
 import Testimonials from './components/News'; // Repurposed News.tsx as Testimonials
 import NewsAndInsights from './components/NewsAndInsights';
 import Contact from './components/Contact';
@@ -57,7 +56,6 @@ const AppCore: React.FC = () => {
             <div id="home"><Hero scrollToProducts={() => scrollToSection('products')} /></div>
             <div id="products"><Products /></div>
             <div id="solutions"><Solutions /></div>
-            <div id="about"><ValueProps /></div>
             <Partners />
             <Testimonials />
             <NewsAndInsights />

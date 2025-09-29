@@ -19,7 +19,6 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
         { key: 'home', id: 'home' },
         { key: 'products', id: 'products' },
         { key: 'solutions', id: 'solutions' },
-        { key: 'about', id: 'about' },
         { key: 'contact', id: 'contact' },
     ];
 

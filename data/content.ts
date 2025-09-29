@@ -1,4 +1,5 @@
 
+
 export interface Product {
     id: string;
     name: string;
@@ -27,12 +28,6 @@ export interface IndustrySolution {
     recommended_products: string[];
 }
 
-export interface ValueProposition {
-    icon: string;
-    title: string;
-    description: string;
-}
-
 export interface Testimonial {
     quote: string;
     name: string;
@@ -48,6 +43,13 @@ export interface NewsArticle {
     category: string;
     image?: string;
     link: string;
+}
+
+// FIX: Added ValuePropositionBenefit interface to provide a type for value propositions.
+export interface ValuePropositionBenefit {
+    icon: string;
+    title: string;
+    description: string;
 }
 
 export interface Content {
@@ -75,13 +77,14 @@ export interface Content {
         section_subtitle: string;
         industries: IndustrySolution[];
     };
-    value_propositions: {
-        section_title: string;
-        benefits: ValueProposition[];
-    };
     testimonials: {
         section_title: string;
         reviews: Testimonial[];
+    };
+    // FIX: Added `value_propositions` to the Content interface to fix type errors.
+    value_propositions: {
+        section_title: string;
+        benefits: ValuePropositionBenefit[];
     };
     news_and_insights: {
         section_title: string;
@@ -128,7 +131,6 @@ export const content: Content = {
         home: 'Home',
         products: 'Products',
         solutions: 'Solutions',
-        about: 'About Us',
         contact: 'Contact',
         back: 'Back to Products'
     },
@@ -424,15 +426,6 @@ export const content: Content = {
             { name: "Corporate Offices", icon: "OfficeIcon", description: "Professional service and maintenance automation", recommended_products: ["FlashBot", "CC1", "PuduBot 2"] }
         ]
     },
-    value_propositions: {
-        section_title: "Why Choose Xinyi Trading Group",
-        benefits: [
-            { icon: "ProductivityIcon", title: "Boost Productivity", description: "Increase operational efficiency by up to 5X with AI-powered automation that works 24/7 without breaks." },
-            { icon: "CustomerExperienceIcon", title: "Wow Your Customers", description: "Create unforgettable experiences with expressive AI interactions and seamless service delivery." },
-            { icon: "CostEfficiencyIcon", title: "Reduce Operating Costs", description: "Lower labor costs and minimize human error while maintaining consistent service quality." },
-            { icon: "ScalabilityIcon", title: "Scalable Solutions", description: "From single units to fleet management, our robots grow with your business needs." }
-        ]
-    },
     testimonials: {
         section_title: "Testimonials",
         reviews: [
@@ -491,6 +484,32 @@ export const content: Content = {
                 title: "Manager of Dim Dou Dok",
                 quote: "Using PuduBot has been a fantastic experience. It enhances safety and efficiency, allowing us to save on labor while operating at a faster pace. Guests, especially children, are fascinated by it and find it very eye-catching. We've also seen a significant increase in customer numbers and foot traffic since its introduction.",
                 image: "https://cdn.pudutech.com/card8_2e1198e782.png"
+            }
+        ]
+    },
+    // FIX: Added `value_propositions` object to provide data for About.tsx and Quality.tsx components.
+    value_propositions: {
+        section_title: "Key Advantages of Robotic Automation",
+        benefits: [
+            {
+                icon: "ProductivityIcon",
+                title: "Boost Operational Productivity",
+                description: "Automate repetitive tasks to free up your staff, allowing them to focus on high-value, customer-facing activities that drive growth."
+            },
+            {
+                icon: "CustomerExperienceIcon",
+                title: "Elevate Customer Experience",
+                description: "Deliver consistent, efficient, and novel service that delights customers, builds brand loyalty, and creates memorable interactions."
+            },
+            {
+                icon: "CostEfficiencyIcon",
+                title: "Achieve Greater Cost Efficiency",
+                description: "Reduce labor costs, minimize human error, and optimize operational workflows for a stronger, more sustainable bottom line."
+            },
+            {
+                icon: "ScalabilityIcon",
+                title: "Enable Seamless Scalability",
+                description: "Easily deploy and manage a fleet of robots to meet growing demand without the complexities and costs of traditional hiring."
             }
         ]
     },
