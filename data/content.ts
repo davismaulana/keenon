@@ -147,357 +147,50 @@ export const content: Content = {
         section_subtitle: "Discover the perfect robot for your business needs",
         products: [
             {
-                id: "bellabot",
-                name: "BellaBot",
-                category: "Delivery Robot",
-                headline: "The Robot Everyone Loves, with Performance Everyone Needs",
-                description: "BellaBot isn't just a delivery robot — it's a brand ambassador on wheels. With expressive interactions, smooth navigation, and precise delivery, BellaBot delights guests while streamlining operations.",
-                key_features: [
-                    "Expressive AI face for friendly customer interaction",
-                    "Multi-tray design for high-volume delivery",
-                    "Centimeter-level navigation & obstacle avoidance",
-                    "Supports both Visual SLAM and Laser SLAM"
-                ],
-                applications: ["Restaurants", "Hotels", "Corporate Spaces"],
-                cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_product_bellabot_f807eb57b5.png",
-                detailTagline: "The delivery robot that brings personality and performance to your service floor.",
-                heroImage: "https://cdn.pudutech.com/nav_product_bellabot_f807eb57b5.png",
-                keySpecs: [
-                    { label: "Trays", value: "4" },
-                    { label: "Load Capacity", value: "40kg" },
-                    { label: "Runtime", value: "13h" },
-                    { label: "Charging Time", value: "4.5h" }
-                ],
-                featureSections: [
-                    {
-                        title: "Expressive AI Interaction",
-                        description: "BellaBot features a range of cute, expressive animations on its screen-based face, creating a memorable and friendly experience for customers. It responds to touch and can engage in simple, charming interactions.",
-                        image: "https://cdn.pudutech.com/nav_product_bellabot_f807eb57b5.png"
-                    },
-                    {
-                        title: "3D Omnidirectional Obstacle Avoidance",
-                        description: "Equipped with dual SLAM solutions and advanced 3D sensors, BellaBot navigates complex environments with ease. It can detect and avoid obstacles with a response time of just 0.5 seconds, ensuring safe and reliable operation.",
-                        image: "https://cdn.pudutech.com/nav_product_bellabot_f807eb57b5.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "565 x 537 x 1290 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Speed", value: "1.2m/s" }, { name: "Load Capacity", value: "10kg/tray" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "13h" }, { name: "Charging", value: "Auto/Manual" }] },
-                ],
-                videoUrl: "https://www.youtube.com/watch?v=MMUkyfJ9Yhc",
-                videoDescription: "See how BellaBot charms customers and streamlines service with its friendly AI face and efficient delivery capabilities. A true restaurant superstar.",
-                brochureUrl: "https://drive.google.com/uc?export=download&id=16ep3h2yGJ6tg-9q6LwbIlIyL2xWVhlYc"
-            },
-            {
-                id: "bellabot_pro",
-                name: "BellaBot Pro",
-                category: "Premium Delivery & Marketing",
-                headline: "Deliveries That Sell Themselves",
-                description: "BellaBot Pro merges flawless delivery with built-in marketing screens. It greets guests, explains products, and promotes offers while working in high-traffic environments.",
-                key_features: [
-                  "Dual LCD screens for ads & interaction",
-                  "Stable chassis for smooth delivery",
-                  "AI voice interaction for personalized engagement",
-                  "Superior navigation in complex layouts"
-                ],
-                applications: ["Premium Hotels", "High-End Restaurants", "Retail Stores"],
-                cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_product_bella_pro_816bfa936e.png",
-                detailTagline: "The ultimate fusion of premium delivery service and interactive marketing.",
-                heroImage: "https://thumbs2.imgbox.com/33/45/T3GdXlHA_t.png",
-                keySpecs: [
-                    { label: "Screens", value: "2x HD" },
-                    { label: "Load Capacity", value: "40kg" },
-                    { label: "AI Voice", value: "Enabled" },
-                    { label: "Runtime", value: "11h" }
-                ],
-                featureSections: [
-                    {
-                        title: "Dual Screens for Dynamic Marketing",
-                        description: "BellaBot Pro is equipped with two high-definition screens: a main interactive face and a top-mounted screen for dynamic advertising. This allows for simultaneous customer engagement and brand promotion.",
-                        image: "https://cdn.pudutech.com/nav_product_bella_pro_816bfa936e.png"
-                    },
-                    {
-                        title: "Advanced AI Voice and Interaction",
-                        description: "Featuring an advanced AI voice module with 360° sound localization, BellaBot Pro can engage in natural, intelligent conversations. It understands context and provides a highly personalized service experience.",
-                        image: "https://cdn.pudutech.com/nav_product_bella_pro_816bfa936e.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "570 x 550 x 1290 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Speed", value: "1.2m/s" }, { name: "Load Capacity", value: "10kg/tray" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "11h" }, { name: "Charging", value: "Auto/Manual" }] }
-                ],
-                videoUrl: "https://www.youtube.com/watch?v=BiJtudsRqkw",
-                videoDescription: "Meet the ultimate service professional. BellaBot Pro combines premium delivery with dynamic advertising on its dual screens, elevating brand presence with every order.",
-                brochureUrl: "/brochures/bellabot pro_compressed.pdf"
-            },
-            {
-                id: "mt1",
-                name: "MT1",
-                category: "Industrial Sweeping",
-                headline: "Big Spaces. Bigger Cleaning Power",
-                description: "Designed for expansive venues, MT1's AI-powered sweeping handles everything from fine dust to large debris with real-time trash recognition and targeted spot cleaning.",
-                key_features: [
-                  "Cleans up to 64,000+ ft²/h in spot-cleaning mode",
-                  "AI trash recognition & continuous learning",
-                  "Active dust control to prevent secondary pollution",
-                  "Long battery life for uninterrupted operation"
-                ],
-                applications: ["Warehouses", "Airports", "Shopping Malls"],
-                cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_product_mt_9d40c8e237.webp",
-                detailTagline: "The AI-powered robotic sweeper for ultimate efficiency in large-scale commercial spaces.",
-                heroImage: "https://thumbs2.imgbox.com/3b/e3/1E84t17Y_t.png",
-                 keySpecs: [
-                    { label: "Cleaning Efficiency", value: "7000 m²/h" },
-                    { label: "AI Recognition", value: "Trash Detect" },
-                    { label: "Dust Bin", value: "35L" },
-                    { label: "Runtime", value: "Up to 10h" }
-                ],
-                featureSections: [
-                    {
-                        title: "AI-Powered Debris Recognition",
-                        description: "MT1 utilizes AI vision to recognize various types of debris, from bottles and paper to dust and leaves. It continuously learns and optimizes its cleaning strategies for maximum effectiveness.",
-                        image: "https://cdn.pudutech.com/nav_product_mt_9d40c8e237.webp"
-                    },
-                    {
-                        title: "Built for Industrial Scale",
-                        description: "With a large 35L dustbin, wide 1000mm sweeping path, and long-lasting battery, the MT1 is engineered to clean vast areas like factory floors, warehouses, and parking lots with minimal human oversight.",
-                        image: "https://cdn.pudutech.com/nav_product_mt_9d40c8e237.webp"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "840 x 600 x 490 mm" }, { name: "Weight", value: "65kg" }] },
-                    { category: "Performance", specs: [{ name: "Sweeping Width", value: "1000mm" }, { name: "Productivity", value: "5000-7000 m²/h" }] },
-                    { category: "Capacity", specs: [{ name: "Dust Bin", value: "35L" }, { name: "Battery Life", value: "Up to 10h" }] }
-                ],
-                videoUrl: "https://www.youtube.com/watch?v=RczLmqYRAXc",
-                videoDescription: "Experience the industrial might of the MT1 as it intelligently sweeps large-scale venues, using AI to recognize and tackle debris for a spotless finish every time.",
-                brochureUrl: "https://drive.google.com/uc?export=download&id=1dNUAQ9LPeNhv7w5rety9hTpRiv0KRiOG"
-            },
-            {
-                id: "cc1",
-                name: "CC1",
+                id: "c39",
+                name: "C39",
                 category: "Cleaning Robot",
-                headline: "One Robot. Four Cleaning Functions. Zero Hassle",
-                description: "The CC1 cleans, sweeps, vacuums, and mops — all without plumbing modifications. Designed for offices, hotels, and retail spaces, it automates floor care with smart mapping and hands-free operation.",
+                headline: "Smaller and Smarter, Your Cleaning Expert",
+                description: "The compact size of the C39 allows it to easily navigate narrow spaces, while its powerful 4-in-1 cleaning functions and intelligent perception capabilities ensure efficient and thorough cleaning results in various commercial settings.",
                 key_features: [
-                    "Scrubbing, sweeping, vacuuming & mopping",
-                    "Mobile water station — no building mods needed",
-                    "Intelligent route planning",
-                    "Measurable cleaning reports"
+                    "4-in-1 cleaning: sweeping, scrubbing, vacuuming, and mopping",
+                    "Compact 50cm body for navigating narrow spaces",
+                    "Intelligent perception and upgraded obstacle avoidance",
+                    "Fully automated: auto-recharge, water refill & drainage"
                 ],
-                applications: ["Offices", "Hotels", "Retail Spaces"],
+                applications: ["Restaurants", "Hotels", "Offices", "Shopping Malls", "Supermarkets"],
                 cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_product_cc1_8baf7f1424.png",
-                detailTagline: "The all-in-one autonomous solution for commercial floor cleaning.",
-                heroImage: "https://cdn.pudutech.com/nav_product_cc1_8baf7f1424.png",
+                image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png",
+                detailTagline: "The nimble and compact 4-in-1 cleaning robot for complex commercial environments.",
+                heroImage: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png",
                 keySpecs: [
-                    { label: "Cleaning Efficiency", value: "12,000 m²/day" },
+                    { label: "Cleaning Efficiency", value: "Up to 700 m²/h" },
                     { label: "Functions", value: "4-in-1" },
-                    { label: "Water Tank", value: "15L Clean" },
-                    { label: "Runtime", value: "6-8h" }
+                    { label: "Body Width", value: "50cm" },
+                    { label: "Runtime", value: "4-6h" }
                 ],
                 featureSections: [
                     {
-                        title: "Truly Automated Operations",
-                        description: "CC1 offers a hands-free experience with automatic water changes, refilling, and self-cleaning capabilities. Its mobile workstation allows deployment anywhere without costly building modifications.",
-                        image: "https://cdn.pudutech.com/nav_product_cc1_8baf7f1424.png"
+                        title: "Nimble and Compact, Access to Narrow Spaces",
+                        description: "With a body width of only 50cm, C39 effortlessly navigates through narrow aisles and spaces under tables and chairs. It moves freely in complex environments, ensuring comprehensive cleaning without dead corners.",
+                        image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png"
                     },
                     {
-                        title: "Smart and Safe Navigation",
-                        description: "Leveraging 3D obstacle avoidance and multi-sensor fusion, CC1 intelligently navigates its environment. It generates cleaning reports, providing data-driven insights to optimize your cleaning schedule.",
-                        image: "https://cdn.pudutech.com/nav_product_cc1_8baf7f1424.png"
+                        title: "4-in-1 Versatility for Comprehensive Cleaning",
+                        description: "C39 integrates sweeping, scrubbing, vacuuming, and mopping. Its dual-roller brush design effectively handles various types of debris, from fine dust to larger particles, ensuring a thorough clean in a single pass.",
+                        image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png"
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "629 x 552 x 695 mm" }, { name: "Weight", value: "75kg" }] },
-                    { category: "Performance", specs: [{ name: "Cleaning Width", value: "500mm" }, { name: "Max Speed", value: "1.2m/s" }] },
-                    { category: "Tanks", specs: [{ name: "Clean Water", value: "15L" }, { name: "Dirty Water", value: "15L" }] }
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "500 x 480 x 605 mm" }, { name: "Weight", value: "45kg" }] },
+                    { category: "Performance", specs: [{ name: "Cleaning Efficiency", value: "500-700 m²/h" }, { name: "Min. Passage Width", value: "55cm" }] },
+                    { category: "Tanks", specs: [{ name: "Clean Water", value: "7L" }, { name: "Dirty Water", value: "6L" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "4-6h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoUrl: "https://www.youtube.com/watch?v=A3_IVfmUMGA",
-                videoDescription: "Witness the CC1's 4-in-1 cleaning power. From sweeping to mopping, this all-in-one unit provides a truly hands-free, automated cleaning solution for any commercial space.",
-                brochureUrl: "https://drive.google.com/uc?export=download&id=1wWsYbV-z_dXBT8AuRyFToxdbDJKt7UkT"
-            },
-            {
-                id: "kettybot_pro",
-                name: "KettyBot Pro",
-                category: "Customer Engagement",
-                headline: "The AI Host That Greets, Guides, and Sells",
-                description: "KettyBot attracts customers with an engaging personality, crisp voice interaction, and a vibrant 18.5\" display for ads. It guides guests, promotes products, and delivers while making experiences unforgettable.",
-                key_features: [
-                    "Active customer tracking & engagement",
-                    "Customizable ad playlists for targeted marketing",
-                    "Multiple delivery & attraction modes",
-                    "360° sound localization with noise suppression"
-                ],
-                applications: ["Retail", "Restaurants", "Shopping Centers"],
-                cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_product_kettybotpro_64d5202d1a.png",
-                detailTagline: "More than a robot—it's your marketing, hosting, and delivery specialist in one.",
-                heroImage: "https://thumbs2.imgbox.com/15/55/ep2jAK3p_t.jpg",
-                keySpecs: [
-                    { label: "Display Size", value: "18.5\" HD" },
-                    { label: "AI Voice", value: "Enabled" },
-                    { label: "Runtime", value: "8-12h" },
-                    { label: "Modes", value: "3+" }
-                ],
-                featureSections: [
-                    {
-                        title: "A Walking Billboard",
-                        description: "The centered, 18.5-inch HD screen is perfect for displaying advertisements and promotions. The PUDU Ads platform allows for easy management of marketing content, turning KettyBot Pro into a powerful sales tool.",
-                        image: "https://cdn.pudutech.com/nav_product_kettybotpro_64d5202d1a.png"
-                    },
-                    {
-                        title: "Intelligent Greetings & Guidance",
-                        description: "KettyBot Pro can actively detect and greet passing customers, engaging them with custom voice lines and on-screen content. In guide mode, it can lead customers to specific seats or store sections, enhancing service quality.",
-                        image: "https://cdn.pudutech.com/nav_product_kettybotpro_64d5202d1a.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "435 x 450 x 1120 mm" }, { name: "Weight", value: "38kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Speed", value: "1.2m/s" }, { name: "Load Capacity", value: "10kg" }] },
-                    { category: "Display", specs: [{ name: "Screen Size", value: "18.5 inch" }, { name: "Resolution", value: "1080p" }] }
-                ],
-                videoUrl: "https://www.youtube.com/watch?v=nbZEkz0keak&t=8s",
-                videoDescription: "Discover how KettyBot Pro does more than just deliver—it greets, guides, and engages customers with its vibrant HD screen, turning every interaction into a marketing opportunity.",
-                brochureUrl: "https://drive.google.com/uc?export=download&id=1EDtNtxBFaq-JMHVcfarYM2AWCvoWiWNg"
-            },
-            {
-                id: "pudubot2",
-                name: "PuduBot 2",
-                category: "Universal Delivery",
-                headline: "Your All-Purpose Autonomous Courier",
-                description: "From restaurants to hospitals, PuduBot 2 handles deliveries with precision and care. Fully enclosed trays, multi-robot collaboration, and automatic charging create a contact-free service ecosystem.",
-                key_features: [
-                  "12–15 hours of runtime",
-                  "Marker-less deployment for quick setup",
-                  "PUDU OS for seamless integration",
-                  "Supports multi-modal delivery scenarios"
-                ],
-                applications: ["Restaurants", "Hospitals", "Offices"],
-                cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_product_pudubot2_478d35cdae.png",
-                detailTagline: "The next generation of universal delivery, engineered for enhanced stability and intelligence.",
-                heroImage: "https://thumbs2.imgbox.com/5f/06/AKuoWz18_t.jpg",
-                keySpecs: [
-                    { label: "Load Capacity", value: "40kg" },
-                    { label: "Suspension", value: "Floating" },
-                    { label: "Navigation", value: "PUDU VSLAM+" },
-                    { label: "Collaboration", value: "Multi-Robot" }
-                ],
-                featureSections: [
-                    {
-                        title: "Upgraded Chassis for Superior Stability",
-                        description: "PuduBot 2 features an all-new floating suspension system that actively absorbs shocks and vibrations. This ensures that even liquids and delicate items are transported smoothly, minimizing spills and accidents.",
-                        image: "https://cdn.pudutech.com/nav_product_pudubot2_478d35cdae.png"
-                    },
-                    {
-                        title: "PUDU VSLAM+ for Unmatched Performance",
-                        description: "The new PUDU VSLAM+ technology allows for marker-less deployment in even highly complex environments, reducing setup time by 75%. It offers robust navigation that is less susceptible to environmental changes.",
-                        image: "https://cdn.pudutech.com/nav_product_pudubot2_478d35cdae.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "580 x 535 x 1290 mm" }, { name: "Weight", value: "39kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Speed", value: "1.2m/s" }, { name: "Load Capacity", value: "40kg Max" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "12 - 15h" }, { name: "Charging", value: "Wire / Automatic" }] }
-                ],
-                videoUrl: "https://www.youtube.com/watch?v=45vUOogXXQc",
-                videoDescription: "Observe the enhanced stability and intelligence of PuduBot 2. Its advanced suspension and marker-less navigation make it the reliable choice for any delivery task.",
-                brochureUrl: "https://drive.google.com/uc?export=download&id=1XQbyfrQogCaQxEkHI8YvLiLXaEafh6rx"
-            },
-            {
-                id: "t300",
-                name: "T300",
-                category: "Industrial Transport",
-                headline: "300kg Payload. 60cm Path Clearance. Endless Applications",
-                description: "T300 delivers where others can't. Built for manufacturing, logistics, and large facilities, it hauls heavy loads while navigating tight spaces with multiple configuration options.",
-                key_features: [
-                  "24/7 operation with auto recharging & battery swap",
-                  "VSLAM+ rapid deployment without layout changes",
-                  "IoT-enabled for elevator & e-gate control",
-                  "Exceptional mobility across thresholds & grooves"
-                ],
-                applications: ["Manufacturing", "Logistics", "Warehouses"],
-                cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_product_0dd9c73f5a.png",
-                detailTagline: "The heavy-duty AMR that navigates narrow passages with agility and power.",
-                heroImage: "https://cdn.pudutech.com/nav_product_0dd9c73f5a.png",
-                keySpecs: [
-                    { label: "Payload", value: "300kg" },
-                    { label: "Passage Width", value: "60cm Min" },
-                    { label: "Mobility", value: "Crosses 3.5cm" },
-                    { label: "Operation", value: "24/7" }
-                ],
-                featureSections: [
-                    {
-                        title: "Unmatched Maneuverability",
-                        description: "The T300 is designed to navigate the tight corridors of industrial environments. It can pass through spaces as narrow as 60cm and effortlessly cross thresholds up to 2cm and grooves up to 3.5cm wide.",
-                        image: "https://cdn.pudutech.com/nav_product_0dd9c73f5a.png"
-                    },
-                    {
-                        title: "Flexible and Powerful",
-                        description: "With a 300kg payload capacity and multiple attachment options, the T300 is highly adaptable. It supports both automatic battery swapping and charging, enabling true 24/7 autonomous operation in demanding settings.",
-                        image: "https://cdn.pudutech.com/nav_product_0dd9c73f5a.png"
-                    }
-                ],
-                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "835 x 500 x 1350 mm" }, { name: "Weight", value: "65kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Speed", value: "1.2m/s" }, { name: "Payload", value: "300kg" }] },
-                    { category: "Mobility", specs: [{ name: "Min Passage", value: "600mm" }, { name: "Threshold Crossing", value: "20mm" }] }
-                ],
-                videoUrl: "https://www.youtube.com/watch?v=UpEVbS84ak8",
-                videoDescription: "See the powerful T300 in motion, effortlessly hauling heavy payloads through narrow industrial passages, proving that strength and agility can coexist.",
-                brochureUrl: "https://drive.google.com/uc?export=download&id=1sQuKVxYdQfQMfUIbh-e-ZI-9czsNmjqO"
-            },
-            {
-                id: "flashbot",
-                name: "FlashBot",
-                category: "Multi-Floor Delivery",
-                headline: "From Lobby to Level 30 — Seamless Multi-Floor Delivery",
-                description: "FlashBot is built for vertical operations. Integrated with elevators, turnstiles, and smart access controls, it delivers securely across multiple floors with modular compartments and verification systems.",
-                key_features: [
-                    "Cloud or hardware elevator control",
-                    "Secure compartment access verification",
-                    "Supports semi-outdoor deliveries",
-                    "Fast multi-floor map replication"
-                ],
-                applications: ["Office Buildings", "Hospitals", "Hotels"],
-                cta: "Learn More",
-                image: "https://cdn.pudutech.com/nav_flashbot_new_e3c621b5fd.png",
-                detailTagline: "The intelligent courier for secure, automated delivery across multiple floors.",
-                heroImage: "https://thumbs2.imgbox.com/13/a2/JvVBafVc_t.jpg",
-                keySpecs: [
-                    { label: "Payload", value: "30kg" },
-                    { label: "Compartments", value: "2-4" },
-                    { label: "IoT Integration", value: "Elevator/Gate" },
-                    { label: "Runtime", value: "9h" }
-                ],
-                featureSections: [
-                    {
-                        title: "Take The Elevator, Automatically",
-                        description: "FlashBot seamlessly integrates with building elevators through a cloud-based or hardware module connection. It can autonomously call and ride elevators to deliver items to any designated floor without human intervention.",
-                        image: "https://cdn.pudutech.com/nav_flashbot_new_e3c621b5fd.png"
-                    },
-                    {
-                        title: "Secure & Modular Compartments",
-                        description: "Featuring adjustable and secure compartments, FlashBot ensures that deliveries are safe and confidential. Access can be granted via passwords or facial recognition, making it ideal for confidential document or package delivery.",
-                        image: "https://cdn.pudutech.com/nav_flashbot_new_e3c621b5fd.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "538 x 534 x 1052 mm" }, { name: "Weight", value: "60kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Speed", value: "1.5m/s" }, { name: "Payload", value: "10kg/compartment" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "9h" }, { name: "Charging", value: "Auto/Manual" }] }
-                ],
-                videoUrl: "https://www.youtube.com/watch?v=ZhNCUcAWEYU",
-                videoDescription: "Watch FlashBot navigate multi-floor buildings with ease, seamlessly integrating with elevators to provide secure, automated delivery from the lobby to any floor.",
-                brochureUrl: "https://drive.google.com/uc?export=download&id=1t_tS6huJmXzUO-fOxGH0SNNejxnjjkL7"
-            },
+                videoUrl: "https://www.youtube.com/watch?v=S2gO4f-9XhA",
+                videoDescription: "Watch the C39, a compact and intelligent cleaning robot, effortlessly navigate and clean various commercial spaces with its 4-in-1 functionality.",
+                brochureUrl: "https://www.keenon.com/en/product/C30/index.html"
+            }
         ]
     },
     solutions_by_industry: {
