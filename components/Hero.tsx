@@ -79,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
                                 <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                             </button>
                             <a 
-                                href="https://www.youtube.com/watch?v=XH976fSwcuk"
+                                href="https://youtu.be/xHWVDZPQ_-E?si=CGlIVO6IMPBlTL8t"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-transparent text-gray-200 font-bold rounded-lg border-2 border-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300"
