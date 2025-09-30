@@ -57,9 +57,13 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
                             className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 pop-in"
                             style={{ '--delay': '200ms' } as React.CSSProperties}
                         >
-                            <img src="https://iili.io/FQiLFzQ.png" alt="Xinyi Trading Group Logo" className="h-16 md:h-20 object-contain" />
+                            <a href="https://www.xinyitradinggroup.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://iili.io/FQiLFzQ.png" alt="Xinyi Trading Group Logo" className="h-16 md:h-20 object-contain" />
+                            </a>
                             <span className="text-4xl md:text-5xl font-light text-gray-400 mx-2">+</span>
-                            <img src="https://images2.imgbox.com/1a/70/Hoh91byU_o.png" alt="KEENON Robotics Logo" className="h-12 md:h-16 object-contain" />
+                            <a href="https://www.keenon.com/en/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://images2.imgbox.com/1a/70/Hoh91byU_o.png" alt="KEENON Robotics Logo" className="h-12 md:h-16 object-contain" />
+                            </a>
                         </div>
                         <p 
                             className="mt-6 text-lg text-medium-gray max-w-2xl mx-auto lg:mx-0 pop-in"
