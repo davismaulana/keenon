@@ -23,7 +23,7 @@ export const ContentProvider: React.FC<{ children: ReactNode }> = ({ children })
 export const useContent = (): ContentContextType => {
     const context = useContext(ContentContext);
     if (context === undefined) {
-        throw new Error('useContent must be used within a ContentProvider');
+        throw new Error('useContent must be used within a ContentProvider!');
     }
     return context;
 };
