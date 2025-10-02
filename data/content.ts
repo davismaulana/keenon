@@ -719,19 +719,23 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "3-in-1 Dry Cleaning",
-                        description: "Sweeping, vacuuming, and dust mopping covers 610mm wide."
+                        description: "Sweeping, vacuuming, and dust mopping covers 610mm wide.",
+                        image: "https://images2.imgbox.com/fb/fc/5ncT5ANr_o.png"
                     },
                     {
                         title: "100% Charged, 2500㎡ cleaned",
-                        description: "With one complete automatic charging, the C30 can clean up to 2500㎡, ideal for extended cleaning sessions."
+                        description: "With one complete automatic charging, the C30 can clean up to 2500㎡, ideal for extended cleaning sessions.",
+                        image: "https://images2.imgbox.com/d4/07/mQYLiCzV_o.png"
                     },
                     {
                         title: "Dual Operation Modes",
-                        description: "Switch between manual map building and automated cleaning with the innovative extendable handle."
+                        description: "Switch between manual map building and automated cleaning with the innovative extendable handle.",
+                        image: "https://images2.imgbox.com/d6/38/oitwWHSc_o.png"
                     },
                     {
                         title: "Remote Assign and Track",
-                        description: "Effortlessly assign and track cleaning tasks, and gain insights into your C30 with the KEENON App."
+                        description: "Effortlessly assign and track cleaning tasks, and gain insights into your C30 with the KEENON App.",
+                        image: "https://images2.imgbox.com/63/08/gDro4iAf_o.png"
                     }
                 ],
                 techSpecs: [
