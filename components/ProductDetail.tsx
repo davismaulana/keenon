@@ -191,8 +191,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                         <div className="reveal">
                             <div className="bg-light-gray rounded-2xl shadow-xl p-4 md:p-6">
                                 <img
-                                    src={product.featureSections[0].image}
-                                    alt={product.featureSections[0].title}
+                                    src={product.heroImage || product.image}
+                                    alt={product.name}
                                     className="w-full h-auto object-cover rounded-xl"
                                 />
                             </div>
