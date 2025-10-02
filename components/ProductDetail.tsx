@@ -56,49 +56,48 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <header 
                 ref={heroRef}
                 data-visible={isHeroVisible}
-                className="relative bg-light-gray"
+                className="relative min-h-screen w-full flex items-center justify-center text-center text-white overflow-hidden"
             >
-                <div className="absolute inset-0 bg-cover bg-center opacity-5"></div>
-                <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-                    <div className="min-h-screen grid lg:grid-cols-2 items-center gap-12 relative z-10 pt-24 pb-12 lg:pt-20 lg:pb-12">
-                        <div className="text-center lg:text-left">
-                            <span 
-                                className="text-corporate-gold font-bold uppercase tracking-wider pop-in"
-                                style={{ '--delay': '100ms' } as React.CSSProperties}
+                <div 
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${product.heroImage || product.image})` }}
+                >
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+
+                <div className="relative z-10 container mx-auto px-6 lg:px-8 max-w-7xl pt-24 pb-12">
+                    <div className="max-w-3xl mx-auto">
+                        <span 
+                            className="text-corporate-gold font-bold uppercase tracking-wider pop-in"
+                            style={{ '--delay': '100ms' } as React.CSSProperties}
+                        >
+                            {product.category}
+                        </span>
+                        <h1 
+                            className="text-4xl md:text-6xl font-bold font-display text-gray-100 mt-2 leading-tight md:leading-tight pop-in"
+                            style={{ '--delay': '200ms' } as React.CSSProperties}
+                        >
+                            {product.name}
+                        </h1>
+                        {product.detailTagline && (
+                            <p 
+                                className="mt-6 text-lg text-medium-gray max-w-xl mx-auto pop-in"
+                                style={{ '--delay': '350ms' } as React.CSSProperties}
                             >
-                                {product.category}
-                            </span>
-                            <h1 
-                                className="text-4xl md:text-6xl font-bold font-display text-gray-100 mt-2 leading-tight md:leading-tight pop-in"
-                                style={{ '--delay': '200ms' } as React.CSSProperties}
+                                {product.detailTagline}
+                            </p>
+                        )}
+                        <div 
+                            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 pop-in"
+                            style={{ '--delay': '500ms' } as React.CSSProperties}
+                        >
+                            <button 
+                                onClick={scrollToContact}
+                                className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-corporate-gold text-white font-bold rounded-lg shadow-lg hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                             >
-                                {product.name}
-                            </h1>
-                            {product.detailTagline && (
-                                <p 
-                                    className="mt-6 text-lg text-medium-gray max-w-xl mx-auto lg:mx-0 pop-in"
-                                    style={{ '--delay': '350ms' } as React.CSSProperties}
-                                >
-                                    {product.detailTagline}
-                                </p>
-                            )}
-                            <div 
-                                className="mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pop-in"
-                                style={{ '--delay': '500ms' } as React.CSSProperties}
-                            >
-                                <button 
-                                    onClick={scrollToContact}
-                                    className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-corporate-gold text-white font-bold rounded-lg shadow-lg hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                                >
-                                    Get a Quote
-                                    <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                                </button>
-                            </div>
-                        </div>
-                        <div className="flex justify-center items-center h-full pop-in" style={{ '--delay': '400ms' } as React.CSSProperties}>
-                           <div className="relative w-full max-w-lg aspect-square">
-                                <img src={product.heroImage || product.image} alt={product.name} className="w-full h-full object-contain drop-shadow-2xl rounded-2xl" />
-                           </div>
+                                Get a Quote
+                                <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 
+
 export interface CoreTechFeature {
     title: string;
     description: string;
@@ -171,7 +172,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
                 detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
-                heroImage: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
+                heroImage: "https://static.keenon.com/uploads/2025/01/07/358ebe3c25fc43d69f1af28d94207c7c.webp",
                 featureSections: [
                     {
                         title: "Safe. Hygienic.",
@@ -248,7 +249,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
                 detailTagline: "The nimble and versatile delivery expert for complex and crowded environments.",
-                heroImage: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
+                heroImage: "https://static.keenon.com/uploads/2025/01/07/a5250f4cb30446b2912151e2c96f0598.webp",
                 featureSections: [
                     {
                         title: "Compact, for Enhanced Agility",
@@ -325,7 +326,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
                 detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
-                heroImage: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
+                heroImage: "https://static.keenon.com/uploads/2025/01/07/b924622435a94162bcacef7af337553c.webp",
                 featureSections: [
                     {
                         title: "Adjustable Layers",
@@ -410,7 +411,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
                 detailTagline: "The flagship delivery robot with a hygienic tray cover and smart marketing screen.",
-                heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
+                heroImage: "https://static.keenon.com/uploads/2025/03/17/0e55bb5ce2d34973821c534d912ebd96.jpg?x-oss-process=image/format,webp",
                 featureSections: [
                     {
                         title: "Interactive & Engaging, Making Every Moment Fun",
@@ -495,7 +496,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
                 detailTagline: "The high-capacity dish collecting robot that streamlines restaurant cleanup.",
-                heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
+                heroImage: "https://static.keenon.com/uploads/2025/08/27/225f3bdaa69441529a0787643b8f7ebd.jpg?x-oss-process=image/format,webp",
                 featureSections: [
                     {
                         image: "https://static.keenon.com/uploads/2025/08/27/bff71a3e19bc43f6ba5f7ee9055555f1.jpg?x-oss-process=image/format,webp"
@@ -556,7 +557,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
                 detailTagline: "Elevating Guest Experience with Autonomous, Contactless Room Service.",
-                heroImage: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
+                heroImage: "https://static.keenon.com/uploads/2025/01/07/ed59fd54ff2f4a45a53f62519bdaf4aa.webp",
                 featureSections: [
                     {
                         title: "The IoT Elevator Rider",
@@ -616,7 +617,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
                 detailTagline: "The agile 4-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
-                heroImage: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
+                heroImage: "https://static.keenon.com/uploads/2025/05/30/249ddd79696847a39faff2155e7b15b9.jpg?x-oss-process=image/format,webp",
                 featureSections: [
                     {
                         image: "https://static.keenon.com/uploads/2025/05/30/92729e51aaa74750b1d077c75c631a2b.jpg?x-oss-process=image/format,webp"
@@ -683,7 +684,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
                 detailTagline: "The nimble and compact 4-in-1 cleaning robot for complex commercial environments.",
-                heroImage: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
+                heroImage: "https://static.keenon.com/uploads/2025/01/07/9137ed1569104c14ba2821eaf1b11678.jpg?x-oss-process=image/format,webp",
                 featureSections: [
                     {
                         title: "3-in-1 Dry Cleaning",
@@ -748,7 +749,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
                 detailTagline: "The agile 5-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
-                heroImage: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
+                heroImage: "https://static.keenon.com/uploads/2025/03/29/94bd7277215d4acbab6af9106eb7085e.jpg?x-oss-process=image/format,webp",
                 featureSections: [
                     { image: "https://static.keenon.com/uploads/2025/03/29/d587a7566ad74622a9a60b03a18f0feb.jpg?x-oss-process=image/format,webp" },
                     { image: "https://static.keenon.com/uploads/2025/03/29/92beedc365b8445291e2f708b34fa76d.jpg?x-oss-process=image/format,webp" },
@@ -815,7 +816,7 @@ export const content: Content = {
                 cta: "Learn More",
                 image: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
                 detailTagline: "A New Generation of Fully Enclosed Delivery Robot for Secure and Private Transport.",
-                heroImage: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
+                heroImage: "https://static.keenon.com/uploads/2025/01/07/09654c9cf811439c943a6e53a84d5173.jpg?x-oss-process=image/format,webp",
                 featureSections: [
                     {
                         title: "100kg+ Load Capacity",
