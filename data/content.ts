@@ -1,8 +1,7 @@
-
-
 export interface CoreTechFeature {
     title: string;
     description: string;
+    image?: string;
 }
 
 export interface KeenonCoreTechnology {
@@ -176,15 +175,18 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "Safe. Hygienic.",
-                        description: "Step-activated and password-secured automatic doors ensure hygienic, spill-proof dish serving."
+                        description: "Step-activated and password-secured automatic doors ensure hygienic, spill-proof dish serving.",
+                        image: "https://images2.imgbox.com/60/67/3TF9efBO_o.png"
                     },
                     {
                         title: "Efficiency Maximized.",
-                        description: "Unlocking streamlined delivery efficiency with a spacious 180L cabin volume."
+                        description: "Unlocking streamlined delivery efficiency with a spacious 180L cabin volume.",
+                        image: "https://images2.imgbox.com/4d/dd/G4tJhQWd_o.png"
                     },
                     {
                         title: "Tailored Courier Solutions",
-                        description: "Flexible for diverse needs. Adjustable layers accommodate items of varied heights (23cm, 38cm, 69cm)."
+                        description: "Flexible for diverse needs. Adjustable layers accommodate items of varied heights (23cm, 38cm, 69cm).",
+                        image: "https://images2.imgbox.com/02/0c/Q1MVD9Jl_o.png"
                     }
                 ],
                 keenonCoreTechnology: {
@@ -192,15 +194,18 @@ export const content: Content = {
                     features: [
                         {
                             title: "Precise navigation and positioning",
-                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability.",
+                            image: "https://images2.imgbox.com/a0/d7/3DXxs6JL_o.png"
                         },
                         {
                             title: "Synergizing 3D perception with instant response",
-                            description: "Precise environmental perception for swift avoidance."
+                            description: "Precise environmental perception for swift avoidance.",
+                            image: "https://images2.imgbox.com/22/a6/Xo1pHMa1_o.png"
                         },
                         {
                             title: "Patented algorithms and multi-robot dispatching",
-                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution.",
+                            image: "https://images2.imgbox.com/72/92/NOMNRmXW_o.png"
                         }
                     ]
                 },

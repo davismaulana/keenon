@@ -153,12 +153,17 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                 } else {
                     return (
                         <Section className="bg-light-gray">
-                            <div className="max-w-4xl mx-auto space-y-12">
+                            <div className="space-y-16 md:space-y-24">
                                 {product.featureSections.map((feature, index) => (
                                     feature.title && (
-                                        <div key={index} className="reveal text-center" style={{ '--delay': `${index * 150}ms` } as React.CSSProperties}>
-                                            <h3 className="text-3xl font-bold font-display text-corporate-gold">{feature.title}</h3>
-                                            <p className="mt-4 text-lg text-medium-gray max-w-2xl mx-auto leading-relaxed">{feature.description}</p>
+                                        <div key={index} className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center reveal`} style={{ '--delay': `${index * 150}ms` } as React.CSSProperties}>
+                                            <div className={`order-1 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
+                                                {feature.image && <img src={feature.image} alt={feature.title} className="rounded-lg shadow-xl w-full h-auto object-cover" />}
+                                            </div>
+                                            <div className={`order-2 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} text-center md:text-left`}>
+                                                <h3 className="text-3xl font-bold font-display text-corporate-gold">{feature.title}</h3>
+                                                <p className="mt-4 text-lg text-medium-gray max-w-2xl mx-auto md:mx-0 leading-relaxed">{feature.description}</p>
+                                            </div>
                                         </div>
                                     )
                                 ))}
@@ -176,9 +181,16 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                     </div>
                     <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {product.keenonCoreTechnology.features.map((tech, index) => (
-                            <div key={index} className="bg-light-gray p-6 rounded-lg shadow-md reveal" style={{ '--delay': `${100 + index * 100}ms` } as React.CSSProperties}>
-                                <h4 className="text-xl font-bold font-display text-corporate-gold">{tech.title}</h4>
-                                <p className="mt-3 text-medium-gray">{tech.description}</p>
+                            <div key={index} className="bg-light-gray rounded-lg shadow-md reveal overflow-hidden flex flex-col" style={{ '--delay': `${100 + index * 100}ms` } as React.CSSProperties}>
+                                {tech.image && (
+                                    <div className="aspect-video">
+                                        <img src={tech.image} alt={tech.title} className="w-full h-full object-cover" />
+                                    </div>
+                                )}
+                                <div className="p-6 flex-grow flex flex-col">
+                                    <h4 className="text-xl font-bold font-display text-corporate-gold">{tech.title}</h4>
+                                    <p className="mt-3 text-medium-gray flex-grow">{tech.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
