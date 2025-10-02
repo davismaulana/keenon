@@ -801,6 +801,18 @@ export const content: Content = {
                 brochureUrl: "https://www.keenon.com/en/product/C40/index.html"
             },
             {
+                id: "c55",
+                name: "KLEENBOT C55",
+                category: "Cleaning",
+                headline: "Advanced Cleaning Solution for Large Environments",
+                description: "The C55 is an industrial-grade cleaning robot designed for maximum efficiency in large-scale commercial spaces. More details coming soon.",
+                key_features: [],
+                applications: [],
+                cta: "Learn More",
+                image: "https://static.keenon.com/uploads/2025/04/14/051877d47539412287e75afedd94a16f.png?x-oss-process=image/format,webp",
+                heroImage: "https://static.keenon.com/uploads/2025/04/11/546e8f90ea2741a08d76ca366ae2c2eb.jpg?x-oss-process=image/format,webp",
+            },
+            {
                 id: "s100",
                 name: "KEENON S100",
                 category: "Heavy Load",
