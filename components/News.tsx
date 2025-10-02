@@ -80,23 +80,21 @@ const CustomerStories: React.FC = () => {
                     }}
                 >
                     {storiesData.map((story, index) => (
-                        <SwiperSlide key={index} className="relative bg-light-gray">
-                            <a href={story.link} target="_blank" rel="noopener noreferrer" aria-label={`Read more about the ${story.category} story`}>
-                                <div className="absolute inset-0">
-                                    <img className="w-full h-full object-cover" src={story.image} alt={story.alt} />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                                </div>
-                                <div className="relative h-full flex flex-col justify-end text-white p-6 md:p-12">
-                                   <div className="max-w-3xl">
-                                        <span className="text-sm font-bold text-corporate-gold uppercase tracking-wider">{story.category}</span>
-                                        <h3 className="mt-2 text-3xl md:text-4xl font-bold font-display leading-tight">{story.title}</h3>
-                                        <div className="mt-4 text-base text-gray-200 max-w-2xl">
-                                            <p className="font-semibold">{story.location} | {story.client}</p>
-                                            <p className="mt-2 text-sm text-gray-400">Product: <span className="font-medium text-gray-300">{story.product}</span></p>
-                                        </div>
-                                   </div>
-                                </div>
-                            </a>
+                        <SwiperSlide key={index} className="relative bg-light-gray cursor-default">
+                            <div className="absolute inset-0">
+                                <img className="w-full h-full object-cover" src={story.image} alt={story.alt} />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                            </div>
+                            <div className="relative h-full flex flex-col justify-end text-white p-6 md:p-12">
+                               <div className="max-w-3xl">
+                                    <span className="text-sm font-bold text-corporate-gold uppercase tracking-wider">{story.category}</span>
+                                    <h3 className="mt-2 text-3xl md:text-4xl font-bold font-display leading-tight">{story.title}</h3>
+                                    <div className="mt-4 text-base text-gray-200 max-w-2xl">
+                                        <p className="font-semibold">{story.location} | {story.client}</p>
+                                        <p className="mt-2 text-sm text-gray-400">Product: <span className="font-medium text-gray-300">{story.product}</span></p>
+                                    </div>
+                               </div>
+                            </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
