@@ -258,15 +258,18 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "Compact, for Enhanced Agility",
-                        description: "Our compact robot navigates spaces as narrow as 55 cm, ensuring maneuverability in cozy environments."
+                        description: "Our compact robot navigates spaces as narrow as 55 cm, ensuring maneuverability in cozy environments.",
+                        image: "https://images2.imgbox.com/4d/8a/ZPoXaQMG_o.png"
                     },
                     {
                         title: "Smart Self-Pickup Guidance",
-                        description: "Made possible by tray sensors, a 300° open tray, and voice and visual guidance on the 10.1\" touch screen."
+                        description: "Made possible by tray sensors, a 300° open tray, and voice and visual guidance on the 10.1\" touch screen.",
+                        image: "https://images2.imgbox.com/99/be/4nVj4qOg_o.png"
                     },
                     {
                         title: "Safety, Elevated",
-                        description: "DINERBOT T8 uses 3 stereo vision sensors, detecting common high obstacles and those under 5cm, for precise, safe service in any environment."
+                        description: "DINERBOT T8 uses 3 stereo vision sensors, detecting common high obstacles and those under 5cm, for precise, safe service in any environment.",
+                        image: "https://images2.imgbox.com/b1/37/iTh9dLz6_o.png"
                     }
                 ],
                 keenonCoreTechnology: {
@@ -274,15 +277,18 @@ export const content: Content = {
                     features: [
                         {
                             title: "Precise navigation and positioning",
-                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability.",
+                            image: "https://images2.imgbox.com/f2/41/zsKzp31t_o.png"
                         },
                         {
                             title: "Synergizing 3D perception with instant response",
-                            description: "Precise environmental perception for swift avoidance."
+                            description: "Precise environmental perception for swift avoidance.",
+                            image: "https://images2.imgbox.com/37/70/1rZ3eJZt_o.png"
                         },
                         {
                             title: "Patented algorithms and multi-robot dispatching",
-                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution.",
+                            image: "https://images2.imgbox.com/1f/f6/9eSB4CYy_o.png"
                         }
                     ]
                 },
