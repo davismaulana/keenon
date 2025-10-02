@@ -173,7 +173,7 @@ export const content: Content = {
                     {
                         title: "Stable Delivery, Superior Performance",
                         description: "The T3 is equipped with an industry-leading chassis shock absorption system, ensuring smooth and stable delivery even on complex surfaces. It keeps dishes perfectly presented from kitchen to table.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp"
+                        image: "https://static.keenon.com/uploads/2025/01/07/2f6e0938cdf14d17ae050fdee9d9b42c.webp"
                     },
                     {
                         title: "High Capacity, High Efficiency",
@@ -217,7 +217,7 @@ export const content: Content = {
                     {
                         title: "Agile and Efficient, Unobstructed Passage",
                         description: "The T8's compact body allows it to easily pass through narrow passages as small as 55cm, making it adaptable to complex and crowded environments. It delivers dishes quickly and accurately, improving service efficiency.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp"
+                        image: "https://static.keenon.com/uploads/2025/01/07/3f1030d1ed7f419e8d1fe25536af2051.webp"
                     },
                     {
                         title: "Smart Interaction, Fun Experience",
@@ -261,7 +261,7 @@ export const content: Content = {
                     {
                         title: "Stable Delivery, Superior Performance",
                         description: "The T9 is equipped with an industry-leading chassis shock absorption system, ensuring smooth and stable delivery even on complex surfaces. It keeps dishes perfectly presented from kitchen to table.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp"
+                        image: "https://static.keenon.com/uploads/2025/01/07/2dc8bf76f6c24bd8abf5db546d36571e.webp"
                     },
                     {
                         title: "High Capacity, High Efficiency",
@@ -305,7 +305,7 @@ export const content: Content = {
                     {
                         title: "Hygiene and Safety First",
                         description: "The T10's automatic tray cover opens upon arrival and closes during transit, protecting food from airborne particles and ensuring a safe, hygienic delivery process for customers.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                        image: "https://static.keenon.com/uploads/2025/01/07/4dd7ee05dfa64deebe34cf14b5f2f755.jpg?x-oss-process=image/format,webp"
                     },
                     {
                         title: "Smart Interaction and Marketing",
@@ -349,7 +349,7 @@ export const content: Content = {
                     {
                         title: "Massive Capacity, Efficient Clearing",
                         description: "The T11's 120L capacity allows it to clear multiple tables in a single trip. The adjustable trays can accommodate various types of tableware, making it a versatile solution for any dining establishment.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                        image: "https://static.keenon.com/uploads/2025/09/01/aef7c671bab445fdbd46cea9cd50a781.png?x-oss-process=image/format,webp"
                     },
                     {
                         title: "Simple Call, Intelligent Operation",
@@ -367,48 +367,48 @@ export const content: Content = {
                 brochureUrl: "https://www.keenon.com/en/product/T11/index.html"
             },
             {
-                id: "s100",
-                name: "S100",
+                id: "w3",
+                name: "BUTLERBOT W3",
                 category: "Hotel",
-                headline: "Smart Delivery, Efficient and Flexible",
-                description: "The S100 is a versatile delivery robot with a fully enclosed, modular design. It offers secure, contact-free delivery of various items like documents, samples, and packages, making it ideal for high-end offices, medical facilities, and government buildings.",
+                headline: "Intelligent Hotel Delivery Robot",
+                description: "The W3 is an intelligent delivery robot for hotels, providing safe, reliable, and efficient room service to enhance guest experience and improve operational efficiency.",
                 key_features: [
-                    "Fully enclosed cabin for privacy and safety",
-                    "Modular design with customizable compartments",
-                    "Autonomous navigation and elevator integration",
-                    "Intelligent interaction with voice and touch screen"
+                    "Autonomous elevator riding for multi-floor delivery",
+                    "Fully enclosed cabin for secure and private transport",
+                    "Smart call function to notify guests of arrival",
+                    "Optimal path planning for efficient service"
                 ],
-                applications: ["High-end office buildings", "Government halls", "Medical institutions", "Hotels"],
+                applications: ["Hotels", "Serviced Apartments", "Resorts", "Office Buildings"],
                 cta: "Learn More",
-                image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
-                detailTagline: "The secure, versatile delivery robot for confidential and contactless item transport.",
-                heroImage: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
+                image: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
+                detailTagline: "Elevating Guest Experience with Autonomous, Contactless Room Service.",
+                heroImage: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "Up to 30kg" },
-                    { label: "Cabin Volume", value: "100L" },
-                    { label: "Runtime", value: "8-12h" },
-                    { label: "Navigation", value: "SLAM" }
+                    { label: "Load Capacity", value: "20kg" },
+                    { label: "Cabin Volume", value: "41L" },
+                    { label: "Runtime", value: "8-10h" },
+                    { label: "Min Passage Width", value: "60cm" }
                 ],
                 featureSections: [
                     {
-                        title: "Secure and Contactless Delivery",
-                        description: "The S100 features a fully enclosed design with password-protected cabins, ensuring the safe and private delivery of items. Its autonomous operation minimizes human contact, enhancing hygiene and security.",
-                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                        title: "Autonomous Navigation and Elevator Control",
+                        description: "The W3 can independently ride elevators to deliver items to any floor. Its advanced navigation system ensures it reaches the correct room safely, providing a seamless guest experience without human intervention.",
+                        image: "https://static.keenon.com/uploads/2025/09/01/4f8087ab91134e15b49764fa9c916295.png?x-oss-process=image/format,webp"
                     },
                     {
-                        title: "Intelligent and Efficient Navigation",
-                        description: "Using advanced SLAM technology, the S100 navigates complex environments with ease. It can autonomously take elevators to operate across different floors, providing seamless building-wide delivery services.",
-                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                        title: "Secure, Private, and Contactless Delivery",
+                        description: "The robot's cabin is fully enclosed to protect guest privacy and ensure item security. The cabin door opens only upon guest confirmation via phone call or password, guaranteeing a safe and contactless delivery.",
+                        image: "https://static.keenon.com/uploads/2025/09/01/de93b66d71b34a66a3e14674384d5f49.png?x-oss-process=image/format,webp"
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "490 x 480 x 1150 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "8-12h" }, { name: "Charging Time", value: "5h" }] },
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "438 x 410 x 1120 mm" }, { name: "Weight", value: "45kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "20kg" }, { name: "Cabin Volume", value: "41L" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "8-10h" }, { name: "Charging Time", value: "5h" }] },
                 ],
-                videoUrl: "https://youtu.be/KGtbV6l5aJQ",
-                videoDescription: "See the S100 in action, delivering items securely and efficiently across different floors.",
-                brochureUrl: "https://www.keenon.com/en/product/S100/index.html"
+                videoUrl: "https://youtu.be/hDVr_RCuxMs?si=mfDkolDMe18RKlKL",
+                videoDescription: "See how the BUTLERBOT W3 revolutionizes hotel service with autonomous and secure delivery.",
+                brochureUrl: "https://www.keenon.com/en/product/W3/index.html"
             },
             {
                 id: "c30",
@@ -501,48 +501,48 @@ export const content: Content = {
                 brochureUrl: "https://www.keenon.com/en/product/C40/index.html"
             },
             {
-                id: "h1",
-                name: "H1",
+                id: "s100",
+                name: "S100",
                 category: "Heavy Load",
-                headline: "All-Round Heavy-Load Delivery Robot",
-                description: "The H1 is a versatile heavy-load delivery robot for industrial and warehouse settings, capable of carrying up to 500kg to automate material handling.",
+                headline: "Smart Delivery, Efficient and Flexible",
+                description: "The S100 is a versatile delivery robot with a fully enclosed, modular design. It offers secure, contact-free delivery of various items like documents, samples, and packages, making it ideal for high-end offices, medical facilities, and government buildings.",
                 key_features: [
-                    "High load capacity (up to 500kg)",
-                    "Advanced SLAM navigation for complex environments",
-                    "Modular top for various applications",
-                    "Intelligent obstacle avoidance and safety features"
+                    "Fully enclosed cabin for privacy and safety",
+                    "Modular design with customizable compartments",
+                    "Autonomous navigation and elevator integration",
+                    "Intelligent interaction with voice and touch screen"
                 ],
-                applications: ["Industrial Manufacturing", "Warehousing Logistics", "Factories"],
+                applications: ["High-end office buildings", "Government halls", "Medical institutions", "Hotels"],
                 cta: "Learn More",
-                image: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png",
-                detailTagline: "The heavy-duty autonomous robot for industrial automation.",
-                heroImage: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png",
+                image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
+                detailTagline: "The secure, versatile delivery robot for confidential and contactless item transport.",
+                heroImage: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
                 keySpecs: [
-                    { label: "Load Capacity", value: "Up to 500kg" },
-                    { label: "Navigation", value: "SLAM" },
-                    { label: "Runtime", value: "8h" },
-                    { label: "Min. Passage Width", value: "70cm" }
+                    { label: "Load Capacity", value: "Up to 30kg" },
+                    { label: "Cabin Volume", value: "100L" },
+                    { label: "Runtime", value: "8-12h" },
+                    { label: "Navigation", value: "SLAM" }
                 ],
                 featureSections: [
                     {
-                        title: "Heavy-Duty Payload, Stable and Reliable",
-                        description: "With a robust chassis and high load capacity, the H1 can transport heavy materials with ease. Its advanced suspension system ensures stable movement, protecting goods during transit.",
-                        image: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png"
+                        title: "Secure and Contactless Delivery",
+                        description: "The S100 features a fully enclosed design with password-protected cabins, ensuring the safe and private delivery of items. Its autonomous operation minimizes human contact, enhancing hygiene and security.",
+                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
                     },
                     {
-                        title: "Flexible and Adaptable for Various Scenarios",
-                        description: "The H1's modular top allows for easy customization with different modules like shelves, rollers, or robotic arms, making it adaptable for a wide range of industrial applications.",
-                        image: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png"
+                        title: "Intelligent and Efficient Navigation",
+                        description: "Using advanced SLAM technology, the S100 navigates complex environments with ease. It can autonomously take elevators to operate across different floors, providing seamless building-wide delivery services.",
+                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "650 x 500 x 300 mm" }, { name: "Weight", value: "60kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "150kg (standard)" }, { name: "Min. Passage Width", value: "70cm" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "8h" }, { name: "Charging Time", value: "3.5h" }] },
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "490 x 480 x 1150 mm" }, { name: "Weight", value: "55kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "8-12h" }, { name: "Charging Time", value: "5h" }] },
                 ],
-                videoUrl: "https://www.youtube.com/watch?v=wzJmPZ_x_vU",
-                videoDescription: "Discover the KEENON H1, the autonomous mobile robot for heavy-load delivery in industrial and warehouse settings.",
-                brochureUrl: "https://www.keenon.com/en/product/H1/index.html"
+                videoUrl: "https://youtu.be/KGtbV6l5aJQ",
+                videoDescription: "See the S100 in action, delivering items securely and efficiently across different floors.",
+                brochureUrl: "https://www.keenon.com/en/product/S100/index.html"
             }
         ]
     },
