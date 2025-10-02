@@ -1,5 +1,4 @@
 
-
 export interface Product {
     id: string;
     name: string;
@@ -145,12 +144,276 @@ export const content: Content = {
     },
     products_showcase: {
         section_title: "Our Robot Solutions",
-        section_subtitle: "Discover the perfect robot for your business needs",
+        section_subtitle: "Discover the perfect robot for your business needs, organized by industry solution.",
         products: [
+            {
+                id: "t3",
+                name: "DINERBOT T3",
+                category: "Catering",
+                headline: "Efficient Tray Delivery, Smart and Stable",
+                description: "The T3 is a tray delivery robot designed for restaurants and catering services. With its multi-layer tray structure and advanced shock absorption system, it ensures fast, stable, and efficient food delivery, improving service quality and operational flow.",
+                key_features: [
+                    "4-layer adjustable tray with 40kg total capacity",
+                    "Advanced shock mitigation for stable delivery",
+                    "AI voice interaction and customizable expressions",
+                    "Efficient multi-robot cooperation"
+                ],
+                applications: ["Restaurants", "Hotels", "Cafes", "Bars"],
+                cta: "Learn More",
+                image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
+                detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
+                heroImage: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
+                keySpecs: [
+                    { label: "Load Capacity", value: "40kg" },
+                    { label: "Min Passage Width", value: "60cm" },
+                    { label: "Runtime", value: "12-15h" },
+                    { label: "Charging Time", value: "4.5h" }
+                ],
+                featureSections: [
+                    {
+                        title: "Stable Delivery, Superior Performance",
+                        description: "The T3 is equipped with an industry-leading chassis shock absorption system, ensuring smooth and stable delivery even on complex surfaces. It keeps dishes perfectly presented from kitchen to table.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp"
+                    },
+                    {
+                        title: "High Capacity, High Efficiency",
+                        description: "Featuring four large-capacity trays, the T3 can deliver multiple orders in a single trip. Its multi-robot collaboration system optimizes delivery routes, significantly improving restaurant turnover rates.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp"
+                    }
+                ],
+                techSpecs: [
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "461 x 521 x 1224 mm" }, { name: "Weight", value: "55kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "40kg (10kg/tray)" }, { name: "Tray Size", value: "420 x 500 mm" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "12-15h" }, { name: "Charging Time", value: "4.5h" }] },
+                ],
+                videoUrl: "https://youtu.be/cN2EAXcqVL4",
+                videoDescription: "Watch the T3 deliver dishes with unparalleled stability and efficiency in a busy restaurant.",
+                brochureUrl: "https://www.keenon.com/en/product/T3/index.html"
+            },
+            {
+                id: "t8",
+                name: "DINERBOT T8",
+                category: "Catering",
+                headline: "Efficient and Nimble Delivery Expert",
+                description: "The T8 is a versatile delivery robot that can serve in various scenarios with its open tray design. It combines precise navigation and intelligent obstacle avoidance to provide a stable and efficient delivery experience.",
+                key_features: [
+                    "Agile movement with 55cm passage width",
+                    "Multi-modal interaction with voice and light",
+                    "Replaceable cute and customizable expressions",
+                    "Detachable magnetic rear cover"
+                ],
+                applications: ["Restaurants", "Hotels", "Offices", "KTVs"],
+                cta: "Learn More",
+                image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
+                detailTagline: "The nimble and versatile delivery expert for complex and crowded environments.",
+                heroImage: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
+                keySpecs: [
+                    { label: "Load Capacity", value: "30kg" },
+                    { label: "Min Passage Width", value: "55cm" },
+                    { label: "Runtime", value: "12-15h" },
+                    { label: "Charging Time", value: "4.5h" }
+                ],
+                featureSections: [
+                    {
+                        title: "Agile and Efficient, Unobstructed Passage",
+                        description: "The T8's compact body allows it to easily pass through narrow passages as small as 55cm, making it adaptable to complex and crowded environments. It delivers dishes quickly and accurately, improving service efficiency.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp"
+                    },
+                    {
+                        title: "Smart Interaction, Fun Experience",
+                        description: "The T8 is equipped with multi-modal interaction capabilities, including AI voice and customizable facial expressions. It can interact with customers in a friendly and fun way, enhancing the dining experience.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp"
+                    }
+                ],
+                techSpecs: [
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "400 x 460 x 1110 mm" }, { name: "Weight", value: "40kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Min. Passage Width", value: "55cm" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "12-15h" }, { name: "Charging Time", value: "4.5h" }] },
+                ],
+                videoUrl: "https://youtu.be/t5YIz65Kjr0",
+                videoDescription: "See the T8 in action, navigating tight spaces with ease and delivering a fun, interactive service.",
+                brochureUrl: "https://www.keenon.com/en/product/T8/index.html"
+            },
+            {
+                id: "t9",
+                name: "DINERBOT T9",
+                category: "Catering",
+                headline: "Efficient Tray Delivery, Smart and Stable",
+                description: "The T9 is a tray delivery robot designed for restaurants and catering services. With its multi-layer tray structure and advanced shock absorption system, it ensures fast, stable, and efficient food delivery, improving service quality and operational flow.",
+                key_features: [
+                    "Four-layer adjustable tray structure",
+                    "Advanced shock mitigation for stable delivery",
+                    "AI voice interaction and customizable expressions",
+                    "Efficient multi-robot cooperation"
+                ],
+                applications: ["Restaurants", "Hotels", "Cafes", "Bars"],
+                cta: "Learn More",
+                image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
+                detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
+                heroImage: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
+                keySpecs: [
+                    { label: "Load Capacity", value: "40kg" },
+                    { label: "Tray Layers", value: "4" },
+                    { label: "Runtime", value: "10-12h" },
+                    { label: "Min Passage Width", value: "60cm" }
+                ],
+                featureSections: [
+                    {
+                        title: "Stable Delivery, Superior Performance",
+                        description: "The T9 is equipped with an industry-leading chassis shock absorption system, ensuring smooth and stable delivery even on complex surfaces. It keeps dishes perfectly presented from kitchen to table.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp"
+                    },
+                    {
+                        title: "High Capacity, High Efficiency",
+                        description: "Featuring four large-capacity trays, the T9 can deliver multiple orders in a single trip. Its multi-robot collaboration system optimizes delivery routes, significantly improving restaurant turnover rates.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp"
+                    }
+                ],
+                techSpecs: [
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "521 x 500 x 1226 mm" }, { name: "Weight", value: "57kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "40kg" }, { name: "Tray Size", value: "420 x 500 mm" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
+                ],
+                videoUrl: "https://youtu.be/5TP6MokvFnQ",
+                videoDescription: "Watch the T9 deliver dishes with unparalleled stability and efficiency in a busy restaurant.",
+                brochureUrl: "https://www.keenon.com/en/product/T9/index.html"
+            },
+            {
+                id: "t10",
+                name: "DINERBOT T10",
+                category: "Catering",
+                headline: "Full-featured Flagship, Smart Dining Companion",
+                description: "The T10 is a flagship delivery robot with a tray cover for enhanced food safety and hygiene. It combines intelligent features like plate detection and multi-modal interaction to create a futuristic and efficient dining experience.",
+                key_features: [
+                    "Automatic tray cover for enhanced hygiene",
+                    "Plate detection for automatic return journeys",
+                    "Multi-modal interaction: voice, touch, and vision",
+                    "23.8-inch large advertising screen"
+                ],
+                applications: ["Restaurants", "Hotels", "Entertainment venues"],
+                cta: "Learn More",
+                image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
+                detailTagline: "The flagship delivery robot with a hygienic tray cover and smart marketing screen.",
+                heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
+                keySpecs: [
+                    { label: "Load Capacity", value: "30kg" },
+                    { label: "Screen Size", value: "23.8 inch" },
+                    { label: "Runtime", value: "10-12h" },
+                    { label: "Hygiene", value: "Auto Tray Cover" }
+                ],
+                featureSections: [
+                    {
+                        title: "Hygiene and Safety First",
+                        description: "The T10's automatic tray cover opens upon arrival and closes during transit, protecting food from airborne particles and ensuring a safe, hygienic delivery process for customers.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                    },
+                    {
+                        title: "Smart Interaction and Marketing",
+                        description: "Equipped with a large 23.8-inch screen, the T10 can display advertisements and promotions. Its multi-modal interaction capabilities create an engaging and futuristic experience for diners.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                    }
+                ],
+                techSpecs: [
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "516 x 500 x 1345 mm" }, { name: "Weight", value: "65kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Screen", value: "23.8\" HD" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
+                ],
+                videoUrl: "https://youtu.be/khnZ4v-5Lqg",
+                videoDescription: "Experience the T10's futuristic dining service, featuring its hygienic cover and large ad screen.",
+                brochureUrl: "https://www.keenon.com/en/product/T10/index.html"
+            },
+            {
+                id: "t11",
+                name: "DINERBOT T11",
+                category: "Catering",
+                headline: "Efficient Dish Collection, Smart and Practical",
+                description: "The T11 is specially designed for dish collection in restaurants. It has a large capacity and can intelligently navigate in complex environments, improving overall service efficiency and quality.",
+                key_features: [
+                    "120L super large capacity, carries up to 400 dishes",
+                    "Three-layer adjustable trays for flexibility",
+                    "Smart SLAM navigation for complex environments",
+                    "Simple call button for on-demand service"
+                ],
+                applications: ["Restaurants", "Canteens", "Food courts"],
+                cta: "Learn More",
+                image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
+                detailTagline: "The high-capacity dish collecting robot that streamlines restaurant cleanup.",
+                heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
+                keySpecs: [
+                    { label: "Load Capacity", value: "60kg" },
+                    { label: "Total Volume", value: "120L" },
+                    { label: "Runtime", value: "10-12h" },
+                    { label: "Min Passage Width", value: "60cm" }
+                ],
+                featureSections: [
+                    {
+                        title: "Massive Capacity, Efficient Clearing",
+                        description: "The T11's 120L capacity allows it to clear multiple tables in a single trip. The adjustable trays can accommodate various types of tableware, making it a versatile solution for any dining establishment.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                    },
+                    {
+                        title: "Simple Call, Intelligent Operation",
+                        description: "Staff can easily call the robot using a pager. The T11 navigates autonomously to the designated table, waits for staff to load the dishes, and then returns to the kitchen, streamlining the entire collection process.",
+                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                    }
+                ],
+                techSpecs: [
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "518 x 500 x 1205 mm" }, { name: "Weight", value: "55kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "60kg" }, { name: "Volume", value: "120L" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
+                ],
+                videoUrl: "https://youtu.be/9xLvVsv86KA",
+                videoDescription: "Watch the T11 effortlessly collect dishes, boosting efficiency in a busy restaurant environment.",
+                brochureUrl: "https://www.keenon.com/en/product/T11/index.html"
+            },
+            {
+                id: "s100",
+                name: "S100",
+                category: "Hotel",
+                headline: "Smart Delivery, Efficient and Flexible",
+                description: "The S100 is a versatile delivery robot with a fully enclosed, modular design. It offers secure, contact-free delivery of various items like documents, samples, and packages, making it ideal for high-end offices, medical facilities, and government buildings.",
+                key_features: [
+                    "Fully enclosed cabin for privacy and safety",
+                    "Modular design with customizable compartments",
+                    "Autonomous navigation and elevator integration",
+                    "Intelligent interaction with voice and touch screen"
+                ],
+                applications: ["High-end office buildings", "Government halls", "Medical institutions", "Hotels"],
+                cta: "Learn More",
+                image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
+                detailTagline: "The secure, versatile delivery robot for confidential and contactless item transport.",
+                heroImage: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
+                keySpecs: [
+                    { label: "Load Capacity", value: "Up to 30kg" },
+                    { label: "Cabin Volume", value: "100L" },
+                    { label: "Runtime", value: "8-12h" },
+                    { label: "Navigation", value: "SLAM" }
+                ],
+                featureSections: [
+                    {
+                        title: "Secure and Contactless Delivery",
+                        description: "The S100 features a fully enclosed design with password-protected cabins, ensuring the safe and private delivery of items. Its autonomous operation minimizes human contact, enhancing hygiene and security.",
+                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                    },
+                    {
+                        title: "Intelligent and Efficient Navigation",
+                        description: "Using advanced SLAM technology, the S100 navigates complex environments with ease. It can autonomously take elevators to operate across different floors, providing seamless building-wide delivery services.",
+                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                    }
+                ],
+                techSpecs: [
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "490 x 480 x 1150 mm" }, { name: "Weight", value: "55kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "8-12h" }, { name: "Charging Time", value: "5h" }] },
+                ],
+                videoUrl: "https://youtu.be/KGtbV6l5aJQ",
+                videoDescription: "See the S100 in action, delivering items securely and efficiently across different floors.",
+                brochureUrl: "https://www.keenon.com/en/product/S100/index.html"
+            },
             {
                 id: "c30",
                 name: "C30",
-                category: "Cleaning Robot",
+                category: "Cleaning",
                 headline: "Smaller and Smarter, Your Cleaning Expert",
                 description: "The compact size of the C30 allows it to easily navigate narrow spaces, while its powerful 4-in-1 cleaning functions and intelligent perception capabilities ensure efficient and thorough cleaning results in various commercial settings.",
                 key_features: [
@@ -195,7 +458,7 @@ export const content: Content = {
             {
                 id: "c40",
                 name: "C40",
-                category: "Cleaning Robot",
+                category: "Cleaning",
                 headline: "Efficient and Agile, a Cleaning Expert for Small and Medium-sized Scenarios.",
                 description: "The C40 is a compact, efficient cleaning robot designed for small to medium commercial spaces. It combines scrubbing, sweeping, and mopping to deliver thorough cleaning performance, easily navigating tight spaces and complex layouts.",
                 key_features: [
@@ -238,180 +501,48 @@ export const content: Content = {
                 brochureUrl: "https://www.keenon.com/en/product/C40/index.html"
             },
             {
-                id: "s100",
-                name: "S100",
-                category: "Multifunctional Delivery Robot",
-                headline: "Smart Delivery, Efficient and Flexible",
-                description: "The S100 is a versatile delivery robot with a fully enclosed, modular design. It offers secure, contact-free delivery of various items like documents, samples, and packages, making it ideal for high-end offices, medical facilities, and government buildings.",
+                id: "h1",
+                name: "H1",
+                category: "Heavy Load",
+                headline: "All-Round Heavy-Load Delivery Robot",
+                description: "The H1 is a versatile heavy-load delivery robot for industrial and warehouse settings, capable of carrying up to 500kg to automate material handling.",
                 key_features: [
-                    "Fully enclosed cabin for privacy and safety",
-                    "Modular design with customizable compartments",
-                    "Autonomous navigation and elevator integration",
-                    "Intelligent interaction with voice and touch screen"
+                    "High load capacity (up to 500kg)",
+                    "Advanced SLAM navigation for complex environments",
+                    "Modular top for various applications",
+                    "Intelligent obstacle avoidance and safety features"
                 ],
-                applications: ["High-end office buildings", "Government halls", "Medical institutions", "Hotels"],
+                applications: ["Industrial Manufacturing", "Warehousing Logistics", "Factories"],
                 cta: "Learn More",
-                image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
-                detailTagline: "The secure, versatile delivery robot for confidential and contactless item transport.",
-                heroImage: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
+                image: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png",
+                detailTagline: "The heavy-duty autonomous robot for industrial automation.",
+                heroImage: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png",
                 keySpecs: [
-                    { label: "Load Capacity", value: "Up to 30kg" },
-                    { label: "Cabin Volume", value: "100L" },
-                    { label: "Runtime", value: "8-12h" },
-                    { label: "Navigation", value: "SLAM" }
+                    { label: "Load Capacity", value: "Up to 500kg" },
+                    { label: "Navigation", value: "SLAM" },
+                    { label: "Runtime", value: "8h" },
+                    { label: "Min. Passage Width", value: "70cm" }
                 ],
                 featureSections: [
                     {
-                        title: "Secure and Contactless Delivery",
-                        description: "The S100 features a fully enclosed design with password-protected cabins, ensuring the safe and private delivery of items. Its autonomous operation minimizes human contact, enhancing hygiene and security.",
-                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                        title: "Heavy-Duty Payload, Stable and Reliable",
+                        description: "With a robust chassis and high load capacity, the H1 can transport heavy materials with ease. Its advanced suspension system ensures stable movement, protecting goods during transit.",
+                        image: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png"
                     },
                     {
-                        title: "Intelligent and Efficient Navigation",
-                        description: "Using advanced SLAM technology, the S100 navigates complex environments with ease. It can autonomously take elevators to operate across different floors, providing seamless building-wide delivery services.",
-                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                        title: "Flexible and Adaptable for Various Scenarios",
+                        description: "The H1's modular top allows for easy customization with different modules like shelves, rollers, or robotic arms, making it adaptable for a wide range of industrial applications.",
+                        image: "https://images2.imgbox.com/6c/67/z9X74M2X_o.png"
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "490 x 480 x 1150 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "8-12h" }, { name: "Charging Time", value: "5h" }] },
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "650 x 500 x 300 mm" }, { name: "Weight", value: "60kg" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "150kg (standard)" }, { name: "Min. Passage Width", value: "70cm" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "8h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoUrl: "https://youtu.be/KGtbV6l5aJQ",
-                videoDescription: "See the S100 in action, delivering items securely and efficiently across different floors.",
-                brochureUrl: "https://www.keenon.com/en/product/S100/index.html"
-            },
-            {
-                id: "t9",
-                name: "T9",
-                category: "Food Delivery Robot",
-                headline: "Efficient Tray Delivery, Smart and Stable",
-                description: "The T9 is a tray delivery robot designed for restaurants and catering services. With its multi-layer tray structure and advanced shock absorption system, it ensures fast, stable, and efficient food delivery, improving service quality and operational flow.",
-                key_features: [
-                    "Four-layer adjustable tray structure",
-                    "Advanced shock mitigation for stable delivery",
-                    "AI voice interaction and customizable expressions",
-                    "Efficient multi-robot cooperation"
-                ],
-                applications: ["Restaurants", "Hotels", "Cafes", "Bars"],
-                cta: "Learn More",
-                image: "https://images2.imgbox.com/ec/24/Tili2j2K_o.png",
-                detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
-                heroImage: "https://images2.imgbox.com/ec/24/Tili2j2K_o.png",
-                keySpecs: [
-                    { label: "Load Capacity", value: "40kg" },
-                    { label: "Tray Layers", value: "4" },
-                    { label: "Runtime", value: "10-12h" },
-                    { label: "Min Passage Width", value: "60cm" }
-                ],
-                featureSections: [
-                    {
-                        title: "Stable Delivery, Superior Performance",
-                        description: "The T9 is equipped with an industry-leading chassis shock absorption system, ensuring smooth and stable delivery even on complex surfaces. It keeps dishes perfectly presented from kitchen to table.",
-                        image: "https://images2.imgbox.com/ec/24/Tili2j2K_o.png"
-                    },
-                    {
-                        title: "High Capacity, High Efficiency",
-                        description: "Featuring four large-capacity trays, the T9 can deliver multiple orders in a single trip. Its multi-robot collaboration system optimizes delivery routes, significantly improving restaurant turnover rates.",
-                        image: "https://images2.imgbox.com/ec/24/Tili2j2K_o.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "521 x 500 x 1226 mm" }, { name: "Weight", value: "57kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "40kg" }, { name: "Tray Size", value: "420 x 500 mm" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
-                ],
-                videoUrl: "https://youtu.be/5TP6MokvFnQ",
-                videoDescription: "Watch the T9 deliver dishes with unparalleled stability and efficiency in a busy restaurant.",
-                brochureUrl: "https://www.keenon.com/en/product/T9/index.html"
-            },
-            {
-                id: "t10",
-                name: "T10",
-                category: "Food Delivery Robot",
-                headline: "Full-featured Flagship, Smart Dining Companion",
-                description: "The T10 is a flagship delivery robot with a tray cover for enhanced food safety and hygiene. It combines intelligent features like plate detection and multi-modal interaction to create a futuristic and efficient dining experience.",
-                key_features: [
-                    "Automatic tray cover for enhanced hygiene",
-                    "Plate detection for automatic return journeys",
-                    "Multi-modal interaction: voice, touch, and vision",
-                    "23.8-inch large advertising screen"
-                ],
-                applications: ["Restaurants", "Hotels", "Entertainment venues"],
-                cta: "Learn More",
-                image: "https://images2.imgbox.com/10/b1/CjIUFxKp_o.png",
-                detailTagline: "The flagship delivery robot with a hygienic tray cover and smart marketing screen.",
-                heroImage: "https://images2.imgbox.com/10/b1/CjIUFxKp_o.png",
-                keySpecs: [
-                    { label: "Load Capacity", value: "30kg" },
-                    { label: "Screen Size", value: "23.8 inch" },
-                    { label: "Runtime", value: "10-12h" },
-                    { label: "Hygiene", value: "Auto Tray Cover" }
-                ],
-                featureSections: [
-                    {
-                        title: "Hygiene and Safety First",
-                        description: "The T10's automatic tray cover opens upon arrival and closes during transit, protecting food from airborne particles and ensuring a safe, hygienic delivery process for customers.",
-                        image: "https://images2.imgbox.com/10/b1/CjIUFxKp_o.png"
-                    },
-                    {
-                        title: "Smart Interaction and Marketing",
-                        description: "Equipped with a large 23.8-inch screen, the T10 can display advertisements and promotions. Its multi-modal interaction capabilities create an engaging and futuristic experience for diners.",
-                        image: "https://images2.imgbox.com/10/b1/CjIUFxKp_o.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "516 x 500 x 1345 mm" }, { name: "Weight", value: "65kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Screen", value: "23.8\" HD" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
-                ],
-                videoUrl: "https://youtu.be/khnZ4v-5Lqg",
-                videoDescription: "Experience the T10's futuristic dining service, featuring its hygienic cover and large ad screen.",
-                brochureUrl: "https://www.keenon.com/en/product/T10/index.html"
-            },
-            {
-                id: "w3",
-                name: "W3",
-                category: "Dish-Returning Robot",
-                headline: "Efficient Dish Collection, Smart and Practical",
-                description: "The W3 is designed to automate the dish collection process in restaurants. With its large capacity and intelligent navigation, it helps waitstaff clear tables faster, improving efficiency and allowing them to focus on customer service.",
-                key_features: [
-                    "120L large capacity, carries up to 400 dishes",
-                    "Three-layer adjustable trays for flexibility",
-                    "Smart SLAM navigation for complex environments",
-                    "Simple call button for on-demand service"
-                ],
-                applications: ["Restaurants", "Canteens", "Food courts"],
-                cta: "Learn More",
-                image: "https://images2.imgbox.com/62/29/jgkgpfzq_o.png",
-                detailTagline: "The high-capacity dish collecting robot that streamlines restaurant cleanup.",
-                heroImage: "https://images2.imgbox.com/62/29/jgkgpfzq_o.png",
-                keySpecs: [
-                    { label: "Load Capacity", value: "60kg" },
-                    { label: "Total Volume", value: "120L" },
-                    { label: "Runtime", value: "10-12h" },
-                    { label: "Min Passage Width", value: "60cm" }
-                ],
-                featureSections: [
-                    {
-                        title: "Massive Capacity for Efficient Clearing",
-                        description: "The W3's 120L capacity allows it to clear multiple tables in a single trip. The adjustable trays can accommodate various types of tableware, making it a versatile solution for any dining establishment.",
-                        image: "https://images2.imgbox.com/62/29/jgkgpfzq_o.png"
-                    },
-                    {
-                        title: "Simple and Intelligent Operation",
-                        description: "Staff can easily call the W3 using a pager. The robot navigates autonomously to the designated table, waits for staff to load the dishes, and then returns to the kitchen, streamlining the entire collection process.",
-                        image: "https://images2.imgbox.com/62/29/jgkgpfzq_o.png"
-                    }
-                ],
-                techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "518 x 500 x 1205 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "60kg" }, { name: "Volume", value: "120L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
-                ],
-                videoUrl: "https://youtu.be/hDVr_RCuxMs",
-                videoDescription: "Watch the W3 effortlessly collect dishes, boosting efficiency in a busy restaurant environment.",
-                brochureUrl: "https://www.keenon.com/en/product/W3/index.html"
+                videoUrl: "https://www.youtube.com/watch?v=wzJmPZ_x_vU",
+                videoDescription: "Discover the KEENON H1, the autonomous mobile robot for heavy-load delivery in industrial and warehouse settings.",
+                brochureUrl: "https://www.keenon.com/en/product/H1/index.html"
             }
         ]
     },

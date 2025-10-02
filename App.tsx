@@ -9,7 +9,6 @@ import ProductDetail from './components/ProductDetail';
 import Solutions from './components/Services'; // Repurposed Services.tsx as Solutions
 import Partners from './components/Partners';
 import CustomerStories from './components/News'; // Repurposed News.tsx as CustomerStories
-import NewsAndInsights from './components/NewsAndInsights';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -58,7 +57,6 @@ const AppCore: React.FC = () => {
             <div id="solutions"><Solutions /></div>
             <Partners />
             <CustomerStories />
-            <NewsAndInsights />
         </>
     );
 
