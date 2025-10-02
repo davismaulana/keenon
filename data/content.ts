@@ -547,45 +547,45 @@ export const content: Content = {
             },
             {
                 id: "s100",
-                name: "S100",
+                name: "KEENON S100",
                 category: "Heavy Load",
-                headline: "Smart Delivery, Efficient and Flexible",
-                description: "The S100 is a versatile delivery robot with a fully enclosed, modular design. It offers secure, contact-free delivery of various items like documents, samples, and packages, making it ideal for high-end offices, medical facilities, and government buildings.",
+                headline: "A New Generation of Fully Enclosed Delivery Robot",
+                description: "The S100 is a new generation of fully enclosed delivery robot that ensures the safe and private delivery of items. With modular compartments, it meets diverse delivery needs for items of different sizes.",
                 key_features: [
-                    "Fully enclosed cabin for privacy and safety",
-                    "Modular design with customizable compartments",
-                    "Autonomous navigation and elevator integration",
-                    "Intelligent interaction with voice and touch screen"
+                    "Fully enclosed and private cabin",
+                    "Modular compartments for flexible combinations",
+                    "Autonomous elevator riding for multi-floor delivery",
+                    "Smart call and notifications for item retrieval"
                 ],
-                applications: ["High-end office buildings", "Government halls", "Medical institutions", "Hotels"],
+                applications: ["Office Buildings", "Government Affairs Halls", "Medical Institutions", "High-end Hotels"],
                 cta: "Learn More",
-                image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
-                detailTagline: "The secure, versatile delivery robot for confidential and contactless item transport.",
-                heroImage: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png",
+                image: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
+                detailTagline: "A New Generation of Fully Enclosed Delivery Robot for Secure and Private Transport.",
+                heroImage: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "Up to 30kg" },
+                    { label: "Load Capacity", value: "30kg" },
                     { label: "Cabin Volume", value: "100L" },
                     { label: "Runtime", value: "8-12h" },
-                    { label: "Navigation", value: "SLAM" }
+                    { label: "Min Passage Width", value: "60cm" }
                 ],
                 featureSections: [
                     {
-                        title: "Secure and Contactless Delivery",
-                        description: "The S100 features a fully enclosed design with password-protected cabins, ensuring the safe and private delivery of items. Its autonomous operation minimizes human contact, enhancing hygiene and security.",
-                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                        title: "Secure and Private, Contactless Delivery",
+                        description: "The fully enclosed cabin with optional password verification for item retrieval ensures privacy and safety throughout the delivery process. This contactless method minimizes human interaction, enhancing hygiene and security.",
+                        image: "https://static.keenon.com/uploads/2025/09/01/2d59ca454c604d538234661793739818.png?x-oss-process=image/format,webp"
                     },
                     {
-                        title: "Intelligent and Efficient Navigation",
-                        description: "Using advanced SLAM technology, the S100 navigates complex environments with ease. It can autonomously take elevators to operate across different floors, providing seamless building-wide delivery services.",
-                        image: "https://images2.imgbox.com/9f/c0/tfwUC3wG_o.png"
+                        title: "Modular and Flexible Compartments",
+                        description: "The cabin features a modular design, allowing for flexible combinations of compartments to meet diverse delivery needs for items of different sizes, from important documents to larger packages.",
+                        image: "https://static.keenon.com/uploads/2025/09/01/4c7fc5b40ca04886ac80f4f9f74ec6f5.png?x-oss-process=image/format,webp"
                     }
                 ],
                 techSpecs: [
                     { category: "Dimensions & Weight", specs: [{ name: "Size", value: "490 x 480 x 1150 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }] },
+                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }, { name: "Min. Passage Width", value: "60cm" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "8-12h" }, { name: "Charging Time", value: "5h" }] },
                 ],
-                videoUrl: "https://youtu.be/KGtbV6l5aJQ",
+                videoUrl: "https://youtu.be/KGtbV6l5aJQ?si=hatmy42v9NFHGQhg",
                 videoDescription: "See the S100 in action, delivering items securely and efficiently across different floors.",
                 brochureUrl: "https://www.keenon.com/en/product/S100/index.html"
             }
