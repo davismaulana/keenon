@@ -6,7 +6,7 @@ export interface CoreTechFeature {
 }
 
 export interface KeenonCoreTechnology {
-    title: string;
+    title:string;
     features: CoreTechFeature[];
 }
 
@@ -435,27 +435,33 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "Interactive & Engaging, Making Every Moment Fun",
-                        description: "Adaptive head movements respond to actions like movement, touch, and delivery, providing dynamic feedback"
+                        description: "Adaptive head movements respond to actions like movement, touch, and delivery, providing dynamic feedback",
+                        image: "https://images2.imgbox.com/c3/21/3ckqCyx1_o.png"
                     },
                     {
                         title: "Engagement Elevated",
-                        description: "Movable heads, 23.8\" screen, and interactive buttons redefine engagement."
+                        description: "Movable heads, 23.8\" screen, and interactive buttons redefine engagement.",
+                        image: "https://images2.imgbox.com/36/de/IsCHUK1A_o.png"
                     },
                     {
                         title: "Effortless Pickup, Thoughtfully Designed",
-                        description: "a. Touch Control b. AI Tray Detection"
+                        description: "a. Touch Control b. AI Tray Detection",
+                        image: "https://images2.imgbox.com/00/48/cWTwgDSG_o.png"
                     },
                     {
                         title: "Safeguarding Every Step",
-                        description: "360° Recognition, equipped with 4 stereo vision sensors + VSLAM + 1 RGB camera for ultra-wide, clearer vision."
+                        description: "360° Recognition, equipped with 4 stereo vision sensors + VSLAM + 1 RGB camera for ultra-wide, clearer vision.",
+                        image: "https://images2.imgbox.com/85/82/GxmNj4iz_o.png"
                     },
                     {
                         title: "Take it Easy, Savor the Ease",
-                        description: "Open-access tray for easy self-pickup, with visual detection, tray lights, on-screen guidance and voice prompts."
+                        description: "Open-access tray for easy self-pickup, with visual detection, tray lights, on-screen guidance and voice prompts.",
+                        image: "https://images2.imgbox.com/24/df/8uBZWkWP_o.png"
                     },
                     {
                         title: "Versatile Styles, Your Way",
-                        description: "Pick Your Options: Head Accessories, Expressions, Voices, Skins, and a Large Screen"
+                        description: "Pick Your Options: Head Accessories, Expressions, Voices, Skins, and a Large Screen",
+                        image: "https://images2.imgbox.com/db/9c/AvbI19ro_o.jpg"
                     }
                 ],
                 keenonCoreTechnology: {
@@ -463,11 +469,13 @@ export const content: Content = {
                     features: [
                         {
                             title: "Precise navigation and positioning",
-                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability.",
+                            image: "https://images2.imgbox.com/c7/4d/fMSAX0pv_o.png"
                         },
                         {
                             title: "Patented algorithms and multi-robot dispatching",
-                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution.",
+                            image: "https://images2.imgbox.com/c1/76/QdIs3umM_o.png"
                         }
                     ]
                 },
