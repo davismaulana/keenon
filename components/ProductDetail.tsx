@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Product } from '../data/content';
 import Section from './Section';
-import { ArrowRightIcon } from './icons/ArrowRightIcon';
 import { CheckCircleIcon } from './icons/CheckCircleIcon';
-import { DownloadIcon } from './icons/DownloadIcon';
 
 interface ProductDetailProps {
     product: Product;
@@ -35,72 +33,17 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             }
         };
     }, []);
-    
-    const scrollToContact = () => {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-            const headerOffset = 80; // Height of the fixed header
-            const elementPosition = contactSection.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    };
 
     return (
         <div className="bg-trust-navy">
             {/* Hero Section */}
-            <header 
+            <header
                 ref={heroRef}
                 data-visible={isHeroVisible}
-                className="relative min-h-screen w-full flex items-center justify-center text-center text-white overflow-hidden"
+                className="relative h-screen w-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${product.heroImage || product.image})` }}
             >
-                <div 
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${product.heroImage || product.image})` }}
-                >
-                    <div className="absolute inset-0 bg-black/60"></div>
-                </div>
-
-                <div className="relative z-10 container mx-auto px-6 lg:px-8 max-w-7xl pt-24 pb-12">
-                    <div className="max-w-3xl mx-auto">
-                        <span 
-                            className="text-corporate-gold font-bold uppercase tracking-wider pop-in"
-                            style={{ '--delay': '100ms' } as React.CSSProperties}
-                        >
-                            {product.category}
-                        </span>
-                        <h1 
-                            className="text-4xl md:text-6xl font-bold font-display text-gray-100 mt-2 leading-tight md:leading-tight pop-in"
-                            style={{ '--delay': '200ms' } as React.CSSProperties}
-                        >
-                            {product.name}
-                        </h1>
-                        {product.detailTagline && (
-                            <p 
-                                className="mt-6 text-lg text-medium-gray max-w-xl mx-auto pop-in"
-                                style={{ '--delay': '350ms' } as React.CSSProperties}
-                            >
-                                {product.detailTagline}
-                            </p>
-                        )}
-                        <div 
-                            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 pop-in"
-                            style={{ '--delay': '500ms' } as React.CSSProperties}
-                        >
-                            <button 
-                                onClick={scrollToContact}
-                                className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-corporate-gold text-white font-bold rounded-lg shadow-lg hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                            >
-                                Get a Quote
-                                <ArrowRightIcon className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                {/* Intentionally empty to showcase the product image as the hero */}
             </header>
 
             {/* Video Section */}
