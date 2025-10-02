@@ -867,19 +867,23 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "100kg+ Load Capacity",
-                        description: "Reliably transport light loads, facilitating the movement of bulky goods across your workspace."
+                        description: "Reliably transport light loads, facilitating the movement of bulky goods across your workspace.",
+                        image: "https://images2.imgbox.com/a1/11/FQodFE2L_o.png"
                     },
                     {
                         title: "Plug-and-Play",
-                        description: "Powered by pre-installed OS and App, S100 offers ready-to-use solutions for instant robot deployment."
+                        description: "Powered by pre-installed OS and App, S100 offers ready-to-use solutions for instant robot deployment.",
+                        image: "https://images2.imgbox.com/09/ef/6roAKnMg_o.png"
                     },
                     {
                         title: "24/7 Delivery, Nonstop Efficiency.",
-                        description: "3 charging options: charging pile, adapter, & 15s-to-swap battery ensures around-the-clock delivery."
+                        description: "3 charging options: charging pile, adapter, & 15s-to-swap battery ensures around-the-clock delivery.",
+                        image: "https://images2.imgbox.com/de/19/xcTxdJd0_o.png"
                     },
                     {
                         title: "Operation Safety, Maximized",
-                        description: "360° obstacle avoidance, anti-collision strip, and 3 emergency stop buttons make sure of it."
+                        description: "360° obstacle avoidance, anti-collision strip, and 3 emergency stop buttons make sure of it.",
+                        image: "https://images2.imgbox.com/70/79/MY3rqhMy_o.png"
                     }
                 ],
                 techSpecs: [
