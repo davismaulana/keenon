@@ -180,7 +180,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                             {product.featureSections?.map((feature, index) => (
                                 feature.image && (
                                     <Section key={index} fullscreen>
-                                        <div className="reveal w-full h-full">
+                                        <div className="reveal-x w-full h-full">
                                             <img 
                                                 src={feature.image} 
                                                 alt={`${product.name} feature ${index + 1}`} 
