@@ -589,15 +589,18 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "The IoT Elevator Rider",
-                        description: "The BUTLERBOT W3 can now take the elevator for item delivery, streamlining business processes."
+                        description: "The BUTLERBOT W3 can now take the elevator for item delivery, streamlining business processes.",
+                        image: "https://images2.imgbox.com/2d/ed/VTl2IhQX_o.png"
                     },
                     {
                         title: "Safe. Hygienic. Private",
-                        description: "Automatic doors and ventilation ensure contactless, hygienic dish service, prioritizing privacy and spill prevention."
+                        description: "Automatic doors and ventilation ensure contactless, hygienic dish service, prioritizing privacy and spill prevention.",
+                        image: "https://images2.imgbox.com/e1/4b/W6mpbQI5_o.png"
                     },
                     {
                         title: "1 Dispatch, 4 Locations Served",
-                        description: "Adjustable up to four compartments, each accessible independently, serving up to 4 locations' diverse needs."
+                        description: "Adjustable up to four compartments, each accessible independently, serving up to 4 locations' diverse needs.",
+                        image: "https://images2.imgbox.com/01/54/2JnUHjAn_o.png"
                     }
                 ],
                 techSpecs: [
