@@ -411,22 +411,67 @@ export const content: Content = {
                 brochureUrl: "https://www.keenon.com/en/product/W3/index.html"
             },
             {
+                id: "c20",
+                name: "KLEENBOT C20",
+                category: "Cleaning",
+                headline: "Efficient and Agile, A Cleaning Expert for Small to Medium-sized Scenarios",
+                description: "The C20 is a compact, efficient cleaning robot designed for small to medium commercial spaces. It combines 4-in-1 cleaning functions to deliver thorough performance while easily navigating tight spaces.",
+                key_features: [
+                    "4-in-1 cleaning: sweeping, scrubbing, vacuuming, and mopping",
+                    "Compact body for navigating narrow spaces (≥60cm)",
+                    "Intelligent perception and upgraded obstacle avoidance",
+                    "Optional workstation for fully automated operation"
+                ],
+                applications: ["Office buildings", "Hotels", "Restaurants", "Shopping malls", "Supermarkets"],
+                cta: "Learn More",
+                image: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
+                detailTagline: "The agile 4-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
+                heroImage: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
+                keySpecs: [
+                    { label: "Cleaning Efficiency", value: "Up to 900 m²/h" },
+                    { label: "Functions", value: "4-in-1" },
+                    { label: "Min Passage Width", value: "60cm" },
+                    { label: "Runtime", value: "3-5h" }
+                ],
+                featureSections: [
+                    {
+                        title: "Agile and Efficient, Excellent Cleaning",
+                        description: "With a compact body and a minimum passage width of just 60cm, the C20 easily navigates narrow aisles and complex environments. Its 4-in-1 cleaning capabilities ensure comprehensive floor maintenance in a single pass.",
+                        image: "https://static.keenon.com/uploads/2025/04/10/7b328766107343e0a35985010950a9cd.png?x-oss-process=image/format,webp"
+                    },
+                    {
+                        title: "Intelligent and Autonomous",
+                        description: "Equipped with advanced sensors and perception systems, the C20 intelligently avoids obstacles and adapts its cleaning path. The optional workstation enables fully autonomous operation, including recharging and water management.",
+                        image: "https://static.keenon.com/uploads/2025/04/10/3c5b96798c8f4955b57f202241cfd1d2.png?x-oss-process=image/format,webp"
+                    }
+                ],
+                techSpecs: [
+                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "520 x 520 x 625 mm" }, { name: "Weight", value: "50kg" }] },
+                    { category: "Performance", specs: [{ name: "Cleaning Efficiency", value: "700-900 m²/h" }, { name: "Min. Passage Width", value: "60cm" }] },
+                    { category: "Tanks", specs: [{ name: "Clean Water", value: "12L" }, { name: "Dirty Water", value: "10L" }] },
+                    { category: "Battery", specs: [{ name: "Battery Life", value: "3-5h" }, { name: "Charging Time", value: "3.5h" }] },
+                ],
+                videoUrl: "https://youtu.be/JAEnvexMePw?si=yjBLaZAZoxl1UtvJ",
+                videoDescription: "Discover the C20, the agile and efficient cleaning expert for small to medium commercial scenarios.",
+                brochureUrl: "https://www.keenon.com/en/product/C20/index.html"
+            },
+            {
                 id: "c30",
-                name: "C30",
+                name: "KLEENBOT C30",
                 category: "Cleaning",
                 headline: "Smaller and Smarter, Your Cleaning Expert",
                 description: "The compact size of the C30 allows it to easily navigate narrow spaces, while its powerful 4-in-1 cleaning functions and intelligent perception capabilities ensure efficient and thorough cleaning results in various commercial settings.",
                 key_features: [
                     "4-in-1 cleaning: sweeping, scrubbing, vacuuming, and mopping",
-                    "Compact 50cm body for navigating narrow spaces",
+                    "Compact 50cm body for navigating narrow spaces (≥55cm)",
                     "Intelligent perception and upgraded obstacle avoidance",
                     "Fully automated: auto-recharge, water refill & drainage"
                 ],
                 applications: ["Restaurants", "Hotels", "Offices", "Shopping Malls", "Supermarkets"],
                 cta: "Learn More",
-                image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png",
+                image: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
                 detailTagline: "The nimble and compact 4-in-1 cleaning robot for complex commercial environments.",
-                heroImage: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png",
+                heroImage: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
                 keySpecs: [
                     { label: "Cleaning Efficiency", value: "Up to 700 m²/h" },
                     { label: "Functions", value: "4-in-1" },
@@ -437,12 +482,12 @@ export const content: Content = {
                     {
                         title: "Nimble and Compact, Access to Narrow Spaces",
                         description: "With a body width of only 50cm, C30 effortlessly navigates through narrow aisles and spaces under tables and chairs. It moves freely in complex environments, ensuring comprehensive cleaning without dead corners.",
-                        image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png"
+                        image: "https://static.keenon.com/uploads/2024/12/30/841203eb302f4a47833a69a0d81ef7fe.png?x-oss-process=image/format,webp"
                     },
                     {
                         title: "4-in-1 Versatility for Comprehensive Cleaning",
                         description: "C30 integrates sweeping, scrubbing, vacuuming, and mopping. Its dual-roller brush design effectively handles various types of debris, from fine dust to larger particles, ensuring a thorough clean in a single pass.",
-                        image: "https://images2.imgbox.com/13/3f/VjNHhVr0_o.png"
+                        image: "https://static.keenon.com/uploads/2024/12/30/5f4039b2b51648a19de02377b209e73b.png?x-oss-process=image/format,webp"
                     }
                 ],
                 techSpecs: [
@@ -451,16 +496,16 @@ export const content: Content = {
                     { category: "Tanks", specs: [{ name: "Clean Water", value: "7L" }, { name: "Dirty Water", value: "6L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "4-6h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoUrl: "https://youtu.be/nHcg64XRxks",
+                videoUrl: "https://youtu.be/nHcg64XRxks?si=ig7cLxqnHVDiN3Oa",
                 videoDescription: "Watch the C30, a compact and intelligent cleaning robot, effortlessly navigate and clean various commercial spaces with its 4-in-1 functionality.",
                 brochureUrl: "https://www.keenon.com/en/product/C30/index.html"
             },
             {
                 id: "c40",
-                name: "C40",
+                name: "KLEENBOT C40",
                 category: "Cleaning",
                 headline: "Efficient and Agile, a Cleaning Expert for Small and Medium-sized Scenarios.",
-                description: "The C40 is a compact, efficient cleaning robot designed for small to medium commercial spaces. It combines scrubbing, sweeping, and mopping to deliver thorough cleaning performance, easily navigating tight spaces and complex layouts.",
+                description: "The C40 is a compact, efficient cleaning robot designed for small to medium commercial spaces. It combines 5-in-1 cleaning functions to deliver thorough cleaning performance, easily navigating tight spaces and complex layouts.",
                 key_features: [
                     "5-in-1 cleaning: sweeping, vacuuming, scrubbing, mopping, and dust mopping",
                     "Compact design for narrow passages (≥65cm)",
@@ -469,9 +514,9 @@ export const content: Content = {
                 ],
                 applications: ["Office buildings", "Hotels", "Restaurants", "Shopping malls", "Supermarkets"],
                 cta: "Learn More",
-                image: "https://images2.imgbox.com/a3/12/AnPR5cbG_o.png",
+                image: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
                 detailTagline: "The agile 5-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
-                heroImage: "https://images2.imgbox.com/a3/12/AnPR5cbG_o.png",
+                heroImage: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
                 keySpecs: [
                     { label: "Cleaning Efficiency", value: "Up to 1200 m²/h" },
                     { label: "Functions", value: "5-in-1" },
@@ -482,12 +527,12 @@ export const content: Content = {
                     {
                         title: "Agile and Efficient, Excellent Cleaning",
                         description: "With a compact body and a minimum passage width of just 65cm, the C40 easily navigates narrow aisles and complex environments. Its 5-in-1 cleaning capabilities ensure comprehensive floor maintenance in a single pass.",
-                        image: "https://images2.imgbox.com/a3/12/AnPR5cbG_o.png"
+                        image: "https://static.keenon.com/uploads/2025/03/29/c0369801f9c349a3af040b2f69f2010c.png?x-oss-process=image/format,webp"
                     },
                     {
                         title: "Intelligent and Autonomous",
                         description: "Equipped with advanced sensors and perception systems, the C40 intelligently avoids obstacles and adapts its cleaning path. The optional workstation enables fully autonomous operation, including recharging and water management.",
-                        image: "https://images2.imgbox.com/a3/12/AnPR5cbG_o.png"
+                        image: "https://static.keenon.com/uploads/2025/03/29/e6f99066662442cf895166f059f3d917.png?x-oss-process=image/format,webp"
                     }
                 ],
                 techSpecs: [
@@ -496,7 +541,7 @@ export const content: Content = {
                     { category: "Tanks", specs: [{ name: "Clean Water", value: "10L" }, { name: "Dirty Water", value: "8L" }] },
                     { category: "Battery", specs: [{ name: "Battery Life", value: "3-5h" }, { name: "Charging Time", value: "3.5h" }] },
                 ],
-                videoUrl: "https://youtu.be/Gd4mC4TcF6s",
+                videoUrl: "https://youtu.be/Gd4mC4TcF6s?si=BlKfJOHmSpcMcOGu",
                 videoDescription: "Discover the C40, the agile and efficient cleaning expert for small to medium commercial scenarios.",
                 brochureUrl: "https://www.keenon.com/en/product/C40/index.html"
             },
