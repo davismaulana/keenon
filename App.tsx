@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { ContentProvider, useContent } from './context/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import GlobalPresence from './components/GlobalPresence';
 import Products from './components/Products';
 import ProductDetail from './components/ProductDetail';
 import Solutions from './components/Services'; // Repurposed Services.tsx as Solutions
@@ -53,6 +54,7 @@ const AppCore: React.FC = () => {
     const HomePageContent = () => (
          <>
             <div id="home"><Hero scrollToProducts={() => scrollToSection('products')} /></div>
+            <GlobalPresence />
             <div id="products"><Products /></div>
             <div id="solutions"><Solutions /></div>
             <Partners />
