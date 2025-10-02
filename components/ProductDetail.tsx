@@ -170,45 +170,53 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                 </Section>
             )}
 
-            {/* Key Specs Section */}
-            {product.keySpecs && product.keySpecs.length > 0 && (
-                <Section className="bg-light-gray">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        {product.keySpecs.map((spec, index) => (
-                            <div key={index} className="pop-in" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
-                                <p className="text-3xl md:text-4xl font-bold font-display text-corporate-gold">{spec.value}</p>
-                                <p className="mt-2 text-medium-gray uppercase text-sm tracking-wider">{spec.label}</p>
+            {/* New Features Section */}
+            {product.featureSections && product.featureSections.length > 0 && (() => {
+                const isImageGallery = product.featureSections?.every(f => f.image && !f.title);
+
+                if (isImageGallery) {
+                    return (
+                        <Section className="bg-trust-navy">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                                {product.featureSections.map((feature, index) => (
+                                    <div key={index} className="reveal aspect-square bg-light-gray rounded-lg overflow-hidden shadow-lg" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
+                                        <img src={feature.image} alt={`${product.name} feature ${index + 1}`} className="w-full h-full object-cover" />
+                                    </div>
+                                ))}
+                            </div>
+                        </Section>
+                    );
+                } else {
+                    return (
+                        <Section className="bg-light-gray">
+                            <div className="max-w-4xl mx-auto space-y-12">
+                                {product.featureSections.map((feature, index) => (
+                                    feature.title && (
+                                        <div key={index} className="reveal text-center" style={{ '--delay': `${index * 150}ms` } as React.CSSProperties}>
+                                            <h3 className="text-3xl font-bold font-display text-corporate-gold">{feature.title}</h3>
+                                            <p className="mt-4 text-lg text-medium-gray max-w-2xl mx-auto leading-relaxed">{feature.description}</p>
+                                        </div>
+                                    )
+                                ))}
+                            </div>
+                        </Section>
+                    );
+                }
+            })()}
+
+            {/* Keenon Core Technology Section */}
+            {product.keenonCoreTechnology && (
+                <Section className="bg-trust-navy">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold font-display text-gray-100 reveal">{product.keenonCoreTechnology.title}</h2>
+                    </div>
+                    <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {product.keenonCoreTechnology.features.map((tech, index) => (
+                            <div key={index} className="bg-light-gray p-6 rounded-lg shadow-md reveal" style={{ '--delay': `${100 + index * 100}ms` } as React.CSSProperties}>
+                                <h4 className="text-xl font-bold font-display text-corporate-gold">{tech.title}</h4>
+                                <p className="mt-3 text-medium-gray">{tech.description}</p>
                             </div>
                         ))}
-                    </div>
-                </Section>
-            )}
-
-            {/* Feature Sections */}
-            {product.featureSections && product.featureSections.length >= 2 && (
-                <Section className="bg-trust-navy">
-                    <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                        <div className="reveal">
-                            <div className="bg-light-gray rounded-2xl shadow-xl p-4 md:p-6">
-                                <img
-                                    src={product.heroImage || product.image}
-                                    alt={product.name}
-                                    className="w-full h-auto object-cover rounded-xl"
-                                />
-                            </div>
-                        </div>
-                        <div className="reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>
-                            <div className="space-y-10">
-                                <div>
-                                    <h2 className="text-3xl font-bold font-display text-gray-100">{product.featureSections[0].title}</h2>
-                                    <p className="mt-4 text-lg text-medium-gray leading-relaxed">{product.featureSections[0].description}</p>
-                                </div>
-                                <div>
-                                    <h2 className="text-3xl font-bold font-display text-gray-100">{product.featureSections[1].title}</h2>
-                                    <p className="mt-4 text-lg text-medium-gray leading-relaxed">{product.featureSections[1].description}</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </Section>
             )}

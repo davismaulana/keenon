@@ -1,4 +1,14 @@
 
+export interface CoreTechFeature {
+    title: string;
+    description: string;
+}
+
+export interface KeenonCoreTechnology {
+    title: string;
+    features: CoreTechFeature[];
+}
+
 export interface Product {
     id: string;
     name: string;
@@ -9,11 +19,10 @@ export interface Product {
     applications: string[];
     cta: string;
     image: string;
-    // New fields for detailed product pages
     detailTagline?: string;
     heroImage?: string;
-    keySpecs?: { label: string; value: string; }[];
-    featureSections?: { title: string; description: string; image: string; }[];
+    featureSections?: { title?: string; description?: string; image?: string; }[];
+    keenonCoreTechnology?: KeenonCoreTechnology;
     techSpecs?: { category: string; specs: { name: string; value: string; }[] }[];
     videoUrl?: string;
     videoDescription?: string;
@@ -163,24 +172,37 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
                 detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
-                keySpecs: [
-                    { label: "Load Capacity", value: "40kg (88lbs)" },
-                    { label: "Min Passage Width", value: "75cm" },
-                    { label: "Runtime", value: "Up to 12h" },
-                    { label: "Weight", value: "71kg (156lbs)" }
-                ],
                 featureSections: [
                     {
-                        title: "Stable Delivery, Superior Performance",
-                        description: "The T3 is equipped with an industry-leading chassis shock absorption system, ensuring smooth and stable delivery even on complex surfaces. It keeps dishes perfectly presented from kitchen to table.",
-                        image: "https://static.keenon.com/uploads/2025/01/07/2f6e0938cdf14d17ae050fdee9d9b42c.webp"
+                        title: "Safe. Hygienic.",
+                        description: "Step-activated and password-secured automatic doors ensure hygienic, spill-proof dish serving."
                     },
                     {
-                        title: "High Capacity, High Efficiency",
-                        description: "Featuring four large-capacity trays, the T3 can deliver multiple orders in a single trip. Its multi-robot collaboration system optimizes delivery routes, significantly improving restaurant turnover rates.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp"
+                        title: "Efficiency Maximized.",
+                        description: "Unlocking streamlined delivery efficiency with a spacious 180L cabin volume."
+                    },
+                    {
+                        title: "Tailored Courier Solutions",
+                        description: "Flexible for diverse needs. Adjustable layers accommodate items of varied heights (23cm, 38cm, 69cm)."
                     }
                 ],
+                keenonCoreTechnology: {
+                    title: "Keenon Core Technology",
+                    features: [
+                        {
+                            title: "Precise navigation and positioning",
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                        },
+                        {
+                            title: "Synergizing 3D perception with instant response",
+                            description: "Precise environmental perception for swift avoidance."
+                        },
+                        {
+                            title: "Patented algorithms and multi-robot dispatching",
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                        }
+                    ]
+                },
                 techSpecs: [
                     { 
                         category: "Dimensions & Weight", 
@@ -227,24 +249,37 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
                 detailTagline: "The nimble and versatile delivery expert for complex and crowded environments.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
-                keySpecs: [
-                    { label: "Load Capacity", value: "20kg (44 lbs)" },
-                    { label: "Min Passage Width", value: "55cm" },
-                    { label: "Runtime", value: "Up to 15h" },
-                    { label: "Charging Time", value: "4h" }
-                ],
                 featureSections: [
                     {
-                        title: "Agile and Efficient, Unobstructed Passage",
-                        description: "The T8's compact body allows it to easily pass through narrow passages as small as 55cm, making it adaptable to complex and crowded environments. It delivers dishes quickly and accurately, improving service efficiency.",
-                        image: "https://static.keenon.com/uploads/2025/01/07/3f1030d1ed7f419e8d1fe25536af2051.webp"
+                        title: "Compact, for Enhanced Agility",
+                        description: "Our compact robot navigates spaces as narrow as 55 cm, ensuring maneuverability in cozy environments."
                     },
                     {
-                        title: "Smart Interaction, Fun Experience",
-                        description: "The T8 is equipped with multi-modal interaction capabilities, including AI voice and customizable facial expressions. It can interact with customers in a friendly and fun way, enhancing the dining experience.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp"
+                        title: "Smart Self-Pickup Guidance",
+                        description: "Made possible by tray sensors, a 300° open tray, and voice and visual guidance on the 10.1\" touch screen."
+                    },
+                    {
+                        title: "Safety, Elevated",
+                        description: "DINERBOT T8 uses 3 stereo vision sensors, detecting common high obstacles and those under 5cm, for precise, safe service in any environment."
                     }
                 ],
+                keenonCoreTechnology: {
+                    title: "Keenon Core Technology",
+                    features: [
+                        {
+                            title: "Precise navigation and positioning",
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                        },
+                        {
+                            title: "Synergizing 3D perception with instant response",
+                            description: "Precise environmental perception for swift avoidance."
+                        },
+                        {
+                            title: "Patented algorithms and multi-robot dispatching",
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                        }
+                    ]
+                },
                 techSpecs: [
                     { 
                         category: "Dimensions & Weight", 
@@ -291,24 +326,45 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
                 detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
-                keySpecs: [
-                    { label: "Load Capacity", value: "40kg (88lbs)" },
-                    { label: "Min Passage Width", value: "70cm" },
-                    { label: "Runtime", value: "Up to 18h" },
-                    { label: "Charging Time", value: "4h" }
-                ],
                 featureSections: [
                     {
-                        title: "Stable Delivery, Superior Performance",
-                        description: "The T9 is equipped with an industry-leading chassis shock absorption system, ensuring smooth and stable delivery even on complex surfaces. It keeps dishes perfectly presented from kitchen to table.",
-                        image: "https://static.keenon.com/uploads/2025/01/07/2dc8bf76f6c24bd8abf5db546d36571e.webp"
+                        title: "Adjustable Layers",
+                        description: "The trays allow for adjustable space heights of 19.5cm, 16.9cm, 25.3cm, 22.8cm"
                     },
                     {
-                        title: "High Capacity, High Efficiency",
-                        description: "Featuring four large-capacity trays, the T9 can deliver multiple orders in a single trip. Its multi-robot collaboration system optimizes delivery routes, significantly improving restaurant turnover rates.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp"
+                        title: "40kg Load Capacity",
+                        description: "10kg per layer, for efficient food service."
+                    },
+                    {
+                        title: "Autonomous Charging",
+                        description: "Extended battery life, with a single charge lasting up to 18 hours."
+                    },
+                    {
+                        title: "Big Touch Screen, Perfect Height",
+                        description: "Optimize daily operations with large touch screen and ideal height."
                     }
                 ],
+                keenonCoreTechnology: {
+                    title: "Keenon Core Technology",
+                    features: [
+                        {
+                            title: "Precise navigation and positioning",
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                        },
+                        {
+                            title: "Synergizing 3D perception with instant response",
+                            description: "Precise environmental perception for swift avoidance."
+                        },
+                        {
+                            title: "Chassis designs with trio patents",
+                            description: "Vehicle-grade independent suspension with shock absorption, based on CAE simulation for superior performance."
+                        },
+                        {
+                            title: "Patented algorithms and multi-robot dispatching",
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                        }
+                    ]
+                },
                 techSpecs: [
                     { 
                         category: "Dimensions & Weight", 
@@ -355,24 +411,45 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
                 detailTagline: "The flagship delivery robot with a hygienic tray cover and smart marketing screen.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
-                keySpecs: [
-                    { label: "Load Capacity", value: "40kg (88lbs)" },
-                    { label: "Min Passage Width", value: "59cm" },
-                    { label: "Runtime", value: "Up to 8h" },
-                    { label: "Charging Time", value: "5.5h" }
-                ],
                 featureSections: [
                     {
-                        title: "Hygiene and Safety First",
-                        description: "The T10's automatic tray cover opens upon arrival and closes during transit, protecting food from airborne particles and ensuring a safe, hygienic delivery process for customers.",
-                        image: "https://static.keenon.com/uploads/2025/01/07/4dd7ee05dfa64deebe34cf14b5f2f755.jpg?x-oss-process=image/format,webp"
+                        title: "Interactive & Engaging, Making Every Moment Fun",
+                        description: "Adaptive head movements respond to actions like movement, touch, and delivery, providing dynamic feedback"
                     },
                     {
-                        title: "Smart Interaction and Marketing",
-                        description: "Equipped with a large 23.8-inch screen, the T10 can display advertisements and promotions. Its multi-modal interaction capabilities create an engaging and futuristic experience for diners.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                        title: "Engagement Elevated",
+                        description: "Movable heads, 23.8\" screen, and interactive buttons redefine engagement."
+                    },
+                    {
+                        title: "Effortless Pickup, Thoughtfully Designed",
+                        description: "a. Touch Control b. AI Tray Detection"
+                    },
+                    {
+                        title: "Safeguarding Every Step",
+                        description: "360° Recognition, equipped with 4 stereo vision sensors + VSLAM + 1 RGB camera for ultra-wide, clearer vision."
+                    },
+                    {
+                        title: "Take it Easy, Savor the Ease",
+                        description: "Open-access tray for easy self-pickup, with visual detection, tray lights, on-screen guidance and voice prompts."
+                    },
+                    {
+                        title: "Versatile Styles, Your Way",
+                        description: "Pick Your Options: Head Accessories, Expressions, Voices, Skins, and a Large Screen"
                     }
                 ],
+                keenonCoreTechnology: {
+                    title: "Keenon Core Technology",
+                    features: [
+                        {
+                            title: "Precise navigation and positioning",
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                        },
+                        {
+                            title: "Patented algorithms and multi-robot dispatching",
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                        }
+                    ]
+                },
                 techSpecs: [
                     { 
                         category: "Dimensions & Weight", 
@@ -419,22 +496,18 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
                 detailTagline: "The high-capacity dish collecting robot that streamlines restaurant cleanup.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
-                keySpecs: [
-                    { label: "Load Capacity", value: "20kg" },
-                    { label: "Min Passage Width", value: "49cm" },
-                    { label: "Weight", value: "38kg" },
-                    { label: "Battery", value: "DC25.9V, 20.8Ah" }
-                ],
                 featureSections: [
                     {
-                        title: "Massive Capacity, Efficient Clearing",
-                        description: "The T11's 120L capacity allows it to clear multiple tables in a single trip. The adjustable trays can accommodate various types of tableware, making it a versatile solution for any dining establishment.",
-                        image: "https://static.keenon.com/uploads/2025/09/01/aef7c671bab445fdbd46cea9cd50a781.png?x-oss-process=image/format,webp"
+                        image: "https://static.keenon.com/uploads/2025/08/27/bff71a3e19bc43f6ba5f7ee9055555f1.jpg?x-oss-process=image/format,webp"
                     },
                     {
-                        title: "Simple Call, Intelligent Operation",
-                        description: "Staff can easily call the robot using a pager. The T11 navigates autonomously to the designated table, waits for staff to load the dishes, and then returns to the kitchen, streamlining the entire collection process.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp"
+                        image: "https://static.keenon.com/uploads/2025/08/27/e5d5ba0f417346fbb0cbbdb038746f8a.jpg?x-oss-process=image/format,webp"
+                    },
+                    {
+                        image: "https://static.keenon.com/uploads/2025/08/27/15eba5c9e4b54040a2048fd7dea74722.jpg?x-oss-process=image/format,webp"
+                    },
+                    {
+                        image: "https://static.keenon.com/uploads/2025/08/27/f485683db03e444a8ccf48e2e158e77b.jpg?x-oss-process=image/format,webp"
                     }
                 ],
                 techSpecs: [
@@ -484,22 +557,18 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
                 detailTagline: "Elevating Guest Experience with Autonomous, Contactless Room Service.",
                 heroImage: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
-                keySpecs: [
-                    { label: "Load Capacity", value: "20kg (44lbs)" },
-                    { label: "Min Passage Width", value: "70cm" },
-                    { label: "Runtime", value: "Up to 12h" },
-                    { label: "Charging Time", value: "6.5h" }
-                ],
                 featureSections: [
                     {
-                        title: "Autonomous Navigation and Elevator Control",
-                        description: "The W3 can independently ride elevators to deliver items to any floor. Its advanced navigation system ensures it reaches the correct room safely, providing a seamless guest experience without human intervention.",
-                        image: "https://static.keenon.com/uploads/2025/09/01/4f8087ab91134e15b49764fa9c916295.png?x-oss-process=image/format,webp"
+                        title: "The IoT Elevator Rider",
+                        description: "The BUTLERBOT W3 can now take the elevator for item delivery, streamlining business processes."
                     },
                     {
-                        title: "Secure, Private, and Contactless Delivery",
-                        description: "The robot's cabin is fully enclosed to protect guest privacy and ensure item security. The cabin door opens only upon guest confirmation via phone call or password, guaranteeing a safe and contactless delivery.",
-                        image: "https://static.keenon.com/uploads/2025/09/01/de93b66d71b34a66a3e14674384d5f49.png?x-oss-process=image/format,webp"
+                        title: "Safe. Hygienic. Private",
+                        description: "Automatic doors and ventilation ensure contactless, hygienic dish service, prioritizing privacy and spill prevention."
+                    },
+                    {
+                        title: "1 Dispatch, 4 Locations Served",
+                        description: "Adjustable up to four compartments, each accessible independently, serving up to 4 locations' diverse needs."
                     }
                 ],
                 techSpecs: [
@@ -548,22 +617,18 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
                 detailTagline: "The agile 4-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
                 heroImage: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
-                keySpecs: [
-                    { label: "Cleaning Efficiency", value: "Up to 400 m²/h" },
-                    { label: "Weight", value: "22 kg" },
-                    { label: "Charging Time", value: "4h" },
-                    { label: "Clean Water Tank", value: "7L" }
-                ],
                 featureSections: [
                     {
-                        title: "Agile and Efficient, Excellent Cleaning",
-                        description: "With a compact body and a minimum passage width of just 60cm, the C20 easily navigates narrow aisles and complex environments. Its 4-in-1 cleaning capabilities ensure comprehensive floor maintenance in a single pass.",
-                        image: "https://static.keenon.com/uploads/2025/04/10/7b328766107343e0a35985010950a9cd.png?x-oss-process=image/format,webp"
+                        image: "https://static.keenon.com/uploads/2025/05/30/92729e51aaa74750b1d077c75c631a2b.jpg?x-oss-process=image/format,webp"
                     },
                     {
-                        title: "Intelligent and Autonomous",
-                        description: "Equipped with advanced sensors and perception systems, the C20 intelligently avoids obstacles and adapts its cleaning path. The optional workstation enables fully autonomous operation, including recharging and water management.",
-                        image: "https://static.keenon.com/uploads/2025/04/10/3c5b96798c8f4955b57f202241cfd1d2.png?x-oss-process=image/format,webp"
+                        image: "https://static.keenon.com/uploads/2025/05/30/cecf06ebc4bb492688f605e2412e4052.jpg?x-oss-process=image/format,webp"
+                    },
+                    {
+                        image: "https://static.keenon.com/uploads/2025/05/30/be9a556dec134c0ca696adad0952edd3.jpg?x-oss-process=image/format,webp"
+                    },
+                    {
+                        image: "https://static.keenon.com/uploads/2025/05/30/6c9b261c52044095a31aa1f23f545b4a.jpg?x-oss-process=image/format,webp"
                     }
                 ],
                 techSpecs: [
@@ -619,22 +684,22 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
                 detailTagline: "The nimble and compact 4-in-1 cleaning robot for complex commercial environments.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
-                keySpecs: [
-                    { label: "Cleaning Efficiency", value: "600 m²/h" },
-                    { label: "Runtime", value: "Up to 6h/10h" },
-                    { label: "Weight", value: "35kg (77lbs)" },
-                    { label: "Charging Time", value: "5-6h" }
-                ],
                 featureSections: [
                     {
-                        title: "Nimble and Compact, Access to Narrow Spaces",
-                        description: "With a body width of only 50cm, C30 effortlessly navigates through narrow aisles and spaces under tables and chairs. It moves freely in complex environments, ensuring comprehensive cleaning without dead corners.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/841203eb302f4a47833a69a0d81ef7fe.png?x-oss-process=image/format,webp"
+                        title: "3-in-1 Dry Cleaning",
+                        description: "Sweeping, vacuuming, and dust mopping covers 610mm wide."
                     },
                     {
-                        title: "4-in-1 Versatility for Comprehensive Cleaning",
-                        description: "C30 integrates sweeping, scrubbing, vacuuming, and mopping. Its dual-roller brush design effectively handles various types of debris, from fine dust to larger particles, ensuring a thorough clean in a single pass.",
-                        image: "https://static.keenon.com/uploads/2024/12/30/5f4039b2b51648a19de02377b209e73b.png?x-oss-process=image/format,webp"
+                        title: "100% Charged, 2500㎡ cleaned",
+                        description: "With one complete automatic charging, the C30 can clean up to 2500㎡, ideal for extended cleaning sessions."
+                    },
+                    {
+                        title: "Dual Operation Modes",
+                        description: "Switch between manual map building and automated cleaning with the innovative extendable handle."
+                    },
+                    {
+                        title: "Remote Assign and Track",
+                        description: "Effortlessly assign and track cleaning tasks, and gain insights into your C30 with the KEENON App."
                     }
                 ],
                 techSpecs: [
@@ -684,23 +749,15 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
                 detailTagline: "The agile 5-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
                 heroImage: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
-                keySpecs: [
-                    { label: "Cleaning Efficiency", value: "Up to 1,100 m²/h" },
-                    { label: "Runtime", value: "Up to 5h / 12h" },
-                    { label: "Charging Time", value: "2h" },
-                    { label: "Weight", value: "70 kg" }
-                ],
                 featureSections: [
-                    {
-                        title: "Agile and Efficient, Excellent Cleaning",
-                        description: "With a compact body and a minimum passage width of just 65cm, the C40 easily navigates narrow aisles and complex environments. Its 5-in-1 cleaning capabilities ensure comprehensive floor maintenance in a single pass.",
-                        image: "https://static.keenon.com/uploads/2025/03/29/c0369801f9c349a3af040b2f69f2010c.png?x-oss-process=image/format,webp"
-                    },
-                    {
-                        title: "Intelligent and Autonomous",
-                        description: "Equipped with advanced sensors and perception systems, the C40 intelligently avoids obstacles and adapts its cleaning path. The optional workstation enables fully autonomous operation, including recharging and water management.",
-                        image: "https://static.keenon.com/uploads/2025/03/29/e6f99066662442cf895166f059f3d917.png?x-oss-process=image/format,webp"
-                    }
+                    { image: "https://static.keenon.com/uploads/2025/03/29/d587a7566ad74622a9a60b03a18f0feb.jpg?x-oss-process=image/format,webp" },
+                    { image: "https://static.keenon.com/uploads/2025/03/29/92beedc365b8445291e2f708b34fa76d.jpg?x-oss-process=image/format,webp" },
+                    { image: "https://static.keenon.com/uploads/2025/03/29/4630618af3b245c289eff9f2f709651f.jpg?x-oss-process=image/format,webp" },
+                    { image: "https://static.keenon.com/uploads/2025/03/29/0e892556adb2497ea476e49d6d90807e.jpg?x-oss-process=image/format,webp" },
+                    { image: "https://static.keenon.com/uploads/2025/03/29/6f9053cab7b040079dcaf03874657cde.jpg?x-oss-process=image/format,webp" },
+                    { image: "https://static.keenon.com/uploads/2025/03/29/420cc45ae1404a58b2aa74abc488baa5.jpg?x-oss-process=image/format,webp" },
+                    { image: "https://static.keenon.com/uploads/2025/03/29/8cc941e0305d4abf925fbf5d23802331.jpg?x-oss-process=image/format,webp" },
+                    { image: "https://static.keenon.com/uploads/2025/03/29/aa0a4be7434448f5b99b507c2ebd7cd7.jpg?x-oss-process=image/format,webp" }
                 ],
                 techSpecs: [
                     { 
@@ -759,22 +816,22 @@ export const content: Content = {
                 image: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
                 detailTagline: "A New Generation of Fully Enclosed Delivery Robot for Secure and Private Transport.",
                 heroImage: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
-                keySpecs: [
-                    { label: "Load Capacity", value: "100kg+" },
-                    { label: "Min Passage Width", value: "90cm" },
-                    { label: "Runtime", value: "Up to 8h" },
-                    { label: "Charging Time", value: "2.5h" }
-                ],
                 featureSections: [
                     {
-                        title: "Secure and Private, Contactless Delivery",
-                        description: "The fully enclosed cabin with optional password verification for item retrieval ensures privacy and safety throughout the delivery process. This contactless method minimizes human interaction, enhancing hygiene and security.",
-                        image: "https://static.keenon.com/uploads/2025/09/01/2d59ca454c604d538234661793739818.png?x-oss-process=image/format,webp"
+                        title: "100kg+ Load Capacity",
+                        description: "Reliably transport light loads, facilitating the movement of bulky goods across your workspace."
                     },
                     {
-                        title: "Modular and Flexible Compartments",
-                        description: "The cabin features a modular design, allowing for flexible combinations of compartments to meet diverse delivery needs for items of different sizes, from important documents to larger packages.",
-                        image: "https://static.keenon.com/uploads/2025/09/01/4c7fc5b40ca04886ac80f4f9f74ec6f5.png?x-oss-process=image/format,webp"
+                        title: "Plug-and-Play",
+                        description: "Powered by pre-installed OS and App, S100 offers ready-to-use solutions for instant robot deployment."
+                    },
+                    {
+                        title: "24/7 Delivery, Nonstop Efficiency.",
+                        description: "3 charging options: charging pile, adapter, & 15s-to-swap battery ensures around-the-clock delivery."
+                    },
+                    {
+                        title: "Operation Safety, Maximized",
+                        description: "360° obstacle avoidance, anti-collision strip, and 3 emergency stop buttons make sure of it."
                     }
                 ],
                 techSpecs: [
