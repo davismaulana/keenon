@@ -1,3 +1,4 @@
+
 export interface CoreTechFeature {
     title: string;
     description: string;
@@ -341,19 +342,23 @@ export const content: Content = {
                 featureSections: [
                     {
                         title: "Adjustable Layers",
-                        description: "The trays allow for adjustable space heights of 19.5cm, 16.9cm, 25.3cm, 22.8cm"
+                        description: "The trays allow for adjustable space heights of 19.5cm, 16.9cm, 25.3cm, 22.8cm",
+                        image: "https://images2.imgbox.com/7b/89/oY9S0ETD_o.png"
                     },
                     {
                         title: "40kg Load Capacity",
-                        description: "10kg per layer, for efficient food service."
+                        description: "10kg per layer, for efficient food service.",
+                        image: "https://images2.imgbox.com/21/32/rkmo1LtF_o.png"
                     },
                     {
                         title: "Autonomous Charging",
-                        description: "Extended battery life, with a single charge lasting up to 18 hours."
+                        description: "Extended battery life, with a single charge lasting up to 18 hours.",
+                        image: "https://images2.imgbox.com/bd/33/mtce1l0f_o.png"
                     },
                     {
                         title: "Big Touch Screen, Perfect Height",
-                        description: "Optimize daily operations with large touch screen and ideal height."
+                        description: "Optimize daily operations with large touch screen and ideal height.",
+                        image: "https://images2.imgbox.com/4c/0b/aApotEbg_o.png"
                     }
                 ],
                 keenonCoreTechnology: {
@@ -361,19 +366,23 @@ export const content: Content = {
                     features: [
                         {
                             title: "Precise navigation and positioning",
-                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability."
+                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability.",
+                            image: "https://images2.imgbox.com/5a/52/HWcEKMyW_o.png"
                         },
                         {
                             title: "Synergizing 3D perception with instant response",
-                            description: "Precise environmental perception for swift avoidance."
+                            description: "Precise environmental perception for swift avoidance.",
+                            image: "https://images2.imgbox.com/2b/32/vpaR1MbG_o.png"
                         },
                         {
                             title: "Chassis designs with trio patents",
-                            description: "Vehicle-grade independent suspension with shock absorption, based on CAE simulation for superior performance."
+                            description: "Vehicle-grade independent suspension with shock absorption, based on CAE simulation for superior performance.",
+                            image: "https://images2.imgbox.com/73/3b/c82ASwIw_o.png"
                         },
                         {
                             title: "Patented algorithms and multi-robot dispatching",
-                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution."
+                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution.",
+                            image: "https://images2.imgbox.com/5d/4d/Jv5VpYLB_o.png"
                         }
                     ]
                 },
