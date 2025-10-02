@@ -172,6 +172,28 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
 
             {/* New Features Section */}
             {product.featureSections && product.featureSections.length > 0 && (() => {
+                const specialImageProducts = ['t11', 'c20', 'c40'];
+
+                if (specialImageProducts.includes(product.id)) {
+                    return (
+                        <>
+                            {product.featureSections?.map((feature, index) => (
+                                feature.image && (
+                                    <Section key={index} fullscreen>
+                                        <div className="reveal w-full h-full">
+                                            <img 
+                                                src={feature.image} 
+                                                alt={`${product.name} feature ${index + 1}`} 
+                                                className="w-full h-full object-cover" 
+                                            />
+                                        </div>
+                                    </Section>
+                                )
+                            ))}
+                        </>
+                    );
+                }
+
                 const isImageGallery = product.featureSections?.every(f => f.image && !f.title);
 
                 if (isImageGallery) {

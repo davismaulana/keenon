@@ -5,9 +5,10 @@ interface SectionProps {
     className?: string;
     id?: string;
     noXPadding?: boolean;
+    fullscreen?: boolean;
 }
 
-const Section: React.FC<SectionProps> = ({ children, className = '', id, noXPadding = false }) => {
+const Section: React.FC<SectionProps> = ({ children, className = '', id, noXPadding = false, fullscreen = false }) => {
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -37,6 +38,14 @@ const Section: React.FC<SectionProps> = ({ children, className = '', id, noXPadd
             }
         };
     }, []);
+
+    if (fullscreen) {
+        return (
+            <section ref={ref} id={id} data-visible={isVisible} className={`h-screen w-full relative overflow-hidden ${className}`}>
+                {children}
+            </section>
+        );
+    }
 
 
     return (
