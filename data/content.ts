@@ -164,10 +164,10 @@ export const content: Content = {
                 detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "40kg" },
-                    { label: "Min Passage Width", value: "60cm" },
-                    { label: "Runtime", value: "12-15h" },
-                    { label: "Charging Time", value: "4.5h" }
+                    { label: "Load Capacity", value: "40kg (88lbs)" },
+                    { label: "Min Passage Width", value: "75cm" },
+                    { label: "Runtime", value: "Up to 12h" },
+                    { label: "Weight", value: "71kg (156lbs)" }
                 ],
                 featureSections: [
                     {
@@ -182,9 +182,29 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "461 x 521 x 1224 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "40kg (10kg/tray)" }, { name: "Tray Size", value: "420 x 500 mm" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "12-15h" }, { name: "Charging Time", value: "4.5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: '49.6 x 62.3 x 135.1cm (19.53" x 24.53" x 53.19")' }, 
+                            { name: "Weight", value: "71kg (156lbs)" },
+                            { name: "Layer Size", value: '42.2 x 57.5cm (16.61" x 22.64")' }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Moving Speed", value: "0.1-1.0m/s (0.33-3.28ft/s)" },
+                            { name: "Slope Angle", value: "5°" },
+                            { name: "Total Load Capacity", value: "40kg (88lbs)" },
+                            { name: "Minimum Passage Width", value: '75cm (29.53")' }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Life*", value: "Up to 12h" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/cN2EAXcqVL4",
                 videoDescription: "Watch the T3 deliver dishes with unparalleled stability and efficiency in a busy restaurant.",
@@ -208,10 +228,10 @@ export const content: Content = {
                 detailTagline: "The nimble and versatile delivery expert for complex and crowded environments.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "30kg" },
+                    { label: "Load Capacity", value: "20kg (44 lbs)" },
                     { label: "Min Passage Width", value: "55cm" },
-                    { label: "Runtime", value: "12-15h" },
-                    { label: "Charging Time", value: "4.5h" }
+                    { label: "Runtime", value: "Up to 15h" },
+                    { label: "Charging Time", value: "4h" }
                 ],
                 featureSections: [
                     {
@@ -226,9 +246,29 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "400 x 460 x 1110 mm" }, { name: "Weight", value: "40kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Min. Passage Width", value: "55cm" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "12-15h" }, { name: "Charging Time", value: "4.5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: '38.4x46.8x111.1cm (15.12"x18.43"x43.74")' }, 
+                            { name: "Weight", value: "34kg (74.96lbs)" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Max. Moving Speed", value: "1.0m/s (3.28ft/s)" },
+                            { name: "Slope Angle", value: "5°" },
+                            { name: "Total Load Capacity", value: "20 kg (44 lbs)" },
+                            { name: "Minimum Passage Width", value: '55 cm (21.65")' }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Life*", value: "Up to 15h" }, 
+                            { name: "Charging Time**", value: "4h" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/t5YIz65Kjr0",
                 videoDescription: "See the T8 in action, navigating tight spaces with ease and delivering a fun, interactive service.",
@@ -252,10 +292,10 @@ export const content: Content = {
                 detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "40kg" },
-                    { label: "Tray Layers", value: "4" },
-                    { label: "Runtime", value: "10-12h" },
-                    { label: "Min Passage Width", value: "60cm" }
+                    { label: "Load Capacity", value: "40kg (88lbs)" },
+                    { label: "Min Passage Width", value: "70cm" },
+                    { label: "Runtime", value: "Up to 18h" },
+                    { label: "Charging Time", value: "4h" }
                 ],
                 featureSections: [
                     {
@@ -270,9 +310,29 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "521 x 500 x 1226 mm" }, { name: "Weight", value: "57kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "40kg" }, { name: "Tray Size", value: "420 x 500 mm" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: '50.0 x 52.7 x 126.6cm (19.69" x 20.75" x 49.84")' }, 
+                            { name: "Weight*", value: "63kg (139lbs)" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Moving Speed", value: "0.1-1.0 m/s (0.33-3.28 ft/s)" },
+                            { name: "Slope Angle", value: "5°" },
+                            { name: "Total Load Capacity", value: "40kg (88lbs)" },
+                            { name: "Minimum Passage Width", value: '70cm (27.56")' }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Life**", value: "Up to 18h" }, 
+                            { name: "Charging Time***", value: "4h" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/5TP6MokvFnQ",
                 videoDescription: "Watch the T9 deliver dishes with unparalleled stability and efficiency in a busy restaurant.",
@@ -296,10 +356,10 @@ export const content: Content = {
                 detailTagline: "The flagship delivery robot with a hygienic tray cover and smart marketing screen.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "30kg" },
-                    { label: "Screen Size", value: "23.8 inch" },
-                    { label: "Runtime", value: "10-12h" },
-                    { label: "Hygiene", value: "Auto Tray Cover" }
+                    { label: "Load Capacity", value: "40kg (88lbs)" },
+                    { label: "Min Passage Width", value: "59cm" },
+                    { label: "Runtime", value: "Up to 8h" },
+                    { label: "Charging Time", value: "5.5h" }
                 ],
                 featureSections: [
                     {
@@ -314,9 +374,29 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "516 x 500 x 1345 mm" }, { name: "Weight", value: "65kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Screen", value: "23.8\" HD" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: '48.6 x 55.5 x 139.9 cm (19.13" x 21.85" x 54.69")' }, 
+                            { name: "Weight", value: "58kg (128lbs)" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Max. Moving Speed", value: "1m/s (3.28 ft/s)" },
+                            { name: "Slope Angle", value: "5°" },
+                            { name: "Total Load Capacity", value: "40kg (88lbs)" },
+                            { name: "Minimum Passage Width", value: '59cm (23.23")' }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Life*", value: "up to 8h" }, 
+                            { name: "Charging Time**", value: "5.5h" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/khnZ4v-5Lqg",
                 videoDescription: "Experience the T10's futuristic dining service, featuring its hygienic cover and large ad screen.",
@@ -340,10 +420,10 @@ export const content: Content = {
                 detailTagline: "The high-capacity dish collecting robot that streamlines restaurant cleanup.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "60kg" },
-                    { label: "Total Volume", value: "120L" },
-                    { label: "Runtime", value: "10-12h" },
-                    { label: "Min Passage Width", value: "60cm" }
+                    { label: "Load Capacity", value: "20kg" },
+                    { label: "Min Passage Width", value: "49cm" },
+                    { label: "Weight", value: "38kg" },
+                    { label: "Battery", value: "DC25.9V, 20.8Ah" }
                 ],
                 featureSections: [
                     {
@@ -358,9 +438,30 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "518 x 500 x 1205 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "60kg" }, { name: "Volume", value: "120L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "10-12h" }, { name: "Charging Time", value: "5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: "463 x 384 x 1123 mm" }, 
+                            { name: "Weight", value: "38kg" },
+                            { name: "Tray Dimensions (middle)", value: "383 × 342 × 220 mm" },
+                            { name: "Tray Dimensions (bottom)", value: "383 × 342 × 285 mm" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Maximum Load Capacity", value: "20 kg" },
+                            { name: "Operating Speed", value: "0.1 to 1.0 m/s" },
+                            { name: "Minimum Passage Width", value: "49cm" },
+                            { name: "Maximum Climbing Angle", value: "5°" }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Specification", value: "DC25.9V, 20.8Ah" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/9xLvVsv86KA",
                 videoDescription: "Watch the T11 effortlessly collect dishes, boosting efficiency in a busy restaurant environment.",
@@ -384,10 +485,10 @@ export const content: Content = {
                 detailTagline: "Elevating Guest Experience with Autonomous, Contactless Room Service.",
                 heroImage: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "20kg" },
-                    { label: "Cabin Volume", value: "41L" },
-                    { label: "Runtime", value: "8-10h" },
-                    { label: "Min Passage Width", value: "60cm" }
+                    { label: "Load Capacity", value: "20kg (44lbs)" },
+                    { label: "Min Passage Width", value: "70cm" },
+                    { label: "Runtime", value: "Up to 12h" },
+                    { label: "Charging Time", value: "6.5h" }
                 ],
                 featureSections: [
                     {
@@ -402,9 +503,29 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "438 x 410 x 1120 mm" }, { name: "Weight", value: "45kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "20kg" }, { name: "Cabin Volume", value: "41L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "8-10h" }, { name: "Charging Time", value: "5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: '45.9 x 54.9 x 108.1 cm (18.07" x 21.61" x 42.56")' }, 
+                            { name: "Weight", value: "48kg (106lbs)" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Max. Moving Speed", value: "0.8m/s (2.63ft/s)" },
+                            { name: "Slope Angle", value: "7°" },
+                            { name: "Total Load Capacity", value: "20kg (44lbs)" },
+                            { name: "Minimum Passage Width", value: '70cm (27.56")' }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Life*", value: "Up to 12h" }, 
+                            { name: "Charging Time**", value: "6.5h" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/hDVr_RCuxMs?si=mfDkolDMe18RKlKL",
                 videoDescription: "See how the BUTLERBOT W3 revolutionizes hotel service with autonomous and secure delivery.",
@@ -428,10 +549,10 @@ export const content: Content = {
                 detailTagline: "The agile 4-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
                 heroImage: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
                 keySpecs: [
-                    { label: "Cleaning Efficiency", value: "Up to 900 m²/h" },
-                    { label: "Functions", value: "4-in-1" },
-                    { label: "Min Passage Width", value: "60cm" },
-                    { label: "Runtime", value: "3-5h" }
+                    { label: "Cleaning Efficiency", value: "Up to 400 m²/h" },
+                    { label: "Weight", value: "22 kg" },
+                    { label: "Charging Time", value: "4h" },
+                    { label: "Clean Water Tank", value: "7L" }
                 ],
                 featureSections: [
                     {
@@ -446,10 +567,36 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "520 x 520 x 625 mm" }, { name: "Weight", value: "50kg" }] },
-                    { category: "Performance", specs: [{ name: "Cleaning Efficiency", value: "700-900 m²/h" }, { name: "Min. Passage Width", value: "60cm" }] },
-                    { category: "Tanks", specs: [{ name: "Clean Water", value: "12L" }, { name: "Dirty Water", value: "10L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "3-5h" }, { name: "Charging Time", value: "3.5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: "523 x 400 x 351 mm" }, 
+                            { name: "Weight", value: "22 kg" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Cleaning Width (Sweeping/Vacuuming)", value: "450 mm" },
+                            { name: "Cleaning Width (Scrubbing)", value: "285 mm" },
+                            { name: "Cleaning Efficiency", value: "Up to 400 ㎡/h" }
+                        ] 
+                    },
+                    { 
+                        category: "Tanks & Bins", 
+                        specs: [
+                            { name: "Clean Water Tank Capacity", value: "7L" },
+                            { name: "Waste Water Tank Capacity", value: "5L" },
+                            { name: "Trash Bin Capacity", value: "0.66L" }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Charging Time", value: "4h" },
+                            { name: "Battery Specification", value: "DC 24V 15.6Ah" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/JAEnvexMePw?si=yjBLaZAZoxl1UtvJ",
                 videoDescription: "Discover the C20, the agile and efficient cleaning expert for small to medium commercial scenarios.",
@@ -473,10 +620,10 @@ export const content: Content = {
                 detailTagline: "The nimble and compact 4-in-1 cleaning robot for complex commercial environments.",
                 heroImage: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
                 keySpecs: [
-                    { label: "Cleaning Efficiency", value: "Up to 700 m²/h" },
-                    { label: "Functions", value: "4-in-1" },
-                    { label: "Body Width", value: "50cm" },
-                    { label: "Runtime", value: "4-6h" }
+                    { label: "Cleaning Efficiency", value: "600 m²/h" },
+                    { label: "Runtime", value: "Up to 6h/10h" },
+                    { label: "Weight", value: "35kg (77lbs)" },
+                    { label: "Charging Time", value: "5-6h" }
                 ],
                 featureSections: [
                     {
@@ -491,10 +638,30 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "500 x 480 x 605 mm" }, { name: "Weight", value: "45kg" }] },
-                    { category: "Performance", specs: [{ name: "Cleaning Efficiency", value: "500-700 m²/h" }, { name: "Min. Passage Width", value: "55cm" }] },
-                    { category: "Tanks", specs: [{ name: "Clean Water", value: "7L" }, { name: "Dirty Water", value: "6L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "4-6h" }, { name: "Charging Time", value: "3.5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: '49.0 x 52.0 x 75.0cm (19.29" x 20.47" x 29.53")' }, 
+                            { name: "Weight", value: "35kg (77lbs)" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Max. Moving Speed", value: "0.8m/s (2.63ft/s)" },
+                            { name: "Cleaning Efficiency", value: "600㎡/h" },
+                            { name: "Maximum Cleaning Width***", value: '61.0cm (24.02")' },
+                            { name: "Maximum Suction", value: "19000Pa" }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Life* (Sweeping & Vacuuming)", value: "Up to 6h" },
+                            { name: "Battery Life* (Dust Mopping)", value: "Up to 10h" },
+                            { name: "Charging Time**", value: "5-6h" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/nHcg64XRxks?si=ig7cLxqnHVDiN3Oa",
                 videoDescription: "Watch the C30, a compact and intelligent cleaning robot, effortlessly navigate and clean various commercial spaces with its 4-in-1 functionality.",
@@ -518,10 +685,10 @@ export const content: Content = {
                 detailTagline: "The agile 5-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
                 heroImage: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
                 keySpecs: [
-                    { label: "Cleaning Efficiency", value: "Up to 1200 m²/h" },
-                    { label: "Functions", value: "5-in-1" },
-                    { label: "Min Passage Width", value: "65cm" },
-                    { label: "Runtime", value: "3-5h" }
+                    { label: "Cleaning Efficiency", value: "Up to 1,100 m²/h" },
+                    { label: "Runtime", value: "Up to 5h / 12h" },
+                    { label: "Charging Time", value: "2h" },
+                    { label: "Weight", value: "70 kg" }
                 ],
                 featureSections: [
                     {
@@ -536,10 +703,40 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "610 x 570 x 695 mm" }, { name: "Weight", value: "65kg" }] },
-                    { category: "Performance", specs: [{ name: "Cleaning Efficiency", value: "Up to 1200 m²/h" }, { name: "Min. Passage Width", value: "65cm" }] },
-                    { category: "Tanks", specs: [{ name: "Clean Water", value: "10L" }, { name: "Dirty Water", value: "8L" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "3-5h" }, { name: "Charging Time", value: "3.5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (w/o squeegee)", value: "578 × 500 × 690 mm" }, 
+                            { name: "Dimensions (w/ squeegee)", value: "616 × 550 × 690 mm" },
+                            { name: "Weight", value: "70 kg" }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Cleaning Width (Sweeping)", value: "560 mm" },
+                            { name: "Cleaning Width (Vacuuming & Scrubbing)", value: "400 mm" },
+                            { name: "Cleaning Efficiency", value: "Up to 1,100 ㎡/h" }
+                        ] 
+                    },
+                    { 
+                        category: "Tanks & Bins", 
+                        specs: [
+                            { name: "Clean Water Tank", value: "16 L" },
+                            { name: "Waste Water Tank", value: "14 L" },
+                            { name: "Dust Bag Capacity", value: "8 L" },
+                            { name: "Trash Bin Capacity", value: "0.7 L" }
+                        ] 
+                    },
+                     { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Maximum Runtime (Scrubbing)", value: "up to 5 hours" },
+                            { name: "Maximum Runtime (Sweeping)", value: "up to 12 hours" },
+                            { name: "Charging Time", value: "2 hours" },
+                            { name: "Battery Specification", value: "DC 25.6V, 50Ah" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/Gd4mC4TcF6s?si=BlKfJOHmSpcMcOGu",
                 videoDescription: "Discover the C40, the agile and efficient cleaning expert for small to medium commercial scenarios.",
@@ -563,10 +760,10 @@ export const content: Content = {
                 detailTagline: "A New Generation of Fully Enclosed Delivery Robot for Secure and Private Transport.",
                 heroImage: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
                 keySpecs: [
-                    { label: "Load Capacity", value: "30kg" },
-                    { label: "Cabin Volume", value: "100L" },
-                    { label: "Runtime", value: "8-12h" },
-                    { label: "Min Passage Width", value: "60cm" }
+                    { label: "Load Capacity", value: "100kg+" },
+                    { label: "Min Passage Width", value: "90cm" },
+                    { label: "Runtime", value: "Up to 8h" },
+                    { label: "Charging Time", value: "2.5h" }
                 ],
                 featureSections: [
                     {
@@ -581,9 +778,29 @@ export const content: Content = {
                     }
                 ],
                 techSpecs: [
-                    { category: "Dimensions & Weight", specs: [{ name: "Size", value: "490 x 480 x 1150 mm" }, { name: "Weight", value: "55kg" }] },
-                    { category: "Performance", specs: [{ name: "Max Load", value: "30kg" }, { name: "Cabin Volume", value: "100L" }, { name: "Min. Passage Width", value: "60cm" }] },
-                    { category: "Battery", specs: [{ name: "Battery Life", value: "8-12h" }, { name: "Charging Time", value: "5h" }] },
+                    { 
+                        category: "Dimensions & Weight", 
+                        specs: [
+                            { name: "Dimensions (WxDxH)", value: '92.5 x 62.0 x 128.2cm (36.42" x 24.41" x 50.47")' }, 
+                            { name: "Weight", value: "87.5kg (192.9lbs)" },
+                            { name: "Standard Shelf Size", value: '86.5 x 60.0 x 80.0cm (34.06" x 23.62" x 31.50")' }
+                        ] 
+                    },
+                    { 
+                        category: "Performance", 
+                        specs: [
+                            { name: "Total Load Capacity", value: "100kg+ (220lbs+)" },
+                            { name: "Max. Moving Speed", value: "1m/s (3.28ft/s)" },
+                            { name: "Minimum Passage Width", value: '90cm (29.53")' }
+                        ] 
+                    },
+                    { 
+                        category: "Battery", 
+                        specs: [
+                            { name: "Battery Life*", value: "Up to 8h" }, 
+                            { name: "Charging Time**", value: "2.5h" }
+                        ] 
+                    },
                 ],
                 videoUrl: "https://youtu.be/KGtbV6l5aJQ?si=hatmy42v9NFHGQhg",
                 videoDescription: "See the S100 in action, delivering items securely and efficiently across different floors.",
