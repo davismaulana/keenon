@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
@@ -7,14 +8,14 @@ import Section from './Section';
 const storiesData = [
     {
         link: "https://www.keenon.com/en/stories/catering/index.html",
-        image: "https://images2.imgbox.com/70/de/pfaTT16n_o.jpg",
-        category: "Catering",
-        title: "Redefining the Dining Experience",
-        description: "KEENON Robotics enhances restaurant efficiency and customer engagement with intelligent, autonomous solutions for food delivery and service.",
-        alt: "KEENON delivery robot serving food in a bustling, modern restaurant.",
-        location: "Washington DC, USA",
-        client: "Hilton Washington Dulles Airport · Internationally acclaimed 5-star hotel",
-        product: "T5 x 1"
+        image: "https://images2.imgbox.com/c5/50/k78hwHrR_o.jpg",
+        category: "Cafe",
+        title: "Brewing Up a New Cafe Experience",
+        description: "KEENON robots help cafes automate drink and food delivery, allowing baristas to focus on crafting the perfect coffee and creating a welcoming atmosphere for guests.",
+        alt: "KEENON T8 robot serving at Compose Coffee in South Korea.",
+        location: "South Korea",
+        client: "Compose Coffee · Renowned Local Cafe Chain",
+        product: "T8 x 1"
     },
     {
         link: "https://www.keenon.com/en/stories/hotel/index.html",
@@ -26,17 +27,6 @@ const storiesData = [
         location: "Tokyo, Japan",
         client: "Sheraton Grande Tokyo Bay Hotel · Internationally acclaimed 5-star hotel",
         product: "W3 x 1"
-    },
-    {
-        link: "https://www.keenon.com/en/stories/retail/index.html",
-        image: "https://images2.imgbox.com/c2/b6/C6yfUDtJ_o.jpg",
-        category: "Supermarket",
-        title: "Enhancing the Shopping Experience",
-        description: "KEENON's smart robots assist shoppers, guide customers, and manage inventory, creating a more efficient and enjoyable retail environment.",
-        alt: "A KEENON robot guiding a customer in a bright, modern supermarket aisle.",
-        location: "Ljubljana, Slovenia",
-        client: "E.Leclerc · Renowned Supermarket Chain",
-        product: "T10 x 1"
     },
     {
         link: "https://www.keenon.com/en/stories/cleaning/index.html",
