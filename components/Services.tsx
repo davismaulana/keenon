@@ -4,13 +4,13 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const slidesData = [
     {
-        link: "https://www.keenon.com/en/solution/catering/index.html",
+        link: "/?solution=catering",
         desktopImg: "https://static.keenon.com/uploads/2025/04/27/399b2df9da8e4ff1931ea03d7aa05212.jpg?x-oss-process=image/format,webp",
         mobileImg: "https://static.keenon.com/uploads/2025/04/27/7fcbda8219c548febe42b9ceea81881b.jpg?x-oss-process=image/format,webp",
         alt: "Robots serving in a restaurant, showcasing the catering solution."
     },
     {
-        link: "https://www.keenon.com/en/solution/hotel/index.html",
+        link: "/?solution=hotel",
         desktopImg: "https://static.keenon.com/uploads/2025/04/27/4e5c2059175b4da19d19dbdf8549b41b.jpg?x-oss-process=image/format,webp",
         mobileImg: "https://static.keenon.com/uploads/2025/04/27/b9f84a3d886a429f8a6e707a287b8670.jpg?x-oss-process=image/format,webp",
         alt: "A delivery robot in a hotel hallway, showcasing the hotel solution."
@@ -40,7 +40,7 @@ const Solutions: React.FC = () => {
             >
                 {slidesData.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <a className="block w-full h-full cursor-pointer" href={slide.link} target="_blank" rel="noopener noreferrer" aria-label={`Learn more about our ${slide.alt}`}>
+                        <a className="block w-full h-full cursor-pointer" href={slide.link} aria-label={`Learn more about our ${slide.alt}`}>
                             <picture>
                                 <source srcSet={slide.desktopImg} media="(min-width: 768px)" />
                                 <source srcSet={slide.mobileImg} media="(max-width: 767px)" />

@@ -1,5 +1,6 @@
 
 
+
 import React, { useEffect } from 'react';
 import { ContentProvider, useContent } from './context/LanguageContext';
 import Header from './components/Header';
@@ -7,6 +8,8 @@ import Hero from './components/Hero';
 import GlobalPresence from './components/GlobalPresence';
 import Products from './components/Products';
 import ProductDetail from './components/ProductDetail';
+import CateringSolution from './components/CateringSolution';
+import HotelSolution from './components/HotelSolution';
 import Solutions from './components/Services'; // Repurposed Services.tsx as Solutions
 import Partners from './components/Partners';
 import CustomerStories from './components/News'; // Repurposed News.tsx as CustomerStories
@@ -19,23 +22,28 @@ const AppCore: React.FC = () => {
     
     const params = new URLSearchParams(window.location.search);
     const productId = params.get('product');
+    const solutionId = params.get('solution');
     const productData = productId 
         ? content.products_showcase.products.find(p => p.id === productId) 
         : null;
 
     useEffect(() => {
-        // On component mount or when product changes, scroll to top.
+        // On component mount or when page changes, scroll to top.
         // Overrides browser's scroll restoration for consistent user experience.
         window.scrollTo(0, 0);
-    }, [productId]);
+    }, [productId, solutionId]);
 
     useEffect(() => {
         if (productData) {
             document.title = `${productData.name} - ${content.company_name}`;
+        } else if (solutionId === 'catering') {
+            document.title = `Catering Solution - ${content.company_name}`;
+        } else if (solutionId === 'hotel') {
+            document.title = `Hotel Solution - ${content.company_name}`;
         } else {
             document.title = `${content.company_name} - ${content.tagline}`;
         }
-    }, [productData, content.company_name, content.tagline]);
+    }, [productData, solutionId, content.company_name, content.tagline]);
     
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -64,11 +72,15 @@ const AppCore: React.FC = () => {
 
     return (
         <div className="bg-trust-navy text-gray-200 font-sans">
-            <Header isDetailPage={!!productData} />
+            <Header isDetailPage={!!productData || !!solutionId} />
             
             <main>
                 {productData ? (
                     <ProductDetail product={productData} />
+                ) : solutionId === 'catering' ? (
+                    <CateringSolution />
+                ) : solutionId === 'hotel' ? (
+                    <HotelSolution />
                 ) : (
                     <HomePageContent />
                 )}
