@@ -1,4 +1,5 @@
 
+
 export interface CoreTechFeature {
     title: string;
     description: string;
@@ -831,7 +832,7 @@ export const content: Content = {
                         ] 
                     },
                 ],
-                videoUrl: "https://youtu.be/Gd4mC4TcF6s?si=BlKfJOHmSpcMcOGu",
+                videoUrl: "https://youtu.be/DLyLjJ2PwGg",
                 videoDescription: "Discover the C40, the agile and efficient cleaning expert for small to medium commercial scenarios.",
                 brochureUrl: "https://www.keenon.com/en/product/C40/index.html"
             },
