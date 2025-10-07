@@ -53,27 +53,33 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
             <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
                 <div className="min-h-screen grid lg:grid-cols-2 items-center gap-12 relative z-10 pt-24 pb-12 lg:pt-0 lg:pb-0">
                     <div className="text-center lg:text-left">
-                        <div 
-                            className="flex items-center justify-center lg:justify-start gap-4 md:gap-6 pop-in"
+                        <h1 
+                            className="text-4xl md:text-5xl font-bold font-display text-gray-100 pop-in"
                             style={{ '--delay': '200ms' } as React.CSSProperties}
                         >
-                            <a href="https://www.xinyitradinggroup.com/" target="_blank" rel="noopener noreferrer">
-                                <img src="https://iili.io/FQiLFzQ.png" alt="Xinyi Trading Group Logo" className="h-16 md:h-20 object-contain" />
+                            {content.hero.headline}
+                        </h1>
+                        <div 
+                            className="flex items-center justify-center lg:justify-start gap-6 my-8 pop-in"
+                            style={{ '--delay': '350ms' } as React.CSSProperties}
+                        >
+                            <a href="https://www.xinyitradinggroup.com/" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                                <img src="https://iili.io/FQiLFzQ.png" alt="Xinyi Trading Group Logo" className="h-12 md:h-14 object-contain" />
                             </a>
-                            <span className="text-4xl md:text-5xl font-light text-gray-400 mx-2">+</span>
-                            <a href="https://www.keenon.com/en/" target="_blank" rel="noopener noreferrer">
-                                <img src="https://images2.imgbox.com/1a/70/Hoh91byU_o.png" alt="KEENON Robotics Logo" className="h-12 md:h-16 object-contain" />
+                            <div className="w-px h-8 bg-gray-700"></div> {/* Vertical Divider */}
+                            <a href="https://www.keenon.com/en/" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                                <img src="https://images2.imgbox.com/1a/70/Hoh91byU_o.png" alt="KEENON Robotics Logo" className="h-10 md:h-12 object-contain" />
                             </a>
                         </div>
                         <p 
-                            className="mt-6 text-lg text-medium-gray max-w-2xl mx-auto lg:mx-0 pop-in"
-                            style={{ '--delay': '350ms' } as React.CSSProperties}
+                            className="text-lg text-medium-gray max-w-2xl mx-auto lg:mx-0 pop-in"
+                            style={{ '--delay': '500ms' } as React.CSSProperties}
                         >
                             {content.hero.subheadline}
                         </p>
                         <div 
                             className="mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pop-in"
-                            style={{ '--delay': '500ms' } as React.CSSProperties}
+                            style={{ '--delay': '650ms' } as React.CSSProperties}
                         >
                             <button 
                                 onClick={scrollToProducts}

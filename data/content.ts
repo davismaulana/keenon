@@ -1,5 +1,3 @@
-
-
 export interface CoreTechFeature {
     title: string;
     description: string;
@@ -148,7 +146,7 @@ export const content: Content = {
         text: "Get Quote",
     },
     hero: {
-        headline: "Global Expertise Meets Robotic Innovation.",
+        headline: "Transforming Industries with Intelligent Automation",
         subheadline: "We are a partnership between Xinyi Trading Group and KEENON Robotics, combining global market expertise with cutting-edge AI robotics. Together, we deliver intelligent service and delivery solutions that help enterprises expand into new markets, improve operational efficiency, and achieve sustainable growth. With reliable technology, rich project experience, and trusted international partnerships, we empower industries from hospitality and catering to healthcare and airports to embrace intelligent upgrades with confidence.",
         primary_cta: "Explore Products",
         secondary_cta: "Watch Demo",
