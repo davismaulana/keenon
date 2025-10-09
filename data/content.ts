@@ -156,172 +156,6 @@ export const content: Content = {
         section_subtitle: "Discover the perfect robot for your business needs, organized by industry solution.",
         products: [
             {
-                id: "t3",
-                name: "DINERBOT T3",
-                category: "Catering",
-                headline: "Efficient Tray Delivery, Smart and Stable",
-                description: "The T3 is a tray delivery robot designed for restaurants and catering services. With its multi-layer tray structure and advanced shock absorption system, it ensures fast, stable, and efficient food delivery, improving service quality and operational flow.",
-                key_features: [
-                    "4-layer adjustable tray with 40kg total capacity",
-                    "Advanced shock mitigation for stable delivery",
-                    "AI voice interaction and customizable expressions",
-                    "Efficient multi-robot cooperation"
-                ],
-                applications: ["Restaurants", "Hotels", "Cafes", "Bars"],
-                cta: "Learn More",
-                image: "https://static.keenon.com/uploads/2024/12/30/3913f366f6bd405fa392f50f011c88bd.webp",
-                detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
-                heroImage: "https://static.keenon.com/uploads/2025/01/07/358ebe3c25fc43d69f1af28d94207c7c.webp",
-                featureSections: [
-                    {
-                        title: "Safe. Hygienic.",
-                        description: "Step-activated and password-secured automatic doors ensure hygienic, spill-proof dish serving.",
-                        image: "https://images2.imgbox.com/60/67/3TF9efBO_o.png"
-                    },
-                    {
-                        title: "Efficiency Maximized.",
-                        description: "Unlocking streamlined delivery efficiency with a spacious 180L cabin volume.",
-                        image: "https://images2.imgbox.com/4d/dd/G4tJhQWd_o.png"
-                    },
-                    {
-                        title: "Tailored Courier Solutions",
-                        description: "Flexible for diverse needs. Adjustable layers accommodate items of varied heights (23cm, 38cm, 69cm).",
-                        image: "https://images2.imgbox.com/02/0c/Q1MVD9Jl_o.png"
-                    }
-                ],
-                keenonCoreTechnology: {
-                    title: "Keenon Core Technology",
-                    features: [
-                        {
-                            title: "Precise navigation and positioning",
-                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability.",
-                            image: "https://images2.imgbox.com/a0/d7/3DXxs6JL_o.png"
-                        },
-                        {
-                            title: "Synergizing 3D perception with instant response",
-                            description: "Precise environmental perception for swift avoidance.",
-                            image: "https://images2.imgbox.com/22/a6/Xo1pHMa1_o.png"
-                        },
-                        {
-                            title: "Patented algorithms and multi-robot dispatching",
-                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution.",
-                            image: "https://images2.imgbox.com/72/92/NOMNRmXW_o.png"
-                        }
-                    ]
-                },
-                techSpecs: [
-                    { 
-                        category: "Dimensions & Weight", 
-                        specs: [
-                            { name: "Dimensions (WxDxH)", value: '49.6 x 62.3 x 135.1cm (19.53" x 24.53" x 53.19")' }, 
-                            { name: "Weight", value: "71kg (156lbs)" },
-                            { name: "Layer Size", value: '42.2 x 57.5cm (16.61" x 22.64")' }
-                        ] 
-                    },
-                    { 
-                        category: "Performance", 
-                        specs: [
-                            { name: "Moving Speed", value: "0.1-1.0m/s (0.33-3.28ft/s)" },
-                            { name: "Slope Angle", value: "5°" },
-                            { name: "Total Load Capacity", value: "40kg (88lbs)" },
-                            { name: "Minimum Passage Width", value: '75cm (29.53")' }
-                        ] 
-                    },
-                    { 
-                        category: "Battery", 
-                        specs: [
-                            { name: "Battery Life*", value: "Up to 12h" }
-                        ] 
-                    },
-                ],
-                videoUrl: "https://youtu.be/cN2EAXcqVL4",
-                videoDescription: "Watch the T3 deliver dishes with unparalleled stability and efficiency in a busy restaurant.",
-                brochureUrl: "https://www.keenon.com/en/product/T3/index.html"
-            },
-            {
-                id: "t8",
-                name: "DINERBOT T8",
-                category: "Catering",
-                headline: "Efficient and Nimble Delivery Expert",
-                description: "The T8 is a versatile delivery robot that can serve in various scenarios with its open tray design. It combines precise navigation and intelligent obstacle avoidance to provide a stable and efficient delivery experience.",
-                key_features: [
-                    "Agile movement with 55cm passage width",
-                    "Multi-modal interaction with voice and light",
-                    "Replaceable cute and customizable expressions",
-                    "Detachable magnetic rear cover"
-                ],
-                applications: ["Restaurants", "Hotels", "Offices", "KTVs"],
-                cta: "Learn More",
-                image: "https://static.keenon.com/uploads/2024/12/30/1e6802e656064293af36c6feb0ab7e2b.webp",
-                detailTagline: "The nimble and versatile delivery expert for complex and crowded environments.",
-                heroImage: "https://static.keenon.com/uploads/2025/01/07/a5250f4cb30446b2912151e2c96f0598.webp",
-                featureSections: [
-                    {
-                        title: "Compact, for Enhanced Agility",
-                        description: "Our compact robot navigates spaces as narrow as 55 cm, ensuring maneuverability in cozy environments.",
-                        image: "https://images2.imgbox.com/4d/8a/ZPoXaQMG_o.png"
-                    },
-                    {
-                        title: "Smart Self-Pickup Guidance",
-                        description: "Made possible by tray sensors, a 300° open tray, and voice and visual guidance on the 10.1\" touch screen.",
-                        image: "https://images2.imgbox.com/99/be/4nVj4qOg_o.png"
-                    },
-                    {
-                        title: "Safety, Elevated",
-                        description: "DINERBOT T8 uses 3 stereo vision sensors, detecting common high obstacles and those under 5cm, for precise, safe service in any environment.",
-                        image: "https://images2.imgbox.com/b1/37/iTh9dLz6_o.png"
-                    }
-                ],
-                keenonCoreTechnology: {
-                    title: "Keenon Core Technology",
-                    features: [
-                        {
-                            title: "Precise navigation and positioning",
-                            description: "Craft precise positioning maps with seamless spatial data collection for trustworthy reliability.",
-                            image: "https://images2.imgbox.com/f2/41/zsKzp31t_o.png"
-                        },
-                        {
-                            title: "Synergizing 3D perception with instant response",
-                            description: "Precise environmental perception for swift avoidance.",
-                            image: "https://images2.imgbox.com/37/70/1rZ3eJZt_o.png"
-                        },
-                        {
-                            title: "Patented algorithms and multi-robot dispatching",
-                            description: "Patented AI algorithms empower robots to optimize route planning for efficient task execution.",
-                            image: "https://images2.imgbox.com/1f/f6/9eSB4CYy_o.png"
-                        }
-                    ]
-                },
-                techSpecs: [
-                    { 
-                        category: "Dimensions & Weight", 
-                        specs: [
-                            { name: "Dimensions (WxDxH)", value: '38.4x46.8x111.1cm (15.12"x18.43"x43.74")' }, 
-                            { name: "Weight", value: "34kg (74.96lbs)" }
-                        ] 
-                    },
-                    { 
-                        category: "Performance", 
-                        specs: [
-                            { name: "Max. Moving Speed", value: "1.0m/s (3.28ft/s)" },
-                            { name: "Slope Angle", value: "5°" },
-                            { name: "Total Load Capacity", value: "20 kg (44 lbs)" },
-                            { name: "Minimum Passage Width", value: '55 cm (21.65")' }
-                        ] 
-                    },
-                    { 
-                        category: "Battery", 
-                        specs: [
-                            { name: "Battery Life*", value: "Up to 15h" }, 
-                            { name: "Charging Time**", value: "4h" }
-                        ] 
-                    },
-                ],
-                videoUrl: "https://youtu.be/t5YIz65Kjr0",
-                videoDescription: "See the T8 in action, navigating tight spaces with ease and delivering a fun, interactive service.",
-                brochureUrl: "https://www.keenon.com/en/product/T8/index.html"
-            },
-            {
                 id: "t9",
                 name: "DINERBOT T9",
                 category: "Catering",
@@ -416,10 +250,10 @@ export const content: Content = {
             },
             {
                 id: "t10",
-                name: "DINERBOT T10",
+                name: "DINERBOT T10S",
                 category: "Catering",
                 headline: "Full-featured Flagship, Smart Dining Companion",
-                description: "The T10 is a flagship delivery robot with a tray cover for enhanced food safety and hygiene. It combines intelligent features like plate detection and multi-modal interaction to create a futuristic and efficient dining experience.",
+                description: "The T10S is a flagship delivery robot with a tray cover for enhanced food safety and hygiene. It combines intelligent features like plate detection and multi-modal interaction to create a futuristic and efficient dining experience.",
                 key_features: [
                     "Automatic tray cover for enhanced hygiene",
                     "Plate detection for automatic return journeys",
@@ -504,69 +338,8 @@ export const content: Content = {
                     },
                 ],
                 videoUrl: "https://youtu.be/khnZ4v-5Lqg",
-                videoDescription: "Experience the T10's futuristic dining service, featuring its hygienic cover and large ad screen.",
+                videoDescription: "Experience the T10S's futuristic dining service, featuring its hygienic cover and large ad screen.",
                 brochureUrl: "https://www.keenon.com/en/product/T10/index.html"
-            },
-            {
-                id: "t11",
-                name: "DINERBOT T11",
-                category: "Catering",
-                headline: "Efficient Dish Collection, Smart and Practical",
-                description: "The T11 is specially designed for dish collection in restaurants. It has a large capacity and can intelligently navigate in complex environments, improving overall service efficiency and quality.",
-                key_features: [
-                    "120L super large capacity, carries up to 400 dishes",
-                    "Three-layer adjustable trays for flexibility",
-                    "Smart SLAM navigation for complex environments",
-                    "Simple call button for on-demand service"
-                ],
-                applications: ["Restaurants", "Canteens", "Food courts"],
-                cta: "Learn More",
-                image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
-                detailTagline: "The high-capacity dish collecting robot that streamlines restaurant cleanup.",
-                heroImage: "https://static.keenon.com/uploads/2025/08/27/225f3bdaa69441529a0787643b8f7ebd.jpg?x-oss-process=image/format,webp",
-                featureSections: [
-                    {
-                        image: "https://static.keenon.com/uploads/2025/08/27/bff71a3e19bc43f6ba5f7ee9055555f1.jpg?x-oss-process=image/format,webp"
-                    },
-                    {
-                        image: "https://static.keenon.com/uploads/2025/08/27/e5d5ba0f417346fbb0cbbdb038746f8a.jpg?x-oss-process=image/format,webp"
-                    },
-                    {
-                        image: "https://static.keenon.com/uploads/2025/08/27/15eba5c9e4b54040a2048fd7dea74722.jpg?x-oss-process=image/format,webp"
-                    },
-                    {
-                        image: "https://static.keenon.com/uploads/2025/08/27/f485683db03e444a8ccf48e2e158e77b.jpg?x-oss-process=image/format,webp"
-                    }
-                ],
-                techSpecs: [
-                    { 
-                        category: "Dimensions & Weight", 
-                        specs: [
-                            { name: "Dimensions (WxDxH)", value: "463 x 384 x 1123 mm" }, 
-                            { name: "Weight", value: "38kg" },
-                            { name: "Tray Dimensions (middle)", value: "383 × 342 × 220 mm" },
-                            { name: "Tray Dimensions (bottom)", value: "383 × 342 × 285 mm" }
-                        ] 
-                    },
-                    { 
-                        category: "Performance", 
-                        specs: [
-                            { name: "Maximum Load Capacity", value: "20 kg" },
-                            { name: "Operating Speed", value: "0.1 to 1.0 m/s" },
-                            { name: "Minimum Passage Width", value: "49cm" },
-                            { name: "Maximum Climbing Angle", value: "5°" }
-                        ] 
-                    },
-                    { 
-                        category: "Battery", 
-                        specs: [
-                            { name: "Battery Specification", value: "DC25.9V, 20.8Ah" }
-                        ] 
-                    },
-                ],
-                videoUrl: "https://youtu.be/9xLvVsv86KA",
-                videoDescription: "Watch the T11 effortlessly collect dishes, boosting efficiency in a busy restaurant environment.",
-                brochureUrl: "https://www.keenon.com/en/product/T11/index.html"
             },
             {
                 id: "w3",
@@ -630,73 +403,6 @@ export const content: Content = {
                 videoUrl: "https://youtu.be/hDVr_RCuxMs?si=mfDkolDMe18RKlKL",
                 videoDescription: "See how the BUTLERBOT W3 revolutionizes hotel service with autonomous and secure delivery.",
                 brochureUrl: "https://www.keenon.com/en/product/W3/index.html"
-            },
-            {
-                id: "c20",
-                name: "KLEENBOT C20",
-                category: "Cleaning",
-                headline: "Efficient and Agile, A Cleaning Expert for Small to Medium-sized Scenarios",
-                description: "The C20 is a compact, efficient cleaning robot designed for small to medium commercial spaces. It combines 4-in-1 cleaning functions to deliver thorough performance while easily navigating tight spaces.",
-                key_features: [
-                    "4-in-1 cleaning: sweeping, scrubbing, vacuuming, and mopping",
-                    "Compact body for navigating narrow spaces (≥60cm)",
-                    "Intelligent perception and upgraded obstacle avoidance",
-                    "Optional workstation for fully automated operation"
-                ],
-                applications: ["Office buildings", "Hotels", "Restaurants", "Shopping malls", "Supermarkets"],
-                cta: "Learn More",
-                image: "https://static.keenon.com/uploads/2025/04/10/bffedda3ed8a49fb9d48db0731dafa3b.png?x-oss-process=image/format,webp",
-                detailTagline: "The agile 4-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
-                heroImage: "https://static.keenon.com/uploads/2025/05/30/249ddd79696847a39faff2155e7b15b9.jpg?x-oss-process=image/format,webp",
-                featureSections: [
-                    {
-                        image: "https://static.keenon.com/uploads/2025/05/30/92729e51aaa74750b1d077c75c631a2b.jpg?x-oss-process=image/format,webp"
-                    },
-                    {
-                        image: "https://static.keenon.com/uploads/2025/05/30/cecf06ebc4bb492688f605e2412e4052.jpg?x-oss-process=image/format,webp"
-                    },
-                    {
-                        image: "https://static.keenon.com/uploads/2025/05/30/be9a556dec134c0ca696adad0952edd3.jpg?x-oss-process=image/format,webp"
-                    },
-                    {
-                        image: "https://static.keenon.com/uploads/2025/05/30/6c9b261c52044095a31aa1f23f545b4a.jpg?x-oss-process=image/format,webp"
-                    }
-                ],
-                techSpecs: [
-                    { 
-                        category: "Dimensions & Weight", 
-                        specs: [
-                            { name: "Dimensions (WxDxH)", value: "523 x 400 x 351 mm" }, 
-                            { name: "Weight", value: "22 kg" }
-                        ] 
-                    },
-                    { 
-                        category: "Performance", 
-                        specs: [
-                            { name: "Cleaning Width (Sweeping/Vacuuming)", value: "450 mm" },
-                            { name: "Cleaning Width (Scrubbing)", value: "285 mm" },
-                            { name: "Cleaning Efficiency", value: "Up to 400 ㎡/h" }
-                        ] 
-                    },
-                    { 
-                        category: "Tanks & Bins", 
-                        specs: [
-                            { name: "Clean Water Tank Capacity", value: "7L" },
-                            { name: "Waste Water Tank Capacity", value: "5L" },
-                            { name: "Trash Bin Capacity", value: "0.66L" }
-                        ] 
-                    },
-                    { 
-                        category: "Battery", 
-                        specs: [
-                            { name: "Charging Time", value: "4h" },
-                            { name: "Battery Specification", value: "DC 24V 15.6Ah" }
-                        ] 
-                    },
-                ],
-                videoUrl: "https://youtu.be/JAEnvexMePw?si=yjBLaZAZoxl1UtvJ",
-                videoDescription: "Discover the C20, the agile and efficient cleaning expert for small to medium commercial scenarios.",
-                brochureUrl: "https://www.keenon.com/en/product/C20/index.html"
             },
             {
                 id: "c30",
@@ -833,18 +539,6 @@ export const content: Content = {
                 videoUrl: "https://youtu.be/DLyLjJ2PwGg",
                 videoDescription: "Discover the C40, the agile and efficient cleaning expert for small to medium commercial scenarios.",
                 brochureUrl: "https://www.keenon.com/en/product/C40/index.html"
-            },
-            {
-                id: "c55",
-                name: "KLEENBOT C55",
-                category: "Cleaning",
-                headline: "Advanced Cleaning Solution for Large Environments",
-                description: "The C55 is an industrial-grade cleaning robot designed for maximum efficiency in large-scale commercial spaces. More details coming soon.",
-                key_features: [],
-                applications: [],
-                cta: "Learn More",
-                image: "https://static.keenon.com/uploads/2025/04/14/051877d47539412287e75afedd94a16f.png?x-oss-process=image/format,webp",
-                heroImage: "https://static.keenon.com/uploads/2025/04/11/546e8f90ea2741a08d76ca366ae2c2eb.jpg?x-oss-process=image/format,webp",
             },
             {
                 id: "s100",
