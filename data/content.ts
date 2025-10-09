@@ -250,10 +250,10 @@ export const content: Content = {
             },
             {
                 id: "t10",
-                name: "DINERBOT T10S",
+                name: "DINERBOT T10",
                 category: "Catering",
                 headline: "Full-featured Flagship, Smart Dining Companion",
-                description: "The T10S is a flagship delivery robot with a tray cover for enhanced food safety and hygiene. It combines intelligent features like plate detection and multi-modal interaction to create a futuristic and efficient dining experience.",
+                description: "The T10 is a flagship delivery robot with a tray cover for enhanced food safety and hygiene. It combines intelligent features like plate detection and multi-modal interaction to create a futuristic and efficient dining experience.",
                 key_features: [
                     "Automatic tray cover for enhanced hygiene",
                     "Plate detection for automatic return journeys",
@@ -338,7 +338,7 @@ export const content: Content = {
                     },
                 ],
                 videoUrl: "https://youtu.be/khnZ4v-5Lqg",
-                videoDescription: "Experience the T10S's futuristic dining service, featuring its hygienic cover and large ad screen.",
+                videoDescription: "Experience the T10's futuristic dining service, featuring its hygienic cover and large ad screen.",
                 brochureUrl: "https://www.keenon.com/en/product/T10/index.html"
             },
             {
