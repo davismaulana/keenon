@@ -3,6 +3,7 @@
 
 import React, { useEffect } from 'react';
 import { ContentProvider, useContent } from './context/LanguageContext';
+import { CustomerDataProvider, useCustomerTracking } from './context/CustomerDataContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import GlobalPresence from './components/GlobalPresence';
@@ -16,9 +17,11 @@ import CustomerStories from './components/News'; // Repurposed News.tsx as Custo
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+// import CookieConsentBanner from './components/CookieConsent';
 
 const AppCore: React.FC = () => {
     const { content } = useContent();
+    // const { trackPageView, trackProductView, trackSolutionInterest } = useCustomerTracking();
     
     const params = new URLSearchParams(window.location.search);
     const productId = params.get('product');
@@ -31,6 +34,20 @@ const AppCore: React.FC = () => {
         // On component mount or when page changes, scroll to top.
         // Overrides browser's scroll restoration for consistent user experience.
         window.scrollTo(0, 0);
+        
+        // Track page views and specific interactions
+        // if (productData) {
+        //     trackPageView(`product-${productData.id}`);
+        //     trackProductView(productData.id);
+        // } else if (solutionId === 'catering') {
+        //     trackPageView('solution-catering');
+        //     trackSolutionInterest('catering');
+        // } else if (solutionId === 'hotel') {
+        //     trackPageView('solution-hotel');
+        //     trackSolutionInterest('hotel');
+        // } else {
+        //     trackPageView('home');
+        // }
     }, [productId, solutionId]);
 
     useEffect(() => {
@@ -89,13 +106,16 @@ const AppCore: React.FC = () => {
 
             <Footer />
             <WhatsAppButton />
+            {/* <CookieConsentBanner /> */}
         </div>
     );
 };
 
 const App: React.FC = () => (
     <ContentProvider>
-        <AppCore />
+        <CustomerDataProvider>
+            <AppCore />
+        </CustomerDataProvider>
     </ContentProvider>
 );
 

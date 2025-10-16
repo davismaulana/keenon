@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Section from './Section';
 import { useContent } from '../context/LanguageContext';
+import { useCustomerTracking } from '../context/CustomerDataContext';
 import { LocationMarkerIcon, ClockIcon } from './icons/ContactIcons';
 import { PhoneIcon } from './icons/PhoneIcon';
 import { MailIcon } from './icons/AdvantageIcons';
@@ -8,6 +9,7 @@ import { MailIcon } from './icons/AdvantageIcons';
 const Contact: React.FC = () => {
     const { content } = useContent();
     const { contact, footer } = content;
+    const { trackContactFormSubmission } = useCustomerTracking();
     const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
 
     type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';
@@ -35,6 +37,8 @@ const Contact: React.FC = () => {
             if (response.ok) {
                 setSubmissionStatus('success');
                 setFormState({ name: '', email: '', subject: '', message: '' });
+                // Track successful form submission
+                trackContactFormSubmission();
             } else {
                 const errorText = await response.text();
                 setSubmissionError(errorText || 'An unexpected error occurred while sending the message.');
