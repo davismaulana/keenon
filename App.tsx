@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect } from 'react';
 import { ContentProvider, useContent } from './context/LanguageContext';
 import Header from './components/Header';
@@ -16,6 +13,8 @@ import CustomerStories from './components/News'; // Repurposed News.tsx as Custo
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import { trackPageView } from './utils/analytics';
+import CookieConsent from './components/CookieConsent';
 
 const AppCore: React.FC = () => {
     const { content } = useContent();
@@ -28,8 +27,8 @@ const AppCore: React.FC = () => {
         : null;
 
     useEffect(() => {
-        // On component mount or when page changes, scroll to top.
-        // Overrides browser's scroll restoration for consistent user experience.
+        // On component mount or when page changes, track the view and scroll to top.
+        trackPageView();
         window.scrollTo(0, 0);
     }, [productId, solutionId]);
 
@@ -89,6 +88,7 @@ const AppCore: React.FC = () => {
 
             <Footer />
             <WhatsAppButton />
+            <CookieConsent />
         </div>
     );
 };
