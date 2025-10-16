@@ -15,7 +15,6 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import { trackPageView } from './utils/analytics';
 import CookieConsent from './components/CookieConsent';
-import ROI_Calculator from './components/ROI_Calculator';
 
 const AppCore: React.FC = () => {
     const { content } = useContent();
@@ -41,12 +40,10 @@ const AppCore: React.FC = () => {
             document.title = `Catering Solution - ${content.company_name}`;
         } else if (solutionId === 'hotel') {
             document.title = `Hotel Solution - ${content.company_name}`;
-        } else if (page === 'roi-calculator') {
-            document.title = `ROI Calculator - ${content.company_name}`;
         } else {
             document.title = `${content.company_name} - ${content.tagline}`;
         }
-    }, [productData, solutionId, page, content.company_name, content.tagline]);
+    }, [productData, solutionId, content.company_name, content.tagline]);
     
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -73,7 +70,7 @@ const AppCore: React.FC = () => {
         </>
     );
     
-    const isDetailPage = !!productData || !!solutionId || page === 'roi-calculator';
+    const isDetailPage = !!productData || !!solutionId;
 
     return (
         <div className="bg-trust-navy text-gray-200 font-sans">
@@ -86,13 +83,11 @@ const AppCore: React.FC = () => {
                     <CateringSolution />
                 ) : solutionId === 'hotel' ? (
                     <HotelSolution />
-                ) : page === 'roi-calculator' ? (
-                    <ROI_Calculator />
                 ) : (
                     <HomePageContent />
                 )}
                 
-                { !isDetailPage && <div id="contact"><Contact /></div> }
+                <div id="contact"><Contact /></div>
             </main>
 
             <Footer />

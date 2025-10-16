@@ -17,8 +17,7 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
         { key: 'home', id: 'home', isPage: false },
         { key: 'products', id: 'products', isPage: false },
         { key: 'solutions', id: 'solutions', isPage: false },
-        { key: 'roi_calculator', id: 'roi-calculator', isPage: true },
-        { key: 'contact', id: 'contact', isPage: false },
+        { key: 'roi_calculator', id: 'contact', isPage: false },
     ];
 
     useEffect(() => {
