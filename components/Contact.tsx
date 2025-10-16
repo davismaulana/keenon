@@ -209,9 +209,9 @@ const Contact: React.FC = () => {
     return (
         <Section id="contact">
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] reveal">Get a Quote & ROI Estimate</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] reveal">Get a Quote</h2>
                 <p className="mt-4 text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto font-light reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>
-                    Discover the financial benefits of automation. Fill in your details to calculate your potential return on investment.
+                    Fill in your business details to receive a personalized quote and see your potential return on investment.
                 </p>
             </div>
 

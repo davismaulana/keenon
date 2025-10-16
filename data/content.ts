@@ -141,7 +141,7 @@ export const content: Content = {
         home: 'Home',
         products: 'Products',
         solutions: 'Solutions',
-        roi_calculator: 'ROI Calculator',
+        roi_calculator: 'Get a Quote',
         contact: 'Contact',
         back: 'Back to Home'
     },
