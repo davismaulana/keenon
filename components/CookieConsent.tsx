@@ -2,21 +2,29 @@ import React, { useState, useEffect } from 'react';
 
 const CookieConsent: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [isExiting, setIsExiting] = useState(false);
 
     useEffect(() => {
-        // The banner should only be visible if consent has not been previously given.
         const consent = localStorage.getItem('cookieConsent');
         if (!consent) {
-            setIsVisible(true);
+            // Delay showing the banner slightly to allow the rest of the page to load first.
+            const timer = setTimeout(() => {
+                setIsVisible(true);
+            }, 500);
+            return () => clearTimeout(timer);
         }
     }, []);
 
     const handleConsent = (consent: 'accepted' | 'declined') => {
         localStorage.setItem('cookieConsent', consent);
-        setIsVisible(false);
-        // If user accepts, trigger the first page view track immediately.
+        setIsExiting(true); // Trigger the exit animation
+
+        // Wait for the animation to finish before removing the component from the DOM.
+        setTimeout(() => {
+            setIsVisible(false);
+        }, 500); // This duration must match the CSS animation duration.
+
         if (consent === 'accepted') {
-            // Dynamically import to avoid circular dependencies and call the function.
             import('../utils/analytics').then(module => {
                 module.trackPageView();
             });
@@ -26,9 +34,12 @@ const CookieConsent: React.FC = () => {
     if (!isVisible) {
         return null;
     }
+    
+    // Apply the correct animation class based on whether the banner is entering or exiting.
+    const animationClass = isExiting ? 'animate-slide-fade-out-down' : 'animate-slide-fade-in-up';
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 bg-light-gray/95 backdrop-blur-sm p-4 z-[100] border-t border-gray-700 shadow-2xl animate-fade-in-up"
+        <div className={`fixed bottom-0 left-0 right-0 bg-light-gray/95 backdrop-blur-sm p-4 z-[100] border-t border-gray-700 shadow-2xl ${animationClass}`}
              role="dialog"
              aria-labelledby="cookie-consent-title"
              aria-describedby="cookie-consent-description">
