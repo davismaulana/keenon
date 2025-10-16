@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { useContent } from '../context/LanguageContext';
 import { MenuIcon, XIcon } from './icons/MenuIcons';
@@ -16,31 +14,34 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
     const [activeSection, setActiveSection] = useState('home');
 
     const navLinks = [
-        { key: 'home', id: 'home' },
-        { key: 'products', id: 'products' },
-        { key: 'solutions', id: 'solutions' },
-        { key: 'contact', id: 'contact' },
+        { key: 'home', id: 'home', isPage: false },
+        { key: 'products', id: 'products', isPage: false },
+        { key: 'solutions', id: 'solutions', isPage: false },
+        { key: 'roi_calculator', id: 'roi-calculator', isPage: true },
+        { key: 'contact', id: 'contact', isPage: false },
     ];
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
 
-            const sections = navLinks.map(link => document.getElementById(link.id));
+            const sections = navLinks.filter(l => !l.isPage).map(link => document.getElementById(link.id));
             const scrollPosition = window.scrollY + 100;
 
             for (let i = sections.length - 1; i >= 0; i--) {
                 const section = sections[i];
                 if (section && section.offsetTop <= scrollPosition) {
-                    setActiveSection(navLinks[i].id);
+                    setActiveSection(navLinks.filter(l => !l.isPage)[i].id);
                     break;
                 }
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        if (!isDetailPage) {
+            window.addEventListener('scroll', handleScroll);
+        }
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [navLinks]);
+    }, [isDetailPage, navLinks]);
     
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -51,6 +52,15 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
             window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
         setIsOpen(false);
+    };
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: typeof navLinks[0]) => {
+        if (!link.isPage) {
+            e.preventDefault();
+            scrollToSection(link.id);
+        } else {
+             setIsOpen(false);
+        }
     };
 
     return (
@@ -73,9 +83,9 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
                                 {navLinks.map(link => (
                                     <a 
                                         key={link.key} 
-                                        href={`#${link.id}`} 
-                                        onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }}
-                                        className={`nav-link-underline text-sm font-medium text-gray-300 hover:text-corporate-gold transition-colors ${activeSection === link.id ? 'active text-corporate-gold' : ''}`}
+                                        href={link.isPage ? `/?page=${link.id}` : `#${link.id}`}
+                                        onClick={(e) => handleNavClick(e, link)}
+                                        className={`nav-link-underline text-sm font-medium text-gray-300 hover:text-corporate-gold transition-colors ${!link.isPage && activeSection === link.id ? 'active text-corporate-gold' : ''}`}
                                     >
                                         {content.nav[link.key as keyof typeof content.nav]}
                                     </a>
@@ -102,7 +112,12 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
                 <div className="lg:hidden bg-trust-navy shadow-lg absolute top-0 left-0 w-full pt-20 animate-fade-in">
                     <div className="px-6 pt-2 pb-4 space-y-2">
                          {navLinks.map(link => (
-                            <a key={link.key} href={`#${link.id}`} onClick={(e) => { e.preventDefault(); scrollToSection(link.id);}} className="block py-3 text-base font-medium text-gray-200 hover:text-corporate-gold hover:bg-light-gray rounded-md text-center">
+                            <a 
+                                key={link.key} 
+                                href={link.isPage ? `/?page=${link.id}` : `#${link.id}`} 
+                                onClick={(e) => handleNavClick(e, link)}
+                                className="block py-3 text-base font-medium text-gray-200 hover:text-corporate-gold hover:bg-light-gray rounded-md text-center"
+                            >
                                 {content.nav[link.key as keyof typeof content.nav]}
                             </a>
                         ))}

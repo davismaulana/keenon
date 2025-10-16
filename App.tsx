@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import { trackPageView } from './utils/analytics';
 import CookieConsent from './components/CookieConsent';
+import ROI_Calculator from './components/ROI_Calculator';
 
 const AppCore: React.FC = () => {
     const { content } = useContent();
@@ -22,6 +23,7 @@ const AppCore: React.FC = () => {
     const params = new URLSearchParams(window.location.search);
     const productId = params.get('product');
     const solutionId = params.get('solution');
+    const page = params.get('page');
     const productData = productId 
         ? content.products_showcase.products.find(p => p.id === productId) 
         : null;
@@ -30,7 +32,7 @@ const AppCore: React.FC = () => {
         // On component mount or when page changes, track the view and scroll to top.
         trackPageView();
         window.scrollTo(0, 0);
-    }, [productId, solutionId]);
+    }, [productId, solutionId, page]);
 
     useEffect(() => {
         if (productData) {
@@ -39,10 +41,12 @@ const AppCore: React.FC = () => {
             document.title = `Catering Solution - ${content.company_name}`;
         } else if (solutionId === 'hotel') {
             document.title = `Hotel Solution - ${content.company_name}`;
+        } else if (page === 'roi-calculator') {
+            document.title = `ROI Calculator - ${content.company_name}`;
         } else {
             document.title = `${content.company_name} - ${content.tagline}`;
         }
-    }, [productData, solutionId, content.company_name, content.tagline]);
+    }, [productData, solutionId, page, content.company_name, content.tagline]);
     
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -68,10 +72,12 @@ const AppCore: React.FC = () => {
             <CustomerStories />
         </>
     );
+    
+    const isDetailPage = !!productData || !!solutionId || page === 'roi-calculator';
 
     return (
         <div className="bg-trust-navy text-gray-200 font-sans">
-            <Header isDetailPage={!!productData || !!solutionId} />
+            <Header isDetailPage={isDetailPage} />
             
             <main>
                 {productData ? (
@@ -80,10 +86,13 @@ const AppCore: React.FC = () => {
                     <CateringSolution />
                 ) : solutionId === 'hotel' ? (
                     <HotelSolution />
+                ) : page === 'roi-calculator' ? (
+                    <ROI_Calculator />
                 ) : (
                     <HomePageContent />
                 )}
-                <div id="contact"><Contact /></div>
+                
+                { !isDetailPage && <div id="contact"><Contact /></div> }
             </main>
 
             <Footer />
