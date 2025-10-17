@@ -1,11 +1,18 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import Section from './Section';
 import { useContent } from '../context/LanguageContext';
-import { Product } from '../data/content';
 import { LocationMarkerIcon, ClockIcon } from './icons/ContactIcons';
 import { PhoneIcon } from './icons/PhoneIcon';
-import { MailIcon, CostEfficiencyIcon, ProductivityIcon, ScalabilityIcon } from './icons/AdvantageIcons';
+import { MailIcon } from './icons/AdvantageIcons';
+import { CheckCircleIcon } from './icons/CheckCircleIcon';
+
+
+/*
+// ROI Calculator Components and Types - Commented out as requested
+
+import { Product } from '../data/content';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
+import { CostEfficiencyIcon, ProductivityIcon, ScalabilityIcon } from './icons/AdvantageIcons';
 import { CalendarIcon } from './icons/CalculatorIcons';
 
 type Step = 1 | 2 | 3;
@@ -117,6 +124,7 @@ const ResultCard: React.FC<{ icon: React.ReactNode, title: string, value: string
         <p className="text-3xl font-bold font-display text-white mt-2">{value}</p>
     </div>
 );
+*/
 
 const InputField: React.FC<React.InputHTMLAttributes<HTMLInputElement> & { label: string }> = ({ label, ...props }) => (
     <div>
@@ -125,83 +133,36 @@ const InputField: React.FC<React.InputHTMLAttributes<HTMLInputElement> & { label
     </div>
 );
 
-const SelectField: React.FC<React.SelectHTMLAttributes<HTMLSelectElement> & { label: string }> = ({ label, children, ...props }) => (
-     <div>
+const TextAreaField: React.FC<React.TextareaHTMLAttributes<HTMLTextAreaElement> & { label: string }> = ({ label, ...props }) => (
+    <div>
         <label htmlFor={props.name} className="block text-sm font-medium text-gray-400 mb-1">{label}</label>
-        <select {...props} id={props.name} className="w-full px-4 py-3 bg-[var(--color-bg-input)] text-[var(--color-text-primary)] rounded-md border border-[var(--color-border-input)] focus:ring-2 focus:ring-[var(--color-border-input-focus)]/50 focus:border-[var(--color-border-input-focus)] transition">
-            {children}
-        </select>
+        <textarea {...props} id={props.name} rows={4} className="w-full px-4 py-3 bg-[var(--color-bg-input)] text-[var(--color-text-primary)] rounded-md border border-[var(--color-border-input)] focus:ring-2 focus:ring-[var(--color-border-input-focus)]/50 focus:border-[var(--color-border-input-focus)] transition"></textarea>
     </div>
 );
 
 const Contact: React.FC = () => {
     const { content } = useContent();
-    const { footer } = content;
-    const [step, setStep] = useState<Step>(1);
-    const [formData, setFormData] = useState<FormData>({
-        name: '', email: '', phone: '', companyName: '', jobTitle: '',
-        businessType: 'Restaurant', companySize: '1', operatingHours: 8,
-        operatingDays: 26, avgSalary: 5000000, staffCount: 10,
-    });
-    const [selectedRobots, setSelectedRobots] = useState<{ [id: string]: number }>({});
-    const [results, setResults] = useState<Results | null>(null);
-
-    const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: name.includes('Hours') || name.includes('Days') || name.includes('Salary') || name.includes('Count') ? Number(value) : value }));
-    };
-
-    const handleRobotQuantityChange = (id: string, delta: number) => {
-        setSelectedRobots(prev => {
-            const newCount = (prev[id] || 0) + delta;
-            const newSelected = { ...prev };
-            if (newCount > 0) {
-                newSelected[id] = newCount;
-            } else {
-                delete newSelected[id];
-            }
-            return newSelected;
-        });
-    };
+    const { contact, footer } = content;
     
-    const calculateROI = () => {
-        const totalInvestment = content.products_showcase.products.reduce((acc, product) => {
-            const quantity = selectedRobots[product.id] || 0;
-            return acc + (quantity * (product.price || 0));
-        }, 0);
+    const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-        const totalStaffReplaced = content.products_showcase.products.reduce((acc, product) => {
-            const quantity = selectedRobots[product.id] || 0;
-            return acc + (quantity * (product.staffReplacementValue || 0));
-        }, 0);
-        
-        const monthlySavings = totalStaffReplaced * formData.avgSalary;
-        const breakEvenMonths = totalInvestment > 0 && monthlySavings > 0 ? totalInvestment / monthlySavings : 0;
-        
-        const annualSavings = monthlySavings * 12;
-        const threeYearNetProfit = (annualSavings * 3) - totalInvestment;
-        const threeYearROI = totalInvestment > 0 ? (threeYearNetProfit / totalInvestment) * 100 : 0;
-
-        setResults({ totalInvestment, monthlySavings, breakEvenMonths, threeYearROI });
-        setStep(3);
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormState(prev => ({ ...prev, [name]: value }));
     };
 
-    const totalSelectedRobots = useMemo(() => Object.values(selectedRobots).reduce((sum: number, count: number) => sum + count, 0), [selectedRobots]);
-
-    const currencyFormatter = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 });
-
-    const renderStep = () => {
-        switch (step) {
-            case 1:
-                return <QuestionnaireStep formData={formData} onChange={handleFormChange} onNext={() => setStep(2)} />;
-            case 2:
-                return <RobotSelectionStep products={content.products_showcase.products} selected={selectedRobots} onChange={handleRobotQuantityChange} onBack={() => setStep(1)} onNext={calculateROI} totalSelected={totalSelectedRobots} formatter={currencyFormatter}/>;
-            case 3:
-                if (!results) return null;
-                return <ResultsStep results={results} formData={formData} onReset={() => { setStep(1); setSelectedRobots({}); setResults(null); }} formatter={currencyFormatter} />;
-            default:
-                return null;
-        }
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus('sending');
+        // Simulate API call for demo purposes
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        setStatus('success');
+        // Reset form after success message
+        setTimeout(() => {
+            setFormState({ name: '', email: '', subject: '', message: '' });
+            setStatus('idle');
+        }, 4000);
     };
     
     const mapFilterClass = 'grayscale(1) invert(0.9) contrast(0.9) brightness(0.9)';
@@ -209,9 +170,9 @@ const Contact: React.FC = () => {
     return (
         <Section id="contact">
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] reveal">Get a Quote</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-primary)] reveal">{contact.title}</h2>
                 <p className="mt-4 text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto font-light reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>
-                    Fill in your business details to receive a personalized quote and see your potential return on investment.
+                   {contact.subtitle}
                 </p>
             </div>
 
@@ -268,9 +229,31 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Right column: ROI Calculator */}
+                {/* Right column: Form */}
                 <div className="md:col-span-3 bg-[var(--color-bg-subtle)] p-6 sm:p-8 rounded-lg border border-[var(--color-border)] reveal" style={{ '--delay': '400ms' } as React.CSSProperties}>
-                    {renderStep()}
+                    {status === 'success' ? (
+                        <div className="flex flex-col items-center justify-center h-full text-center animate-fade-in">
+                            <CheckCircleIcon className="w-16 h-16 text-green-500 mb-4" />
+                            <h3 className="text-2xl font-bold text-gray-100">Message Sent!</h3>
+                            <p className="text-medium-gray mt-2">{contact.form.success}</p>
+                        </div>
+                    ) : (
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <InputField label={contact.form.name} name="name" value={formState.name} onChange={handleInputChange} required />
+                            <InputField label={contact.form.email} name="email" type="email" value={formState.email} onChange={handleInputChange} required />
+                            <InputField label={contact.form.subject} name="subject" value={formState.subject} onChange={handleInputChange} required />
+                            <TextAreaField label={contact.form.message} name="message" value={formState.message} onChange={handleInputChange} required />
+                            <div className="flex justify-end pt-2">
+                                <button
+                                    type="submit"
+                                    disabled={status === 'sending'}
+                                    className="w-full sm:w-auto px-8 py-3 bg-[var(--color-accent-cta-bg)] text-[var(--color-text-cta)] font-bold rounded-lg shadow-lg hover:bg-[var(--color-accent-hover)] transition-all duration-300 transform hover:scale-105 disabled:bg-gray-600 disabled:cursor-wait"
+                                >
+                                    {status === 'sending' ? contact.form.sending : contact.form.send}
+                                </button>
+                            </div>
+                        </form>
+                    )}
                 </div>
             </div>
         </Section>
