@@ -37,22 +37,22 @@ const QuestionnaireStep: React.FC<{ formData: FormData; onChange: (e: React.Chan
         <p className="text-center text-medium-gray mb-8">Fill in your business details to get started.</p>
         <form onSubmit={(e) => { e.preventDefault(); onNext(); }} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <InputField label="Nama" name="name" value={formData.name} onChange={onChange} required />
+                <InputField label="Name" name="name" value={formData.name} onChange={onChange} required />
                 <InputField label="Email" name="email" type="email" value={formData.email} onChange={onChange} required />
                 <InputField label="Phone Number" name="phone" type="tel" value={formData.phone} onChange={onChange} required />
-                <InputField label="Nama Perusahaan" name="companyName" value={formData.companyName} onChange={onChange} required />
-                <InputField label="Jabatan" name="jobTitle" value={formData.jobTitle} onChange={onChange} required />
-                <SelectField label="Jenis Usaha Anda" name="businessType" value={formData.businessType} onChange={onChange}>
+                <InputField label="Company Name" name="companyName" value={formData.companyName} onChange={onChange} required />
+                <InputField label="Job Title" name="jobTitle" value={formData.jobTitle} onChange={onChange} required />
+                <SelectField label="Business Type" name="businessType" value={formData.businessType} onChange={onChange}>
                     <option>Restaurant</option><option>Hotel</option><option>Retail</option><option>Healthcare</option><option>Office</option><option>Manufacturing</option><option>Other</option>
                 </SelectField>
             </div>
             <div className="pt-4 border-t border-gray-700">
                 <h3 className="text-xl font-semibold text-gray-200 mb-4">Operational & Cost Details</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <InputField label="Jam Operasional per Hari" name="operatingHours" type="number" min="1" value={String(formData.operatingHours)} onChange={onChange} required />
-                    <InputField label="Hari Operasional per Bulan" name="operatingDays" type="number" min="1" value={String(formData.operatingDays)} onChange={onChange} required />
-                    <InputField label="Gaji Rata-rata per Staf (IDR)" name="avgSalary" type="number" min="0" value={String(formData.avgSalary)} onChange={onChange} required />
-                    <InputField label="Jumlah Staff" name="staffCount" type="number" min="1" value={String(formData.staffCount)} onChange={onChange} required />
+                    <InputField label="Operating Hours per Day" name="operatingHours" type="number" min="1" value={String(formData.operatingHours)} onChange={onChange} required />
+                    <InputField label="Operating Days per Month" name="operatingDays" type="number" min="1" value={String(formData.operatingDays)} onChange={onChange} required />
+                    <InputField label="Average Salary per Staff (IDR)" name="avgSalary" type="number" min="0" value={String(formData.avgSalary)} onChange={onChange} required />
+                    <InputField label="Number of Staff" name="staffCount" type="number" min="1" value={String(formData.staffCount)} onChange={onChange} required />
                 </div>
             </div>
             <div className="flex justify-end pt-4">
