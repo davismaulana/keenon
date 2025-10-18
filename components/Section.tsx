@@ -41,7 +41,7 @@ const Section: React.FC<SectionProps> = ({ children, className = '', id, noXPadd
 
     if (fullscreen) {
         return (
-            <section ref={ref} id={id} data-visible={isVisible} className={`h-screen w-full relative overflow-hidden ${className}`}>
+            <section ref={ref} id={id} data-visible={isVisible} className={`w-full relative overflow-hidden ${className}`}>
                 {children}
             </section>
         );

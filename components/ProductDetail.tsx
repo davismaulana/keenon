@@ -40,7 +40,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <header
                 ref={heroRef}
                 data-visible={isHeroVisible}
-                className="relative h-screen w-full bg-cover bg-center"
+                className="relative h-[70vh] md:h-screen w-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${product.heroImage || product.image})` }}
             >
                 {/* Intentionally empty to showcase the product image as the hero */}
@@ -121,7 +121,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                         <>
                             {product.featureSections?.map((feature, index) => (
                                 feature.image && (
-                                    <Section key={index} fullscreen>
+                                    <Section key={index} fullscreen className="h-[70vh] md:h-screen">
                                         <div className="reveal-x w-full h-full">
                                             <img 
                                                 src={feature.image} 
@@ -210,8 +210,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                                         <tbody className="align-baseline">
                                             {product.techSpecs.flatMap(category => category.specs).map((spec, specIndex) => (
                                                 <tr key={specIndex} className="border-b border-gray-800 last-of-type:border-b-0">
-                                                    <td className="px-6 py-4 text-medium-gray">{spec.name}</td>
-                                                    <td className="px-6 py-4 font-semibold text-gray-200 text-right">{spec.value}</td>
+                                                    <td className="px-4 sm:px-6 py-4 text-medium-gray">{spec.name}</td>
+                                                    <td className="px-4 sm:px-6 py-4 font-semibold text-gray-200 text-right">{spec.value}</td>
                                                 </tr>
                                             ))}
                                         </tbody>
@@ -224,7 +224,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                     {/* Applications Section */}
                     <div className="md:col-span-2">
                         {product.applications && product.applications.length > 0 && (
-                             <div className="bg-trust-navy h-fit rounded-xl p-8 sticky top-28">
+                             <div className="bg-trust-navy h-fit rounded-xl p-6 md:p-8 md:sticky top-28">
                                 <h2 className="text-2xl font-bold font-display text-gray-100 mb-6 reveal">Typical Applications</h2>
                                 <ul className="space-y-4">
                                     {product.applications.map((app, index) => (
