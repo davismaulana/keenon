@@ -40,10 +40,22 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <header
                 ref={heroRef}
                 data-visible={isHeroVisible}
-                className="relative h-[60vh] md:h-screen w-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${product.heroImage || product.image})` }}
+                className="relative h-[70vh] md:h-[90vh] w-full overflow-hidden flex items-center justify-center text-center"
             >
-                {/* Intentionally empty to showcase the product image as the hero */}
+                <img 
+                    src={product.heroImage || product.image} 
+                    alt={`${product.name} hero image`} 
+                    className="absolute inset-0 w-full h-full object-cover object-center" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-trust-navy via-trust-navy/50 to-transparent"></div>
+                <div className="relative z-10 px-6">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display text-white drop-shadow-2xl reveal" style={{ '--delay': '200ms' } as React.CSSProperties}>
+                        {product.name}
+                    </h1>
+                    <p className="mt-4 text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto drop-shadow-lg reveal" style={{ '--delay': '400ms' } as React.CSSProperties}>
+                        {product.detailTagline || product.headline}
+                    </p>
+                </div>
             </header>
 
             {/* Video Section */}
