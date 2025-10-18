@@ -40,7 +40,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             <header
                 ref={heroRef}
                 data-visible={isHeroVisible}
-                className="relative h-[70vh] md:h-screen w-full bg-cover bg-center"
+                className="relative h-[60vh] md:h-screen w-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${product.heroImage || product.image})` }}
             >
                 {/* Intentionally empty to showcase the product image as the hero */}
@@ -121,7 +121,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                         <>
                             {product.featureSections?.map((feature, index) => (
                                 feature.image && (
-                                    <Section key={index} fullscreen className="h-[70vh] md:h-screen">
+                                    <Section key={index} fullscreen className="h-[60vh] md:h-screen">
                                         <div className="reveal-x w-full h-full">
                                             <img 
                                                 src={feature.image} 
