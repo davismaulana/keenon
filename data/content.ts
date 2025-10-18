@@ -503,14 +503,46 @@ export const content: Content = {
                 detailTagline: "The agile 5-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
                 heroImage: "https://static.keenon.com/uploads/2025/03/29/94bd7277215d4acbab6af9106eb7085e.jpg?x-oss-process=image/format,webp",
                 featureSections: [
-                    { image: "https://static.keenon.com/uploads/2025/03/29/d587a7566ad74622a9a60b03a18f0feb.jpg?x-oss-process=image/format,webp" },
-                    { image: "https://static.keenon.com/uploads/2025/03/29/92beedc365b8445291e2f708b34fa76d.jpg?x-oss-process=image/format,webp" },
-                    { image: "https://static.keenon.com/uploads/2025/03/29/4630618af3b245c289eff9f2f709651f.jpg?x-oss-process=image/format,webp" },
-                    { image: "https://static.keenon.com/uploads/2025/03/29/0e892556adb2497ea476e49d6d90807e.jpg?x-oss-process=image/format,webp" },
-                    { image: "https://static.keenon.com/uploads/2025/03/29/6f9053cab7b040079dcaf03874657cde.jpg?x-oss-process=image/format,webp" },
-                    { image: "https://static.keenon.com/uploads/2025/03/29/420cc45ae1404a58b2aa74abc488baa5.jpg?x-oss-process=image/format,webp" },
-                    { image: "https://static.keenon.com/uploads/2025/03/29/8cc941e0305d4abf925fbf5d23802331.jpg?x-oss-process=image/format,webp" },
-                    { image: "https://static.keenon.com/uploads/2025/03/29/aa0a4be7434448f5b99b507c2ebd7cd7.jpg?x-oss-process=image/format,webp" }
+                    { 
+                        title: "All-in-One Cleaning Powerhouse",
+                        description: "The KLEENBOT C40 integrates 5 cleaning modes: sweeping, vacuuming, scrubbing, dust mopping, and wet mopping. It's a complete solution for maintaining pristine floors in any commercial space.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/d587a7566ad74622a9a60b03a18f0feb.jpg?x-oss-process=image/format,webp" 
+                    },
+                    { 
+                        title: "Deep Cleaning Technology",
+                        description: "Equipped with a high-speed roller brush and a powerful vacuum motor, the C40 effectively removes everything from fine dust to stubborn debris, leaving floors dry and safe.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/92beedc365b8445291e2f708b34fa76d.jpg?x-oss-process=image/format,webp" 
+                    },
+                    { 
+                        title: "Agile Navigation in Complex Spaces",
+                        description: "With its slim profile and advanced sensor suite, the C40 effortlessly navigates narrow passages and complex layouts, ensuring complete coverage in spaces as narrow as 65cm.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/4630618af3b245c289eff9f2f709651f.jpg?x-oss-process=image/format,webp" 
+                    },
+                    { 
+                        title: "Fully Autonomous Workstation",
+                        description: "Experience true hands-off operation. The C40 automatically returns to its workstation to recharge, empty wastewater, and refill its clean water tank.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/0e892556adb2497ea476e49d6d90807e.jpg?x-oss-process=image/format,webp" 
+                    },
+                    { 
+                        title: "Smart Control at Your Fingertips",
+                        description: "Manage your cleaning fleet from anywhere with the KEENON Cloud platform. Schedule tasks, monitor real-time progress, and receive detailed cleaning reports on your mobile device.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/6f9053cab7b040079dcaf03874657cde.jpg?x-oss-process=image/format,webp" 
+                    },
+                    { 
+                        title: "360° Intelligent Perception",
+                        description: "Safety is paramount. The C40 uses a fusion of Lidar and 3D depth cameras to accurately perceive its surroundings, intelligently avoiding obstacles and ensuring safe operation.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/420cc45ae1404a58b2aa74abc488baa5.jpg?x-oss-process=image/format,webp" 
+                    },
+                    { 
+                        title: "Edge-to-Edge Cleaning Precision",
+                        description: "The C40's innovative design and advanced algorithms allow it to clean right up to the edges and corners, delivering a consistently thorough result across your entire floor space.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/8cc941e0305d4abf925fbf5d23802331.jpg?x-oss-process=image/format,webp" 
+                    },
+                    { 
+                        title: "High Capacity for Extended Cleaning",
+                        description: "With its large 16L clean water tank, the C40 can clean up to 1,100 m² per hour, maximizing uptime and efficiency for large commercial areas without constant refilling.",
+                        image: "https://static.keenon.com/uploads/2025/03/29/aa0a4be7434448f5b99b507c2ebd7cd7.jpg?x-oss-process=image/format,webp" 
+                    }
                 ],
                 techSpecs: [
                     { 

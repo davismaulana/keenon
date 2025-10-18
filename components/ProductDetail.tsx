@@ -126,7 +126,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
 
             {/* New Features Section */}
             {product.featureSections && product.featureSections.length > 0 && (() => {
-                const specialImageProducts = ['t11', 'c20', 'c40'];
+                const specialImageProducts = ['t11', 'c20'];
 
                 if (specialImageProducts.includes(product.id)) {
                     return (
