@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect, useRef } from 'react';
 import { useContent } from '../context/LanguageContext';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
@@ -51,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
         >
              <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{backgroundImage: "url('https://images.unsplash.com/photo-1599382878149-e93910a3399f?q=80&w=2940&auto=format&fit=crop')"}}></div>
             <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-                <div className="min-h-screen grid lg:grid-cols-2 items-center gap-12 relative z-10 pt-24 pb-12 lg:pt-0 lg:pb-0">
+                <div className="min-h-screen grid lg:grid-cols-2 items-center gap-12 relative z-10 py-24 lg:py-12">
                     <div className="text-center lg:text-left">
                         <h1 
                             className="text-4xl md:text-5xl font-bold font-display text-gray-100 pop-in"
@@ -99,17 +100,22 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
                             </a>
                         </div>
                     </div>
-                    <div className="hidden lg:flex justify-center items-center h-full pop-in" style={{ '--delay': '400ms' } as React.CSSProperties}>
-                        <div className="grid grid-cols-2 gap-3 w-full max-w-lg aspect-[1/1] rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden shadow-2xl">
+                    <div className="mt-12 lg:mt-0 w-full flex justify-center items-center h-full pop-in" style={{ '--delay': '400ms' } as React.CSSProperties}>
+                        {/* Desktop grid */}
+                        <div className="hidden lg:grid grid-cols-2 gap-3 w-full max-w-lg aspect-[1/1] rounded-tl-[4rem] rounded-br-[4rem] overflow-hidden shadow-2xl">
                             {images.map((src, index) => (
                                 <div key={index} className="overflow-hidden">
                                     <img 
                                         src={src} 
                                         alt={`PUDU Robot Showcase ${index + 1}`}
-                                        className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out"
+                                        className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-105"
                                     />
                                 </div>
                             ))}
+                        </div>
+                        {/* Mobile image */}
+                        <div className="lg:hidden w-full max-w-md aspect-square rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden shadow-2xl">
+                            <img src={images[0]} alt="PUDU Robot Showcase" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>

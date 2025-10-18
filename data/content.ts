@@ -141,12 +141,11 @@ export const content: Content = {
         home: 'Home',
         products: 'Products',
         solutions: 'Solutions',
-        roi_calculator: 'Get a Quote',
         contact: 'Contact',
         back: 'Back to Home'
     },
     header_cta: {
-        text: "Get Quote",
+        text: "Get a Quote",
     },
     hero: {
         headline: "Intelligent Automation, Transforming Industries",

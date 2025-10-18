@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
         { key: 'home', id: 'home', isPage: false },
         { key: 'products', id: 'products', isPage: false },
         { key: 'solutions', id: 'solutions', isPage: false },
-        { key: 'roi_calculator', id: 'contact', isPage: false },
+        { key: 'contact', id: 'contact', isPage: false },
     ];
 
     useEffect(() => {
@@ -56,10 +56,21 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: typeof navLinks[0]) => {
         if (!link.isPage) {
             e.preventDefault();
-            scrollToSection(link.id);
+            // If on a detail page, first go home, then scroll
+            if (isDetailPage) {
+                window.location.href = `/#${link.id}`;
+            } else {
+                scrollToSection(link.id);
+            }
         } else {
              setIsOpen(false);
         }
+    };
+    
+    const handleCTAClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        scrollToSection('contact');
+        setIsOpen(false);
     };
 
     return (
@@ -91,9 +102,9 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
                                 ))}
                             </nav>
                             <div className="hidden lg:flex items-center">
-                                <button onClick={() => scrollToSection('contact')} className="px-5 py-2 bg-corporate-gold text-white font-bold rounded-full shadow-sm hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105">
+                                <a href="#contact" onClick={handleCTAClick} className="px-5 py-2 bg-corporate-gold text-white font-bold rounded-full shadow-sm hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105">
                                     {content.header_cta.text}
-                                </button>
+                                </a>
                             </div>
                         </>
                     )}
@@ -121,9 +132,9 @@ const Header: React.FC<HeaderProps> = ({ isDetailPage }) => {
                             </a>
                         ))}
                         <div className="border-t border-gray-700 my-2 pt-4">
-                             <button onClick={() => scrollToSection('contact')} className="w-full px-5 py-3 bg-corporate-gold text-white font-bold rounded-lg shadow-sm hover:bg-corporate-gold/80 transition-colors">
+                             <a href="#contact" onClick={handleCTAClick} className="w-full block text-center px-5 py-3 bg-corporate-gold text-white font-bold rounded-lg shadow-sm hover:bg-corporate-gold/80 transition-colors">
                                 {content.header_cta.text}
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

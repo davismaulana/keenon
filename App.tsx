@@ -43,7 +43,7 @@ const AppCore: React.FC = () => {
         } else {
             document.title = `${content.company_name} - ${content.tagline}`;
         }
-    }, [productData, solutionId, content.company_name, content.tagline]);
+    }, [productData, solutionId, page, content.company_name, content.tagline]);
     
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
