@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect, useRef } from 'react';
 import { useContent } from '../context/LanguageContext';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
@@ -73,7 +72,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToProducts }) => {
                             </a>
                         </div>
                         <p 
-                            className="text-lg text-medium-gray max-w-2xl mx-auto lg:mx-0 pop-in"
+                            className="text-base leading-relaxed text-medium-gray max-w-2xl mx-auto lg:mx-0 pop-in"
                             style={{ '--delay': '500ms' } as React.CSSProperties}
                         >
                             {content.hero.subheadline}
