@@ -11,7 +11,7 @@ const HotelSolution: React.FC = () => {
             productName: "BUTLERBOT W3",
             title: "Elevate Guest Service with 24/7 Autonomous Delivery",
             description: "The BUTLERBOT W3 redefines in-room service. Operating around the clock, it securely and privately delivers amenities, meals, and parcels directly to the guest's door. Its ability to autonomously navigate elevators and complex hotel layouts ensures prompt service, reduces staff workload, and frees your team to focus on creating memorable, high-value guest interactions.",
-            image: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
+            videoUrl: "https://www.youtube.com/embed/hDVr_RCuxMs?autoplay=1&mute=1&loop=1&playlist=hDVr_RCuxMs&controls=0&rel=0&showinfo=0",
             alt: "KEENON BUTLERBOT W3 autonomously delivering items in a luxury hotel.",
             benefits: [
                 "Secure, fully enclosed cabin for complete guest privacy.",
@@ -23,7 +23,7 @@ const HotelSolution: React.FC = () => {
             productName: "KLEENBOT Series",
             title: "Uphold Impeccable Cleanliness, Effortlessly",
             description: "Maintain pristine conditions in your lobbies, hallways, and common areas with the KLEENBOT C30 & C40. These compact and agile robots offer powerful 4-in-1 and 5-in-1 cleaning functions, navigating tight spaces with ease. Automate your cleaning schedules to ensure a consistently spotless environment for your guests while significantly reducing manual labor costs and operational strain.",
-            image: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
+            videoUrl: "https://www.youtube.com/embed/nHcg64XRxks?autoplay=1&mute=1&loop=1&playlist=nHcg64XRxks&controls=0&rel=0&showinfo=0",
             alt: "KEENON KLEENBOT C30 providing automated cleaning in a hotel lobby.",
             benefits: [
                 "Powerful multi-function cleaning: sweep, scrub, vacuum, and mop.",
@@ -62,7 +62,16 @@ const HotelSolution: React.FC = () => {
                     {features.map((feature, index) => (
                         <div key={index} className="grid md:grid-cols-2 gap-8 md:gap-16 items-center reveal">
                             <div className={`order-1 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                                <img src={feature.image} alt={feature.alt} className="rounded-lg shadow-xl w-full h-auto object-cover aspect-video" />
+                                <div className="aspect-video overflow-hidden rounded-lg shadow-xl">
+                                    <iframe
+                                        className="w-full h-full"
+                                        src={feature.videoUrl}
+                                        title={feature.title}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
                             </div>
                             <div className={`order-2 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'} text-center md:text-left`}>
                                 <h3 className="text-3xl font-bold font-display text-corporate-gold">{feature.title}</h3>
