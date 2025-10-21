@@ -161,7 +161,7 @@ const ROICalculator: React.FC = () => {
                 email: formData.email,
                 phone: formData.phone,
                 companyName: formData.companyName,
-                position: formData.position,
+                position: formData.position
             },
             businessProfile: {
                 businessType: formData.businessType,
@@ -169,15 +169,20 @@ const ROICalculator: React.FC = () => {
                 staffCount: formData.staffCount,
                 operatingHours: formData.operatingHours,
                 operatingDays: formData.operatingDays,
-                avgSalary: formData.avgSalary,
+                avgSalary: formData.avgSalary
             },
             roiAnalysis: {
-                ...results,
+                estimatedSavingsPerMonth: results.monthlySavings,
+                paybackPeriodMonths: results.robotAnalysis.paybackPeriod,
+                assumptions: {
+                    adoptionRate: 0.8,
+                    turnoverReductionPct: 10
+                }
             }
         };
 
         try {
-            const response = await fetch('https://xinyi-backend.vercel.app/sales-inquiry', {
+            const response = await fetch('https://xinyi-backend.vercel.app/enquiries', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
