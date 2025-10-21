@@ -29,6 +29,8 @@ export interface Product {
     brochureUrl?: string;
     price?: number;
     staffReplacementValue?: number;
+    cutEfficiency?: number;
+    maxStaffEfficiency?: number;
 }
 
 export interface IndustrySolution {
@@ -174,6 +176,8 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/b408afcd74634745a11cdbe66b4b149c.webp",
                 price: 85000000,
                 staffReplacementValue: 1.5,
+                cutEfficiency: 0.3,
+                maxStaffEfficiency: 4,
                 detailTagline: "The professional tray delivery robot for fast, stable, and efficient food service.",
                 heroImage: "https://static.keenon.com/uploads/2025/01/07/b924622435a94162bcacef7af337553c.webp",
                 featureSections: [
@@ -269,6 +273,8 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/6a2fddac7ea849759a1540d15bc37bac.webp",
                 price: 128000000,
                 staffReplacementValue: 1.5,
+                cutEfficiency: 0.3,
+                maxStaffEfficiency: 4,
                 detailTagline: "The flagship delivery robot with a hygienic tray cover and smart marketing screen.",
                 heroImage: "https://static.keenon.com/uploads/2025/03/17/0e55bb5ce2d34973821c534d912ebd96.jpg?x-oss-process=image/format,webp",
                 featureSections: [
@@ -364,6 +370,8 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/images/10becb8073c94840b6bb9e3b03535780.webp",
                 price: 185000000,
                 staffReplacementValue: 1.2,
+                cutEfficiency: 0.3,
+                maxStaffEfficiency: 4,
                 detailTagline: "Elevating Guest Experience with Autonomous, Contactless Room Service.",
                 heroImage: "https://static.keenon.com/uploads/2025/01/07/ed59fd54ff2f4a45a53f62519bdaf4aa.webp",
                 featureSections: [
@@ -429,6 +437,8 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2024/12/30/eb8ba6e205eb4134b5c51fcde8733835.png?x-oss-process=image/format,webp",
                 price: 148000000,
                 staffReplacementValue: 2.0,
+                cutEfficiency: 0.3,
+                maxStaffEfficiency: 4,
                 detailTagline: "The nimble and compact 4-in-1 cleaning robot for complex commercial environments.",
                 heroImage: "https://static.keenon.com/uploads/2025/01/07/9137ed1569104c14ba2821eaf1b11678.jpg?x-oss-process=image/format,webp",
                 featureSections: [
@@ -500,6 +510,8 @@ export const content: Content = {
                 image: "https://static.keenon.com/uploads/2025/03/29/57c63343437f4cc9a4513d0ec12adec1.png?x-oss-process=image/format,webp",
                 price: 205000000,
                 staffReplacementValue: 2.0,
+                cutEfficiency: 0.3,
+                maxStaffEfficiency: 4,
                 detailTagline: "The agile 5-in-1 cleaning robot for efficient maintenance in complex commercial spaces.",
                 heroImage: "https://static.keenon.com/uploads/2025/03/29/94bd7277215d4acbab6af9106eb7085e.jpg?x-oss-process=image/format,webp",
                 featureSections: [
@@ -601,6 +613,8 @@ export const content: Content = {
                 image: "https://static.keenon.com/admin/9fe4eb592a7d46c19cb58f5dd2c645db.webp",
                 price: 185000000,
                 staffReplacementValue: 1.2,
+                cutEfficiency: 0.3,
+                maxStaffEfficiency: 4,
                 detailTagline: "A New Generation of Fully Enclosed Delivery Robot for Secure and Private Transport.",
                 heroImage: "https://static.keenon.com/uploads/2025/01/07/09654c9cf811439c943a6e53a84d5173.jpg?x-oss-process=image/format,webp",
                 featureSections: [
