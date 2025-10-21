@@ -161,7 +161,7 @@ const ROICalculator: React.FC = () => {
                 email: formData.email,
                 phone: formData.phone,
                 companyName: formData.companyName,
-                position: formData.position
+                position: formData.position,
             },
             businessProfile: {
                 businessType: formData.businessType,
@@ -169,14 +169,15 @@ const ROICalculator: React.FC = () => {
                 staffCount: formData.staffCount,
                 operatingHours: formData.operatingHours,
                 operatingDays: formData.operatingDays,
-                avgSalary: formData.avgSalary
+                avgSalary: formData.avgSalary,
             },
             roiAnalysis: {
-                estimatedSavingsPerMonth: results.monthlySavings,
-                paybackPeriodMonths: results.robotAnalysis.paybackPeriod,
-                assumptions: {
-                    adoptionRate: 0.8,
-                    turnoverReductionPct: 10
+                requiredRobots: results.requiredRobots,
+                staffMadeEfficient: results.staffMadeEfficient,
+                monthlySavings: results.monthlySavings,
+                robotAnalysis: {
+                    totalInvestment: results.robotAnalysis.totalInvestment,
+                    paybackPeriod: results.robotAnalysis.paybackPeriod,
                 }
             }
         };
