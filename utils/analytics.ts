@@ -29,8 +29,8 @@ const getOrCreateUserId = (): string => {
 };
 
 export const trackPageView = () => {
-    // Only proceed if the user has explicitly accepted cookie usage.
-    if (localStorage.getItem('cookieConsent') !== 'accepted') {
+    // Only proceed if the user has explicitly accepted cookie usage for the current session.
+    if (sessionStorage.getItem('cookieConsent') !== 'accepted') {
         return;
     }
 

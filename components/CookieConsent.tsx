@@ -5,7 +5,7 @@ const CookieConsent: React.FC = () => {
     const [isExiting, setIsExiting] = useState(false);
 
     useEffect(() => {
-        const consent = localStorage.getItem('cookieConsent');
+        const consent = sessionStorage.getItem('cookieConsent');
         if (!consent) {
             // Delay showing the banner slightly to allow the rest of the page to load first.
             const timer = setTimeout(() => {
@@ -16,7 +16,7 @@ const CookieConsent: React.FC = () => {
     }, []);
 
     const handleConsent = (consent: 'accepted' | 'declined') => {
-        localStorage.setItem('cookieConsent', consent);
+        sessionStorage.setItem('cookieConsent', consent);
         setIsExiting(true); // Trigger the exit animation
 
         // Wait for the animation to finish before removing the component from the DOM.
