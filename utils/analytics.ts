@@ -9,8 +9,6 @@ interface AnalyticsPayload {
     userId: string;
     sessionId: string;
     timestamp: string;
-    visitCount: number;
-    firstVisit: string;
     page: {
         path: string;
         referrer: string;
@@ -19,31 +17,15 @@ interface AnalyticsPayload {
     deviceInfo: DeviceInfo;
 }
 
-// This endpoint URL is a placeholder. Replace it with your actual n8n, Zapier, or custom backend webhook URL.
-const ANALYTICS_ENDPOINT = 'https://n8n.sixzenith.space/webhook/keenon-analytics-tracking';
+const ANALYTICS_ENDPOINT = 'https://xinyi-backend.vercel.app/track';
 
-const getOrCreateUser = (): { userId: string; visitCount: number; firstVisit: string } => {
-    let userDataString = localStorage.getItem('userAnalytics');
-    let userData;
-
-    try {
-        userData = userDataString ? JSON.parse(userDataString) : {};
-    } catch (e) {
-        userData = {};
+const getOrCreateUserId = (): string => {
+    let userId = localStorage.getItem('userAnalyticsId');
+    if (!userId) {
+        userId = crypto.randomUUID();
+        localStorage.setItem('userAnalyticsId', userId);
     }
-    
-    if (!userData.userId) {
-        userData = {
-            userId: crypto.randomUUID(),
-            visitCount: 1,
-            firstVisit: new Date().toISOString(),
-        };
-    } else {
-        userData.visitCount = (userData.visitCount || 0) + 1;
-    }
-
-    localStorage.setItem('userAnalytics', JSON.stringify(userData));
-    return userData;
+    return userId;
 };
 
 export const trackPageView = () => {
@@ -53,7 +35,7 @@ export const trackPageView = () => {
     }
 
     try {
-        const { userId, visitCount, firstVisit } = getOrCreateUser();
+        const userId = getOrCreateUserId();
         
         const sessionId = sessionStorage.getItem('sessionId') || crypto.randomUUID();
         if (!sessionStorage.getItem('sessionId')) {
@@ -64,8 +46,6 @@ export const trackPageView = () => {
             userId,
             sessionId,
             timestamp: new Date().toISOString(),
-            visitCount,
-            firstVisit,
             page: {
                 path: window.location.href,
                 referrer: document.referrer || 'direct',
