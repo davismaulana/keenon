@@ -128,7 +128,7 @@ const ROICalculator: React.FC = () => {
 
         const maxStaffEfficiency = selectedRobot.maxStaffEfficiency || 4;
 
-        const requiredRobots = Math.ceil(staffMadeEfficient / maxStaffEfficiency) || 1;
+        const requiredRobots = Math.round(staffMadeEfficient / maxStaffEfficiency) || 1;
         const monthlySavings = staffMadeEfficient * formData.avgSalary;
         
         const totalInvestment = requiredRobots * (selectedRobot.price || 0);
@@ -265,7 +265,7 @@ const ResultsStep: React.FC<{ results: Results, onReset: () => void, formatter: 
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <ResultCard icon={<CostEfficiencyIcon className="w-7 h-7 text-corporate-gold"/>} title="Robots Needed" value={results.requiredRobots} />
-            <ResultCard icon={<UsersIcon className="w-7 h-7 text-corporate-gold"/>} title="Total Staff Efficiency" value={Math.ceil(results.staffMadeEfficient)} suffix=" Staff" />
+            <ResultCard icon={<UsersIcon className="w-7 h-7 text-corporate-gold"/>} title="Total Staff Efficiency" value={Math.round(results.staffMadeEfficient)} suffix=" Staff" />
         </div>
 
         <div className="text-left bg-trust-navy p-4 rounded-lg border border-gray-700">
@@ -286,7 +286,7 @@ const ResultsStep: React.FC<{ results: Results, onReset: () => void, formatter: 
                 <div className="flex justify-between items-baseline">
                     <span className="text-sm text-medium-gray flex items-center"><CalendarIcon className="w-4 h-4 mr-2"/> Payback Period:</span>
                     <span className="font-bold text-gray-100 text-lg">
-                        <CountUpNumber endValue={Math.ceil(results.robotAnalysis.paybackPeriod)} />
+                        <CountUpNumber endValue={Math.round(results.robotAnalysis.paybackPeriod)} />
                         {' '}Months
                     </span>
                 </div>
