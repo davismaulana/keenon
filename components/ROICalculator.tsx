@@ -130,10 +130,9 @@ const ROICalculator: React.FC = () => {
         const staffMadeEfficient = formData.staffCount * cutEfficiency;
 
         // Per user request, update the formula for Max Staff Efficiency.
-        const maxStaffEfficiency = formData.staffCount * cutEfficiency;
+        const maxStaffEfficiency = 4;
 
-        // Note: With the new formula for maxStaffEfficiency, requiredRobots will typically evaluate to 1
-        // as staffMadeEfficient and maxStaffEfficiency are calculated with the same base.
+        // Calculate the number of robots needed based on how many staff can be made more efficient.
         const requiredRobots = Math.round(staffMadeEfficient / maxStaffEfficiency) || 1;
         
         const monthlySavings = staffMadeEfficient * formData.avgSalary;
