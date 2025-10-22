@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect } from 'react';
 import { useContent } from '../context/LanguageContext';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
@@ -130,9 +129,13 @@ const ROICalculator: React.FC = () => {
         const cutEfficiency = selectedRobot.cutEfficiency || 0.3;
         const staffMadeEfficient = formData.staffCount * cutEfficiency;
 
-        const maxStaffEfficiency = selectedRobot.maxStaffEfficiency || 4;
+        // Per user request, update the formula for Max Staff Efficiency.
+        const maxStaffEfficiency = formData.staffCount * cutEfficiency;
 
+        // Note: With the new formula for maxStaffEfficiency, requiredRobots will typically evaluate to 1
+        // as staffMadeEfficient and maxStaffEfficiency are calculated with the same base.
         const requiredRobots = Math.round(staffMadeEfficient / maxStaffEfficiency) || 1;
+        
         const monthlySavings = staffMadeEfficient * formData.avgSalary;
         
         const totalInvestment = requiredRobots * (selectedRobot.price || 0);
