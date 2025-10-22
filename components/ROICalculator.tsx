@@ -362,11 +362,24 @@ const ResultsStep: React.FC<{
                             <CountUpNumber endValue={results.monthlySavings} formatter={formatter.format} />
                         </span>
                     </div>
-                    <div className="flex justify-between items-baseline">
-                        <span className="text-sm text-medium-gray flex items-center"><CostEfficiencyIcon className="w-4 h-4 mr-2"/> Total Investment:</span>
-                        <span className="font-bold text-gray-100 text-lg">
-                            <CountUpNumber endValue={results.robotAnalysis.totalInvestment} formatter={formatter.format} />
-                        </span>
+                    <div>
+                        <div className="text-sm space-y-1 text-gray-300">
+                            <div className="flex justify-between font-mono">
+                                <span>Robot Price</span>
+                                <span>{formatter.format(results.robotAnalysis.price)}</span>
+                            </div>
+                            <div className="flex justify-between font-mono">
+                                <span>Robots Needed</span>
+                                <span>x {results.requiredRobots}</span>
+                            </div>
+                        </div>
+                        <hr className="my-2 border-gray-600 border-dashed"/>
+                        <div className="flex justify-between items-baseline">
+                            <span className="text-sm text-medium-gray flex items-center"><CostEfficiencyIcon className="w-4 h-4 mr-2"/>Total Investment</span>
+                            <span className="font-bold text-gray-100 text-lg">
+                                <CountUpNumber endValue={results.robotAnalysis.totalInvestment} formatter={formatter.format} />
+                            </span>
+                        </div>
                     </div>
                     <div className="flex justify-between items-baseline">
                         <span className="text-sm text-medium-gray flex items-center"><CalendarIcon className="w-4 h-4 mr-2"/> Payback Period:</span>
