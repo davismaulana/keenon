@@ -195,43 +195,6 @@ const ROICalculator: React.FC = () => {
             }
         };
 
-        // Create plain text body for mailto link
-        const currencyFormatter = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 });
-        const numberFormatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
-    
-        const plainTextBody = `New Inquiry from ROI Calculator:
-
-A new potential client, ${formData.name} from ${formData.companyName}, has submitted their details.
-
---- ROI Summary ---
-Est. Monthly Savings: ${currencyFormatter.format(results.monthlySavings)}
-Payback Period: ${numberFormatter.format(results.robotAnalysis.paybackPeriod)} months
-
---- Contact Information ---
-Name: ${formData.name}
-Company: ${formData.companyName}
-Position: ${formData.position}
-Email: ${formData.email}
-Phone: ${formData.phone}
-
---- Business Profile ---
-Business Type: ${formData.businessType}${formData.businessType === 'Others' ? ` (${formData.otherBusinessType})` : ''}
-Staff Count: ${formData.staffCount}
-Avg. Salary: ${currencyFormatter.format(formData.avgSalary)}
-Operating Hours: ${formData.operatingHours} / day
-Operating Days: ${formData.operatingDays} / month
-
---- ROI Analysis Details ---
-Selected Robot: ${results.robotAnalysis.name}
-Robots Required: ${results.requiredRobots}
-Staff Made Efficient: ${numberFormatter.format(results.staffMadeEfficient)} staff
-Total Investment: ${currencyFormatter.format(results.robotAnalysis.totalInvestment)}
-`;
-    
-        const subject = `ROI Calculator Inquiry: ${formData.companyName}`;
-        const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainTextBody.trim())}`;
-
-
         try {
             const response = await fetch('https://xinyi-backend.vercel.app/enquiries', {
                 method: 'POST',
@@ -241,9 +204,6 @@ Total Investment: ${currencyFormatter.format(results.robotAnalysis.totalInvestme
             if (!response.ok) throw new Error('Network response was not ok.');
             
             setSubmissionStatus('success');
-            
-            // After successfully submitting to the API, open the user's email client.
-            window.location.href = mailtoLink;
 
         } catch (error) {
             console.error('Submission failed:', error);
