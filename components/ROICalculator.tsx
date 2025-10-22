@@ -5,9 +5,6 @@ import { CostEfficiencyIcon, ProductivityIcon, MailIcon } from './icons/Advantag
 import { CalendarIcon } from './icons/CalculatorIcons';
 import { ArrowLeftIcon } from './icons/ArrowLeftIcon';
 import { UsersIcon } from './icons/UsersIcon';
-import { SpinnerIcon } from './icons/SpinnerIcon';
-import { CheckCircleIcon } from './icons/CheckCircleIcon';
-import { createEmailHtml } from '../utils/emailTemplate';
 
 type Step = 'questionnaire' | 'selection' | 'results';
 
@@ -104,8 +101,6 @@ const ROICalculator: React.FC = () => {
     const [formData, setFormData] = useState<FormData>(initialFormData);
     const [selectedRobotId, setSelectedRobotId] = useState<string | null>(null);
     const [results, setResults] = useState<Results | null>(null);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
     const calculableRobots = useMemo(() => {
         return content.products_showcase.products.filter(p => p.price && p.maxStaffEfficiency);
@@ -120,6 +115,9 @@ const ROICalculator: React.FC = () => {
     const handleRobotSelectionChange = (id: string) => {
         setSelectedRobotId(id);
     };
+    
+    const currencyFormatter = useMemo(() => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }), []);
+
 
     const handleCalculate = () => {
         if (!selectedRobotId) return;
@@ -153,62 +151,54 @@ const ROICalculator: React.FC = () => {
         setStep('results');
     };
 
-    const handleContactSales = async () => {
+    const handleContactSales = () => {
         if (!results || !formData) return;
-        setIsSubmitting(true);
-        setSubmissionStatus('idle');
 
-        const emailData = { formData, results };
-        const emailHtml = createEmailHtml(emailData);
+        const to = 'davis@sixzenith.com';
+        const subject = `New ROI Calculator Inquiry: ${formData.companyName}`;
 
-        const payload = {
-            contact: {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                companyName: formData.companyName,
-                position: formData.position,
-            },
-            businessProfile: {
-                businessType: formData.businessType,
-                otherBusinessType: formData.otherBusinessType,
-                staffCount: formData.staffCount,
-                operatingHours: formData.operatingHours,
-                operatingDays: formData.operatingDays,
-                avgSalary: formData.avgSalary,
-            },
-            roiAnalysis: {
-                requiredRobots: results.requiredRobots,
-                staffMadeEfficient: results.staffMadeEfficient,
-                monthlySavings: results.monthlySavings,
-                robotAnalysis: {
-                    id: results.robotAnalysis.id,
-                    name: results.robotAnalysis.name,
-                    totalInvestment: results.robotAnalysis.totalInvestment,
-                    paybackPeriod: results.robotAnalysis.paybackPeriod,
-                }
-            },
-            emailDetails: {
-                to: 'davis@sixzenith.com',
-                subject: `New ROI Calculator Inquiry: ${formData.companyName}`,
-                html: emailHtml
-            }
-        };
+        const numberFormatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
 
-        try {
-            const response = await fetch('https://xinyi-backend.vercel.app/enquiries', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
-            if (!response.ok) throw new Error('Network response was not ok.');
-            setSubmissionStatus('success');
-        } catch (error) {
-            console.error('Submission failed:', error);
-            setSubmissionStatus('error');
-        } finally {
-            setIsSubmitting(false);
-        }
+        const body = `
+New Inquiry from ROI Calculator
+------------------------------------
+
+A new potential client has submitted their details through the ROI calculator on the website.
+
+** ROI HIGHLIGHTS **
+- Est. Monthly Savings: ${currencyFormatter.format(results.monthlySavings)}
+- Payback Period: ${numberFormatter.format(results.robotAnalysis.paybackPeriod)} months
+
+** CONTACT INFORMATION **
+- Name: ${formData.name}
+- Company: ${formData.companyName}
+- Position: ${formData.position}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+
+** BUSINESS PROFILE **
+- Business Type: ${formData.businessType}${formData.businessType === 'Others' ? ` (${formData.otherBusinessType})` : ''}
+- Staff Count: ${formData.staffCount}
+- Avg. Salary: ${currencyFormatter.format(formData.avgSalary)}
+- Operating Hours: ${formData.operatingHours} / day
+- Operating Days: ${formData.operatingDays} / month
+
+** ROI ANALYSIS DETAILS **
+- Selected Robot: ${results.robotAnalysis.name}
+- Robots Required: ${results.requiredRobots}
+- Staff Made Efficient: ${numberFormatter.format(results.staffMadeEfficient)}
+- Total Investment: ${currencyFormatter.format(results.robotAnalysis.totalInvestment)}
+
+------------------------------------
+This email was generated from the Xinyi Trading Group website.
+    `;
+
+        // Clean up the body for the mailto link (remove leading spaces on each line).
+        const cleanedBody = body.split('\n').map(line => line.trim()).join('\n').trim();
+
+        const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(cleanedBody)}`;
+        
+        window.location.href = mailtoLink;
     };
 
     const handleReset = () => {
@@ -216,12 +206,9 @@ const ROICalculator: React.FC = () => {
         setSelectedRobotId(null);
         setResults(null);
         setStep('questionnaire');
-        setIsSubmitting(false);
-        setSubmissionStatus('idle');
     };
     
     const totalSelectedRobots = useMemo(() => (selectedRobotId ? 1 : 0), [selectedRobotId]);
-    const currencyFormatter = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 });
 
     const stepTitles: { [key in Step]: string } = {
         questionnaire: 'Business Details',
@@ -241,8 +228,6 @@ const ROICalculator: React.FC = () => {
                     results={results} 
                     onReset={handleReset} 
                     formatter={currencyFormatter} 
-                    isSubmitting={isSubmitting}
-                    submissionStatus={submissionStatus}
                     onContactSales={handleContactSales}
                 />;
             default: return null;
@@ -335,24 +320,8 @@ const ResultsStep: React.FC<{
     results: Results, 
     onReset: () => void, 
     formatter: Intl.NumberFormat,
-    isSubmitting: boolean,
-    submissionStatus: 'idle' | 'success' | 'error',
     onContactSales: () => void
-}> = ({ results, onReset, formatter, isSubmitting, submissionStatus, onContactSales }) => {
-    
-    if (submissionStatus === 'success') {
-        return (
-            <div className="animate-fade-in text-center flex flex-col h-full justify-center items-center">
-                <CheckCircleIcon className="w-16 h-16 text-green-400 mb-4" />
-                <h3 className="text-2xl font-bold font-display text-white">Thank You!</h3>
-                <p className="text-medium-gray mt-2 mb-6 max-w-sm">Your inquiry has been sent. Our sales team will contact you shortly.</p>
-                <button onClick={onReset} className="w-full sm:w-auto px-8 py-3 bg-transparent text-gray-200 font-bold rounded-lg border-2 border-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300">
-                    Start Over
-                </button>
-            </div>
-        );
-    }
-
+}> = ({ results, onReset, formatter, onContactSales }) => {
     return (
         <div className="animate-fade-in text-center flex flex-col h-full">
             <div>
@@ -406,26 +375,13 @@ const ResultsStep: React.FC<{
 
             <p className="text-xs text-gray-500 mt-6 px-4">* These figures are estimates based on your inputs and our standardized models. Actual results may vary.</p>
             
-            {submissionStatus === 'error' && (
-                <p className="text-sm text-red-400 mt-4">Could not send inquiry. Please try again.</p>
-            )}
-
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                <button onClick={onReset} disabled={isSubmitting} className="w-full sm:w-auto px-8 py-3 bg-transparent text-gray-200 font-bold rounded-lg border-2 border-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                <button onClick={onReset} className="w-full sm:w-auto px-8 py-3 bg-transparent text-gray-200 font-bold rounded-lg border-2 border-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300">
                     Calculate Again
                 </button>
-                <button onClick={onContactSales} disabled={isSubmitting} className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-corporate-gold text-white font-bold rounded-lg shadow-lg hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105 disabled:bg-corporate-gold/70 disabled:cursor-not-allowed">
-                    {isSubmitting ? (
-                        <>
-                            <SpinnerIcon className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" />
-                            Sending...
-                        </>
-                    ) : (
-                        <>
-                            <MailIcon className="w-5 h-5 mr-2" />
-                            Contact Sales
-                        </>
-                    )}
+                <button onClick={onContactSales} className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-corporate-gold text-white font-bold rounded-lg shadow-lg hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105">
+                    <MailIcon className="w-5 h-5 mr-2" />
+                    Contact Sales
                 </button>
             </div>
         </div>
