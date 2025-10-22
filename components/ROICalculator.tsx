@@ -7,6 +7,7 @@ import { ArrowLeftIcon } from './icons/ArrowLeftIcon';
 import { UsersIcon } from './icons/UsersIcon';
 import { SpinnerIcon } from './icons/SpinnerIcon';
 import { CheckCircleIcon } from './icons/CheckCircleIcon';
+import { createEmailHtml } from '../utils/emailTemplate';
 
 type Step = 'questionnaire' | 'selection' | 'results';
 
@@ -49,7 +50,7 @@ const CountUpNumber: React.FC<{
     return <span className={className}>{formattedValue}</span>;
 };
 
-interface FormData {
+export interface FormData {
     name: string;
     email: string;
     phone: string;
@@ -63,7 +64,7 @@ interface FormData {
     avgSalary: number;
 }
 
-interface Results {
+export interface Results {
     requiredRobots: number;
     monthlySavings: number;
     staffMadeEfficient: number;
@@ -157,6 +158,9 @@ const ROICalculator: React.FC = () => {
         setIsSubmitting(true);
         setSubmissionStatus('idle');
 
+        const emailData = { formData, results };
+        const emailHtml = createEmailHtml(emailData);
+
         const payload = {
             contact: {
                 name: formData.name,
@@ -178,9 +182,16 @@ const ROICalculator: React.FC = () => {
                 staffMadeEfficient: results.staffMadeEfficient,
                 monthlySavings: results.monthlySavings,
                 robotAnalysis: {
+                    id: results.robotAnalysis.id,
+                    name: results.robotAnalysis.name,
                     totalInvestment: results.robotAnalysis.totalInvestment,
                     paybackPeriod: results.robotAnalysis.paybackPeriod,
                 }
+            },
+            emailDetails: {
+                to: 'davis@sixzenith.com',
+                subject: `New ROI Calculator Inquiry: ${formData.companyName}`,
+                html: emailHtml
             }
         };
 
