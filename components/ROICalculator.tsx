@@ -105,7 +105,7 @@ const ROICalculator: React.FC = () => {
     const [selectedRobotId, setSelectedRobotId] = useState<string | null>(null);
     const [results, setResults] = useState<Results | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'error'>('idle');
+    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'error' | 'submitted'>('idle');
 
     const calculableRobots = useMemo(() => {
         return content.products_showcase.products.filter(p => p.price && p.maxStaffEfficiency);
@@ -153,70 +153,34 @@ const ROICalculator: React.FC = () => {
         setStep('results');
     };
 
-    const handleContactSales = async () => {
+    const handleContactSales = () => {
         if (!results || !formData) return;
+        
         setIsSubmitting(true);
         setSubmissionStatus('idle');
 
-        const emailData = { formData, results };
-        const emailHtml = createEmailHtml(emailData);
+        // Show loading state for a moment before opening the email client
+        setTimeout(() => {
+            try {
+                const emailData = { formData, results };
+                const emailTextBody = createEmailTextBody(emailData);
+                const mailtoSubject = `New ROI Calculator Inquiry: ${formData.companyName}`;
+                const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
+                
+                window.location.href = mailtoLink;
+                
+                // After attempting to open mail client, update the UI to success.
+                // The browser might lose focus, and when it returns, this state will be visible.
+                setIsSubmitting(false);
+                setSubmissionStatus('submitted');
 
-        const payload = {
-            contact: {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                companyName: formData.companyName,
-                position: formData.position,
-            },
-            businessProfile: {
-                businessType: formData.businessType,
-                otherBusinessType: formData.otherBusinessType,
-                staffCount: formData.staffCount,
-                operatingHours: formData.operatingHours,
-                operatingDays: formData.operatingDays,
-                avgSalary: formData.avgSalary,
-            },
-            roiAnalysis: {
-                requiredRobots: results.requiredRobots,
-                staffMadeEfficient: results.staffMadeEfficient,
-                monthlySavings: results.monthlySavings,
-                robotAnalysis: {
-                    id: results.robotAnalysis.id,
-                    name: results.robotAnalysis.name,
-                    totalInvestment: results.robotAnalysis.totalInvestment,
-                    paybackPeriod: results.robotAnalysis.paybackPeriod,
-                }
-            },
-            emailDetails: {
-                to: 'davis@sixzenith.com',
-                subject: `New ROI Calculator Inquiry: ${formData.companyName}`,
-                html: emailHtml
+            } catch (error) {
+                console.error('Mailto link creation failed:', error);
+                setIsSubmitting(false);
+                setSubmissionStatus('error');
             }
-        };
-
-        try {
-            const response = await fetch('https://xinyi-backend.vercel.app/enquiries', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
-            if (!response.ok) throw new Error('Network response was not ok.');
-            
-            // After successful direct send, also trigger mailto
-            const emailTextBody = createEmailTextBody(emailData);
-            const mailtoSubject = `New ROI Calculator Inquiry: ${formData.companyName}`;
-            const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
-            window.location.href = mailtoLink;
-
-        } catch (error) {
-            console.error('Submission failed:', error);
-            setSubmissionStatus('error');
-        } finally {
-            setIsSubmitting(false);
-        }
+        }, 1000); // 1-second delay for the loading animation to be visible
     };
-
 
     const handleReset = () => {
         setFormData(initialFormData);
@@ -343,9 +307,47 @@ const ResultsStep: React.FC<{
     onReset: () => void, 
     formatter: Intl.NumberFormat,
     isSubmitting: boolean,
-    submissionStatus: 'idle' | 'error',
+    submissionStatus: 'idle' | 'error' | 'submitted',
     onContactSales: () => void
 }> = ({ results, onReset, formatter, isSubmitting, submissionStatus, onContactSales }) => {
+    
+    const contactButtonContent = () => {
+        if (isSubmitting) {
+            return (
+                <>
+                    <SpinnerIcon className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" />
+                    Sending...
+                </>
+            );
+        }
+        if (submissionStatus === 'submitted') {
+            return (
+                 <>
+                    <CheckCircleIcon className="w-5 h-5 mr-2" />
+                    Complete!
+                </>
+            );
+        }
+        return (
+            <>
+                <MailIcon className="w-5 h-5 mr-2" />
+                Contact Sales
+            </>
+        );
+    };
+
+    const getContactButtonClass = () => {
+        const baseClass = "group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 text-white font-bold rounded-lg shadow-lg transition-all duration-300";
+        if (submissionStatus === 'submitted') {
+            return `${baseClass} bg-green-600 cursor-default`;
+        }
+        if (isSubmitting) {
+            return `${baseClass} bg-corporate-gold/70 cursor-wait`;
+        }
+        return `${baseClass} bg-corporate-gold hover:bg-corporate-gold/80 transform hover:scale-105`;
+    };
+
+
     return (
         <div className="animate-fade-in text-center flex flex-col h-full">
             <div>
@@ -400,25 +402,15 @@ const ResultsStep: React.FC<{
             <p className="text-xs text-gray-500 mt-6 px-4">* These figures are estimates based on your inputs and our standardized models. Actual results may vary.</p>
             
             {submissionStatus === 'error' && (
-                <p className="text-sm text-red-400 mt-4">Could not send inquiry. Please try again.</p>
+                <p className="text-sm text-red-400 mt-4">Could not open email client. Please try again.</p>
             )}
 
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
                 <button onClick={onReset} disabled={isSubmitting} className="w-full sm:w-auto px-8 py-3 bg-transparent text-gray-200 font-bold rounded-lg border-2 border-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
                     Calculate Again
                 </button>
-                <button onClick={onContactSales} disabled={isSubmitting} className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-corporate-gold text-white font-bold rounded-lg shadow-lg hover:bg-corporate-gold/80 transition-all duration-300 transform hover:scale-105 disabled:bg-corporate-gold/70 disabled:cursor-not-allowed">
-                    {isSubmitting ? (
-                        <>
-                            <SpinnerIcon className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" />
-                            Sending...
-                        </>
-                    ) : (
-                        <>
-                            <MailIcon className="w-5 h-5 mr-2" />
-                            Contact Sales
-                        </>
-                    )}
+                <button onClick={onContactSales} disabled={isSubmitting || submissionStatus === 'submitted'} className={getContactButtonClass()}>
+                    {contactButtonContent()}
                 </button>
             </div>
         </div>
