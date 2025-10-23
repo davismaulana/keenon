@@ -177,19 +177,15 @@ const ROICalculator: React.FC = () => {
                     avgSalary: formData.avgSalary,
                 },
                 roiAnalysis: {
-                    estimatedSavingsPerMonth: results.monthlySavings,
-                    paybackPeriodMonths: Math.round(results.robotAnalysis.paybackPeriod),
-                    totalStaffEfficiency: Math.round(results.staffMadeEfficient),
-                    assumptions: {
-                        adoptionRate: 0.8,
-                        turnoverReductionPct: 10,
+                    robotAnalysis: {
+                        id: results.robotAnalysis.id,
+                        name: results.robotAnalysis.name,
+                        paybackPeriod: results.robotAnalysis.paybackPeriod,
+                        totalInvestment: results.robotAnalysis.totalInvestment,
                     },
-                    robotSelection: {
-                      name: results.robotAnalysis.name,
-                      quantity: results.requiredRobots,
-                      totalInvestment: results.robotAnalysis.totalInvestment,
-                      pricePerUnit: results.robotAnalysis.price,
-                    }
+                    monthlySavings: results.monthlySavings,
+                    requiredRobots: results.requiredRobots,
+                    staffMadeEfficient: results.staffMadeEfficient,
                 }
             };
 
