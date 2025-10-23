@@ -163,7 +163,7 @@ const ROICalculator: React.FC = () => {
             const payload = { formData, results };
 
             // Step 1: Send data to the backend API
-            const response = await fetch('https://xinyi-backend.vercel.app/api/roi-inquiry', {
+            const response = await fetch('https://xinyi-backend.vercel.app/enquiries', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
