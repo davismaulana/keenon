@@ -160,7 +160,38 @@ const ROICalculator: React.FC = () => {
         setSubmissionStatus('idle');
 
         try {
-            const payload = { formData, results };
+            const payload = {
+                contact: {
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    companyName: formData.companyName,
+                    position: formData.position,
+                },
+                businessProfile: {
+                    businessType: formData.businessType,
+                    otherBusinessType: formData.otherBusinessType,
+                    staffCount: formData.staffCount,
+                    operatingHours: formData.operatingHours,
+                    operatingDays: formData.operatingDays,
+                    avgSalary: formData.avgSalary,
+                },
+                roiAnalysis: {
+                    estimatedSavingsPerMonth: results.monthlySavings,
+                    paybackPeriodMonths: Math.round(results.robotAnalysis.paybackPeriod),
+                    // Adding static assumptions as per the requested JSON structure
+                    assumptions: {
+                        adoptionRate: 0.8,
+                        turnoverReductionPct: 10,
+                    },
+                    // You can also include more dynamic results if needed
+                    robotSelection: {
+                      name: results.robotAnalysis.name,
+                      quantity: results.requiredRobots,
+                      totalInvestment: results.robotAnalysis.totalInvestment,
+                    }
+                }
+            };
 
             // Step 1: Send data to the backend API
             const response = await fetch('https://xinyi-backend.vercel.app/enquiries', {
@@ -177,7 +208,7 @@ const ROICalculator: React.FC = () => {
             const emailData = { formData, results };
             const emailTextBody = createEmailTextBody(emailData);
             const mailtoSubject = `New ROI Calculator Inquiry: ${formData.companyName}`;
-            const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
+            const mailtoLink = `mailto:info@xinyitradinggroup.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
             
             window.location.href = mailtoLink;
             
