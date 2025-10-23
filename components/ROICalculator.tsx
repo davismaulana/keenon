@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useContent } from '../context/LanguageContext';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
-import { CostEfficiencyIcon, ProductivityIcon } from './icons/AdvantageIcons';
+import { CostEfficiencyIcon, ProductivityIcon, MailIcon } from './icons/AdvantageIcons';
 import { CalendarIcon } from './icons/CalculatorIcons';
 import { ArrowLeftIcon } from './icons/ArrowLeftIcon';
 import { UsersIcon } from './icons/UsersIcon';
@@ -358,10 +358,18 @@ const ResultsStep: React.FC<{
                 </>
             );
         }
+        if (submissionStatus === 'submitted') {
+            return (
+                <>
+                    <CheckCircleIcon className="w-5 h-5 mr-2" />
+                    Submitted
+                </>
+            );
+        }
         return (
             <>
-                <CheckCircleIcon className="w-5 h-5 mr-2" />
-                Complete!
+                <MailIcon className="w-5 h-5 mr-2" />
+                Contact Sales
             </>
         );
     };
