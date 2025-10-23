@@ -153,33 +153,44 @@ const ROICalculator: React.FC = () => {
         setStep('results');
     };
 
-    const handleContactSales = () => {
+    const handleContactSales = async () => {
         if (!results || !formData) return;
         
         setIsSubmitting(true);
         setSubmissionStatus('idle');
 
-        // Show loading state for a moment before opening the email client
-        setTimeout(() => {
-            try {
-                const emailData = { formData, results };
-                const emailTextBody = createEmailTextBody(emailData);
-                const mailtoSubject = `New ROI Calculator Inquiry: ${formData.companyName}`;
-                const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
-                
-                window.location.href = mailtoLink;
-                
-                // After attempting to open mail client, update the UI to success.
-                // The browser might lose focus, and when it returns, this state will be visible.
-                setIsSubmitting(false);
-                setSubmissionStatus('submitted');
+        try {
+            const payload = { formData, results };
 
-            } catch (error) {
-                console.error('Mailto link creation failed:', error);
-                setIsSubmitting(false);
-                setSubmissionStatus('error');
+            // Step 1: Send data to the backend API
+            const response = await fetch('https://xinyi-backend.vercel.app/api/roi-inquiry', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                throw new Error(`API submission failed with status: ${response.status}`);
             }
-        }, 1000); // 1-second delay for the loading animation to be visible
+
+            // Step 2: If API call is successful, open the mailto link
+            const emailData = { formData, results };
+            const emailTextBody = createEmailTextBody(emailData);
+            const mailtoSubject = `New ROI Calculator Inquiry: ${formData.companyName}`;
+            const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
+            
+            window.location.href = mailtoLink;
+            
+            // Step 3: Set success state
+            setSubmissionStatus('submitted');
+
+        } catch (error) {
+            console.error('Submission failed:', error);
+            setSubmissionStatus('error');
+        } finally {
+            // Stop the loading indicator regardless of the outcome
+            setIsSubmitting(false);
+        }
     };
 
     const handleReset = () => {
@@ -402,7 +413,7 @@ const ResultsStep: React.FC<{
             <p className="text-xs text-gray-500 mt-6 px-4">* These figures are estimates based on your inputs and our standardized models. Actual results may vary.</p>
             
             {submissionStatus === 'error' && (
-                <p className="text-sm text-red-400 mt-4">Could not open email client. Please try again.</p>
+                <p className="text-sm text-red-400 mt-4">Submission failed. Please check your connection and try again.</p>
             )}
 
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
