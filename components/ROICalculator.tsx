@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useContent } from '../context/LanguageContext';
 import { ArrowRightIcon } from './icons/ArrowRightIcon';
-import { CostEfficiencyIcon, ProductivityIcon, MailIcon } from './icons/AdvantageIcons';
+import { CostEfficiencyIcon, ProductivityIcon } from './icons/AdvantageIcons';
 import { CalendarIcon } from './icons/CalculatorIcons';
 import { ArrowLeftIcon } from './icons/ArrowLeftIcon';
 import { UsersIcon } from './icons/UsersIcon';
@@ -179,16 +179,16 @@ const ROICalculator: React.FC = () => {
                 roiAnalysis: {
                     estimatedSavingsPerMonth: results.monthlySavings,
                     paybackPeriodMonths: Math.round(results.robotAnalysis.paybackPeriod),
-                    // Adding static assumptions as per the requested JSON structure
+                    totalStaffEfficiency: Math.round(results.staffMadeEfficient),
                     assumptions: {
                         adoptionRate: 0.8,
                         turnoverReductionPct: 10,
                     },
-                    // You can also include more dynamic results if needed
                     robotSelection: {
                       name: results.robotAnalysis.name,
                       quantity: results.requiredRobots,
                       totalInvestment: results.robotAnalysis.totalInvestment,
+                      pricePerUnit: results.robotAnalysis.price,
                     }
                 }
             };
@@ -362,18 +362,10 @@ const ResultsStep: React.FC<{
                 </>
             );
         }
-        if (submissionStatus === 'submitted') {
-            return (
-                 <>
-                    <CheckCircleIcon className="w-5 h-5 mr-2" />
-                    Complete!
-                </>
-            );
-        }
         return (
             <>
-                <MailIcon className="w-5 h-5 mr-2" />
-                Contact Sales
+                <CheckCircleIcon className="w-5 h-5 mr-2" />
+                Complete!
             </>
         );
     };
