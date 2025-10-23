@@ -208,7 +208,7 @@ const ROICalculator: React.FC = () => {
             const emailData = { formData, results };
             const emailTextBody = createEmailTextBody(emailData);
             const mailtoSubject = `New ROI Calculator Inquiry: ${formData.companyName}`;
-            const mailtoLink = `mailto:info@xinyitradinggroup.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
+            const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
             
             window.location.href = mailtoLink;
             
