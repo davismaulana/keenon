@@ -7,7 +7,7 @@ import { ArrowLeftIcon } from './icons/ArrowLeftIcon';
 import { UsersIcon } from './icons/UsersIcon';
 import { SpinnerIcon } from './icons/SpinnerIcon';
 import { CheckCircleIcon } from './icons/CheckCircleIcon';
-import { createEmailHtml } from '../utils/emailTemplate';
+import { createEmailHtml, createEmailTextBody } from '../utils/emailTemplate';
 
 type Step = 'questionnaire' | 'selection' | 'results';
 
@@ -105,7 +105,7 @@ const ROICalculator: React.FC = () => {
     const [selectedRobotId, setSelectedRobotId] = useState<string | null>(null);
     const [results, setResults] = useState<Results | null>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'error'>('idle');
 
     const calculableRobots = useMemo(() => {
         return content.products_showcase.products.filter(p => p.price && p.maxStaffEfficiency);
@@ -203,7 +203,11 @@ const ROICalculator: React.FC = () => {
             });
             if (!response.ok) throw new Error('Network response was not ok.');
             
-            setSubmissionStatus('success');
+            // After successful direct send, also trigger mailto
+            const emailTextBody = createEmailTextBody(emailData);
+            const mailtoSubject = `New ROI Calculator Inquiry: ${formData.companyName}`;
+            const mailtoLink = `mailto:davis@sixzenith.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(emailTextBody)}`;
+            window.location.href = mailtoLink;
 
         } catch (error) {
             console.error('Submission failed:', error);
@@ -339,23 +343,9 @@ const ResultsStep: React.FC<{
     onReset: () => void, 
     formatter: Intl.NumberFormat,
     isSubmitting: boolean,
-    submissionStatus: 'idle' | 'success' | 'error',
+    submissionStatus: 'idle' | 'error',
     onContactSales: () => void
 }> = ({ results, onReset, formatter, isSubmitting, submissionStatus, onContactSales }) => {
-    
-    if (submissionStatus === 'success') {
-        return (
-            <div className="animate-fade-in text-center flex flex-col h-full justify-center items-center">
-                <CheckCircleIcon className="w-16 h-16 text-green-400 mb-4" />
-                <h3 className="text-2xl font-bold font-display text-white">Thank You!</h3>
-                <p className="text-medium-gray mt-2 mb-6 max-w-sm">Your inquiry has been sent. Our sales team will contact you shortly.</p>
-                <button onClick={onReset} className="w-full sm:w-auto px-8 py-3 bg-transparent text-gray-200 font-bold rounded-lg border-2 border-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-300">
-                    Start Over
-                </button>
-            </div>
-        );
-    }
-
     return (
         <div className="animate-fade-in text-center flex flex-col h-full">
             <div>

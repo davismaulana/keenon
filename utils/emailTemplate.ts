@@ -94,3 +94,40 @@ export const createEmailHtml = (data: EmailData): string => {
     </html>
     `;
 };
+
+export const createEmailTextBody = (data: EmailData): string => {
+    const { formData, results } = data;
+    const currencyFormatter = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 });
+    const numberFormatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
+
+    const sections = [
+        "New Inquiry from ROI Calculator",
+        "A new potential client has submitted their details through the ROI calculator on the website.",
+        "",
+        "--- ROI SUMMARY ---",
+        `Est. Monthly Savings: ${currencyFormatter.format(results.monthlySavings)}`,
+        `Payback Period: ${numberFormatter.format(results.robotAnalysis.paybackPeriod)} mo.`,
+        "",
+        "--- CONTACT INFORMATION ---",
+        `Name: ${formData.name}`,
+        `Company: ${formData.companyName}`,
+        `Position: ${formData.position}`,
+        `Email: ${formData.email}`,
+        `Phone: ${formData.phone}`,
+        "",
+        "--- BUSINESS PROFILE ---",
+        `Business Type: ${formData.businessType}${formData.businessType === 'Others' ? ` (${formData.otherBusinessType})` : ''}`,
+        `Staff Count: ${formData.staffCount}`,
+        `Avg. Salary: ${currencyFormatter.format(formData.avgSalary)}`,
+        `Operating Hours: ${formData.operatingHours} / day`,
+        `Operating Days: ${formData.operatingDays} / month`,
+        "",
+        "--- ROI ANALYSIS DETAILS ---",
+        `Selected Robot: ${results.robotAnalysis.name}`,
+        `Robots Required: ${results.requiredRobots}`,
+        `Staff Made Efficient: ${numberFormatter.format(results.staffMadeEfficient)}`,
+        `Total Investment: ${currencyFormatter.format(results.robotAnalysis.totalInvestment)}`
+    ];
+
+    return sections.join('\r\n');
+};
